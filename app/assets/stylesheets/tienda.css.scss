@@ -1,0 +1,77 @@
+// Place all the styles related to the Tienda controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.tienda {
+  h1 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    font:  150% sans-serif;
+    color: #226;
+    border-bottom: 3px solid #0D4F8B;
+  }
+
+  /* An entry in the store catalog */
+  
+  .entry {
+    width: 220px;
+    min-height: 90px;
+    height: 205px;
+    float:left;
+    display:block;
+
+    img.catalogo {
+      width: 67px;
+      margin-right: 10px;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      position: absolute;
+      z-index:-1;
+    }
+
+    h3 {
+      font-size: 90%;
+      font-family: sans-serif;
+      margin-right: 10px;
+      margin-left: 12px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #227;
+    }
+
+    h4 {
+      font-size:80%;
+      font-family: sans-serif;
+      margin-left: 100px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: #227;
+    }
+
+    p, div.price_line {
+      font-size:82%;
+      margin-left: 100px;
+      margin-top: 0.5em; 
+      margin-bottom: 0.8em; 
+    }
+
+    div.price {
+      width:75px;
+      float:left;
+      color: #44a;
+      margin-right: 3em;
+    }
+
+    input.button {
+      margin-top:20px;
+      color:white;
+      background:#0D4F8B;
+      height:25px;
+      text-font:60%;
+      display:inline;
+    }
+    img.carro {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

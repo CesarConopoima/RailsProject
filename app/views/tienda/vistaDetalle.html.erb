@@ -1,0 +1,18 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h1>Bienvenido a tu tienda virtual</h1> 
+	<% @productos2.each do |producto| %>
+	<div class="entry" style="margin-top:12px;">
+		<h3><%= producto.nombre %></h3>
+		<%= image_tag(producto.imageUrl, :class => 'catalogo') %>
+		<h4><%= producto.marca %></h4>
+			<div class="price_line">
+				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
+				<div class="price">Disponible</div>	
+				<%= button_to 'Agregar al Carro', line_items_path(producto_id: producto), remote: true, :class => "button"%>	
+				<%= image_tag("logo/carro_1.png",  :class => 'carro') %>
+			</div>
+			<div style="text-align:center;z-index:1;margin-top:12px;margin-bottom:5px;"><%= producto.codigo %></div>
+	</div>
+<% end %>	

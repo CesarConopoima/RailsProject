@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  codigo: MyString
+  marca: MyString
+  cantidad: 1
+  precio: 9.99
+  imageUrl: MyString
+  modelo: MyString
+
+two:
+  nombre: MyString
+  codigo: MyString
+  marca: MyString
+  cantidad: 1
+  precio: 9.99
+  imageUrl: MyString
+  modelo: MyString

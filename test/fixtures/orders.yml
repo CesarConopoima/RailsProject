@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: Dave Thomas
+  direccion: MyText
+  email: dave@example.org
+  tipoPago: Cheque
+
+two:
+  nombre: MyString
+  direccion: MyText
+  email: MyString
+  tipoPago: MyString

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aplicacion</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class='<%= controller.controller_name %>'>
+<div id="contenido">
+	<div id="banner_2">
+		<%= image_tag("logo/banner.jpg")%>
+	</div>
+	<div id="navegacion">
+		<ul>
+			<li><%= link_to "Productos", tienda_url %></li>
+		</ul>
+	</div>	
+<div id="columns">
+	<div id="side_1" class="inline">
+		<%= render 'layouts/menu' %>
+		<div style="font-style:italic;font-size:8px;background:#A2B5CD;font-weight: bold;margin-top:5px;font-color:#36648B;">Dirección: <br>Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br>Email. copelancita@gmail.com</div>
+		<div style="text-align:center;margin-top:5px;"><%= image_tag("logo/icra.gif")%></div>
+	</div>	
+	<div id="main" class="inline">
+		<%= yield %>
+	</div>
+	<div id="side" class="inline">
+		<div id="cart" style="position:fixed;width:27%;">
+		<% if @cart %>
+			<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+			<%= render @cart %>
+			<% end %>
+		<% end %>
+		</div>
+	</div>
+</div>
+	
+	<% if session[:usuario_id] %>
+	<ul>
+	<li><%= link_to 'Ordenes', orders_path %></li>
+	<li><%= link_to 'Productos', productos_path %></li>
+	<li><%= link_to 'Usuarios', usuarios_path %></li>
+	</ul>
+	<%= button_to 'Logout', logout_path, method: :delete %>
+	<% end %>
+</div>	
+</body>
+</html>

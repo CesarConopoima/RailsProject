@@ -1,0 +1,4 @@
+<h1>Bienvenido</h1>
+Son las <%= Time.now %>
+<br /> <br />Hoy tenemos <%= pluralize(@total_orders, "ordenes") %>.
+<br /> <%= link_to 'Ver las ordenes', orders_path %>

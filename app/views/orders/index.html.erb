@@ -1,0 +1,32 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Empresa</th>
+    <th>Direccion</th>
+    <th>Email</th>
+    <th>telefono</th>
+    <th>Tipo de Pago</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.nombre %></td>
+    <td><%= order.empresa %></td>
+    <td><%= order.direccion %></td>
+    <td><%= order.email %></td>
+    <td><%= order.telefono %></td>
+    <td><%= order.tipoPago %></td>
+    <td><%= link_to 'Mostrar', order %></td>
+    <td><%= link_to 'Editar', edit_order_path(order) %></td>
+    <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

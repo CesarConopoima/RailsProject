@@ -1,0 +1,23 @@
+<p>
+  <b>Nombre:</b>
+  <%= @order.nombre %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @order.direccion %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @order.email %>
+</p>
+
+<p>
+  <b>Tipo de pago:</b>
+  <%= @order.tipoPago %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,24 @@
+<ul id="menu">  
+		<% if @productos1 %>
+			<% @productos1.each do |producto| %>
+			  <li style="border: solid 1px #808080; text-align:center;"><a class="lista">
+			   <%= link_to "#{producto.marca}", tienda_pagina_path(:marca => "#{producto.marca.downcase}") %>
+				</a>
+			  	<ul><%= params[:marca] => "Copeland" %>
+			  		<% @Busqueda=@productoVer %>
+			  		<% @Busqueda.each do |producto1| %>
+			  		<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><a><%= link_to "#{producto1.nombre.split("MOD").first.downcase.capitalize}", tienda_vista_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombre.downcase}") %></a>
+					<ul><li><a>
+						<% @nombre="#{producto1.nombre.downcase.split(" ")[0]}" %>
+						<% @busqueda = Producto.find_by_sql("select nombre from productos where nombre like '#{@nombre}%'") %>
+						<% if @busqueda.length > 20 %>	
+						<% else %>	
+						<% end %>	
+					</a></ul></li>
+			  		</li>
+			  	<% end %>
+			  	</ul>
+			  </li>	
+			<% end %> 
+		<% end %>        
+</ul>

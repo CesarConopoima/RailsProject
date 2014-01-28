@@ -1,0 +1,22 @@
+<table>
+    <% @productos.each do |producto| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td>
+            <%= image_tag(producto.imageUrl, class: 'list_image') %>
+        </td>
+        <td class="list_description">
+            <dl>
+            <dt><%= producto.nombre %></dt>
+            <dd><%= producto.codigo %></dd>
+            <dd><%= producto.precio %></dd>
+            <dd><%= producto.marca %></dd>
+            </dl>
+        </td>
+        <td class="list_actions">
+            <%= link_to 'Mostrar', producto %><br/>
+            <%= link_to 'Editar', edit_producto_path(producto) %><br/>
+            <%= link_to 'Destruir', producto, confirm: 'Estas seguro?', method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+</table>
