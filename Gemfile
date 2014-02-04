@@ -6,9 +6,9 @@ gem 'rails', '3.2.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "heroku"
-#group :development, :test do
-#  gem 'sqlite3'
-#end
+group :development, :test do
+  gem 'sqlite3'
+end
 group :production do
   gem 'pg'
   gem 'thin'
