@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20131211164359) do
     t.string   "marca"
     t.integer  "cantidad"
     t.decimal  "precio"
-    t.string   "imageUrl"
+    t.string   "imageurl"
     t.string   "modelo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
