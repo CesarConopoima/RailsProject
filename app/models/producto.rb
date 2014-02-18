@@ -2,9 +2,9 @@ class Producto < ActiveRecord::Base
 	has_many :line_items
 	has_many :orders, through: :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
-	attr_accessible :nombre, :codigo, :marca, :cantidad, :precio, :imageUrl, :modelo
+	attr_accessible :nombre, :codigo, :marca, :cantidad, :precio, :imageurl, :modelo
 	
-	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageUrl, presence: true
+	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageurl, presence: true
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01}
 	validates :codigo, uniqueness: true
 	validates :imageUrl, allow_blank: true, format: {
