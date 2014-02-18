@@ -19,10 +19,10 @@
 #  timeout: 5000
 
 production:
- adapter: postgresql
- encoding: utf8
- database: aplicacion_development
- pool: 5
- username: username
- password: password
- host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: aplicacion_development
+  pool: 5
+  username: username
+  password: password
+  host: localhost
