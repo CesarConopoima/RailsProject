@@ -1,7 +1,7 @@
 	    <% @productos.each do |producto| %>
 		<div class="entry">
 			<h3><%= producto.nombre %></h3>
-			<%= image_tag(producto.imageUrl, :class => 'catalogo') %>
+			<%= image_tag(producto.imageurl, :class => 'catalogo') %>
 			<h4><%= producto.marca %></h4>
 			<div class="price_line">
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>

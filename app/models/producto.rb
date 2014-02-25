@@ -7,7 +7,7 @@ class Producto < ActiveRecord::Base
 	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageurl, presence: true
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01}
 	validates :codigo, uniqueness: true
-	validates :imageUrl, allow_blank: true, format: {
+	validates :imageurl, allow_blank: true, format: {
 		with: %r{\.(gif|jpg|png)$}i,
 		message: 'La imagen debe tener extension JPG,GIF o PNG'
 		}
@@ -16,7 +16,7 @@ class Producto < ActiveRecord::Base
 	    if search  
 	      where('nombre LIKE ? and marca LIKE ? and modelo LIKE ?',"%#{search.split(',')[0]}%","%#{search.split(',')[1]}%","%#{search.split(',')[2]}%")  
 	    else
-	      find_by_sql("select * from productos where imageUrl not like 'logo%' ORDER BY RANDOM() LIMIT 10 ")
+	      find_by_sql("select * from productos where imageurl not like 'logo%' ORDER BY RANDOM() LIMIT 10 ")
 	    end  
   	end 
 
