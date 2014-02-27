@@ -2,7 +2,7 @@
 		<% if @productos1 %>
 			<% @productos1.each do |producto| %>
 			  <li style="border: solid 1px #808080; text-align:center;">
-			   <%= link_to "#{producto.marca}", tienda_pagina_path(:marca => "#{producto.marca.downcase}") %>
+			   <%= producto.marca, tienda_pagina_path(:marca => "#{producto.marca.downcase}") %>
 			  	<ul><% if "#{producto.marca}" == 'Copeland' %>
 			  		<% @Busqueda = @productoCop %>
 			  		<% elsif "#{producto.marca}" == 'Carrier' %>
@@ -13,7 +13,7 @@
 			  		<% @Busqueda = @productoYork %>
 			  		<% end %>
 			  		<% @Busqueda.each do |producto1| %>
-			  		<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "#{producto1.nombre.split(" ").first.downcase.gsub('"','').gsub('(','').capitalize.split(",").first}", tienda_vista_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombre.downcase}") %>
+			  		<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "#{producto1.nombre.split(" ").first.dowcase.capitalize}", tienda_vista_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombre.downcase}") %>
 			  		</li>
 			  	<% end %>
 			  	<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "Miscelaneus", tienda_miscelaneus_path(:marca => "#{producto.marca.downcase}") %></li>
