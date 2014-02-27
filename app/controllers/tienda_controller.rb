@@ -3,7 +3,7 @@ class TiendaController < ApplicationController
   
   def index
   	@productos = Producto.search(params[:search])
-  	@productos1= Producto.marcas
+  	@productos1= Producto.find_by_sql("select marca from productos group by marca")
     @productoCop=Producto.find_by_sql("select nombre from
             (select substring(nombre,0,11) AS nombres,count(*) AS number 
             from productos where marca = 'Copeland' group by nombres)AS 
@@ -30,7 +30,7 @@ class TiendaController < ApplicationController
     @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
     @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @marca = params[:marca].downcase
-    @productos1 = Producto.marcas
+    @productos1 = Producto.find_by_sql("select marca from productos group by marca")
     @productos2 = Producto.find_by_sql("select * from productos where marca like '#{@marca}' group by SUBSTR(nombre,0,4)")
   end
 
