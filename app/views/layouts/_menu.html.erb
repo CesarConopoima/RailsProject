@@ -13,24 +13,7 @@
 			  		<% @Busqueda = @productoYork %>
 			  		<% end %>
 			  		<% @Busqueda.each do |producto1| %>
-			  		<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "#{producto1.nombre.split(" ").first.downcase.capitalize}", tienda_vista_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombre.downcase}") %>
-					<% @nombre=producto1.nombre.split(" ").first %>
-					<% @busqueda = Producto.find_by_sql("select nombre,modelo from productos where nombre like '#{@nombre}%' and marca = '#{producto.marca}'") %>
-					<% @busqueda2 = Producto.find_by_sql("select nombre,modelo from productos where nombre like '#{@nombre}%' and marca = '#{producto.marca}' group by SUBSTR(modelo,0,2)") %>
-					<% @busqueda3 = Producto.find_by_sql("select nombre,modelo from productos where nombre like '#{@nombre}%' and marca = '#{producto.marca}' group by SUBSTR(nombre,0,17)") %>
-					<ul>
-						<% if @busqueda.length > 9 %>
-							<% if @nombre=="KIT" or @nombre=="ANILLO" or @nombre=="FLAPPER" or @nombre=="VALVULA" or @nombre=="EMPACADURA" %>
-							<% @busqueda3.each do |i| %>
-							<li style="width:200px;border: solid 1px #808080; text-align:center;font-size:75%;"><%= link_to "#{i.nombre.split("MOD").first.downcase.capitalize}", tienda_vistaDetalle_path(:marca => "#{producto.marca.downcase}", :nombre=>"#{i.nombre.split(" ").first.downcase.capitalize}", :modelo=>"#{i.modelo.split(" ").first}") %></li>
-								<% end %>
-						<% else %>
-						<% @busqueda2.each do |i| %>
-						<li style="width:200px;border: solid 1px #808080; text-align:center;font-size:75%;"><%= link_to "#{i.nombre.split("MOD").first.split(" ").first.downcase.capitalize}"+" Modelo"+"  #{i.modelo.split(" ").first}", tienda_vistaDetalle_path(:marca => "#{producto.marca.downcase}", :nombre=>"#{i.nombre.split("MOD").first.split(" ").first.downcase.capitalize}", :modelo=>"#{i.modelo.split(" ").first}") %></li>
-							<% end %>	
-						<% end %>
-						<% end %>
-					</ul>
+			  		<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "#{producto1.nombre.split(" ").first.downcase.gsub('"','').gsub('(','').capitalize.split(",").first}", tienda_vista_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombre.downcase}") %>
 			  		</li>
 			  	<% end %>
 			  	<li style="border: solid 1px #808080; width: 285px; height: 19px; text-align:center;font-size:75%;"><%= link_to "Miscelaneus", tienda_miscelaneus_path(:marca => "#{producto.marca.downcase}") %></li>

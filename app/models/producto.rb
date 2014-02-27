@@ -21,7 +21,7 @@ class Producto < ActiveRecord::Base
   	end 
 
   	def self.marcas
-  		 find_by_sql("select * from productos group by marca")
+  		 find_by_sql("select marca from productos group by marca")
   	end
 
   	def ensure_not_referenced_by_any_line_item

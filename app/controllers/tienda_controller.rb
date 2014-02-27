@@ -4,16 +4,16 @@ class TiendaController < ApplicationController
   def index
   	@productos = Producto.search(params[:search])
   	@productos1= Producto.marcas
-    @productoCop=Producto.find_by_sql("select nombre from (select nombre,count() 
-            AS number from productos 
-            where marca = 'Copeland' group by SUBSTR(nombre,0,6))
-            where number > 6")
-    @productoCarr=Producto.find_by_sql("select nombre from (select nombre,count() 
-            AS number from productos 
-            where marca = 'Carrier' group by SUBSTR(nombre,0,6))
-            where number > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by SUBSTR(nombre,0,4)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by SUBSTR(nombre,0,4)")
+    @productoCop=Producto.find_by_sql("select nombre from
+            (select substring(nombre,0,11) AS nombres,count(*) AS number 
+            from productos where marca = 'Copeland' group by nombres)AS 
+            nombre where number > 5")
+    @productoCarr=Producto.find_by_sql("select nombre from
+            (select substring(nombre,0,11) AS nombres,count(*) AS number 
+            from productos where marca = 'Carrier' group by nombres)AS 
+            nombre where number > 5")
+    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
+    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @cart = current_cart
   end
 
@@ -27,8 +27,8 @@ class TiendaController < ApplicationController
             AS number from productos 
             where marca = 'Carrier' group by SUBSTR(nombre,0,4))
             where number > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by SUBSTR(nombre,0,4)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by SUBSTR(nombre,0,4)")
+    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
+    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @marca = params[:marca].downcase
     @productos1 = Producto.marcas
     @productos2 = Producto.find_by_sql("select * from productos where marca like '#{@marca}' group by SUBSTR(nombre,0,4)")
@@ -44,8 +44,8 @@ class TiendaController < ApplicationController
             AS number from productos 
             where marca = 'Carrier' group by SUBSTR(nombre,0,4))
             where number > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by SUBSTR(nombre,0,4)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by SUBSTR(nombre,0,4)")
+    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre)")
+    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @marca = params[:marca].downcase
     @nombre = params[:nombre].downcase.split("MOD").first.split(" ").first
     @productos1 = Producto.marcas
@@ -63,8 +63,8 @@ class TiendaController < ApplicationController
             AS number from productos 
             where marca = 'Carrier' group by SUBSTR(nombre,0,4))
             where number > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by SUBSTR(nombre,0,4)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by SUBSTR(nombre,0,4)")
+    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
+    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @cart = current_cart    
     @marca = params[:marca].downcase.capitalize
     @productoMis = Producto.find_by_sql("select * from (select *,count() 
@@ -84,8 +84,8 @@ class TiendaController < ApplicationController
             AS number from productos 
             where marca = 'Carrier' group by SUBSTR(nombre,0,4))
             where number > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by SUBSTR(nombre,0,4)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by SUBSTR(nombre,0,4)")
+    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
+    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
     @marca = params[:marca].downcase.capitalize
     @nombre = params[:nombre]
     @modelo = params[:modelo].split("/").first.to_s
