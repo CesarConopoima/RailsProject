@@ -6,8 +6,8 @@ class TiendaController < ApplicationController
   	@productos1= Producto.find_by_sql("select marca from productos group by marca order by marca")
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 6")
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
+    @productoTran=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'Trane' group by nombres")
+    @productoYork=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'York' group by nombres")
     @cart = current_cart
   end
 
@@ -15,8 +15,8 @@ class TiendaController < ApplicationController
     @cart = current_cart
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 6")
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
+    @productoTran=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'Trane' group by nombres")
+    @productoYork=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'York' group by nombres")
     @marca = params[:marca].downcase
     @productos1 = Producto.find_by_sql("select marca from productos group by marca order by marca")
     @productos2 = Producto.find_by_sql("select * from productos where marca like '#{@marca}' group by SUBSTR(nombre,0,4)")
@@ -26,8 +26,8 @@ class TiendaController < ApplicationController
     @cart = current_cart
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 6")
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6")
-    @productoTran=Producto.find_by_sql("select nombre from productos where marca = 'Trane' group by nombre)")
-    @productoYork=Producto.find_by_sql("select nombre from productos where marca = 'York' group by nombre")
+    @productoTran=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'Trane' group by nombres")
+    @productoYork=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'York' group by nombres")
     @marca = params[:marca].downcase
     @nombre = params[:nombre].downcase.split("MOD").first.split(" ").first
     @productos1 = Producto.marcas
