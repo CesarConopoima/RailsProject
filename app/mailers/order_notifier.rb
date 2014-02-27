@@ -1,5 +1,5 @@
 class OrderNotifier < ActionMailer::Base
-
+  skip_before_filter :authorize, only: [:received, :recibido]
   default from: "cesar.conopoima@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
