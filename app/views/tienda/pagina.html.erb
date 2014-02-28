@@ -4,7 +4,7 @@
 <h1>Productos <%= @marca.capitalize %></h1> 
 	<% @productos2.each do |producto| %>
 		<div class="lista">
-	<%= link_to "#{producto.nombres}", tienda_vista_path(:marca => "#{marca}", :nombre => "#{producto.nombre.downcase}") %>
+	<%= link_to "#{producto.nombres}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombre.downcase}") %>
 		</div>
 <% end %>
 	
