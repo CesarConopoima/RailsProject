@@ -1,13 +1,11 @@
-<h1>Listing orders</h1>
+<h1>Lista de Ordenes </h1>
 
 <table>
   <tr>
     <th>Nombre</th>
     <th>Empresa</th>
-    <th>Direccion</th>
-    <th>Email</th>
-    <th>telefono</th>
-    <th>Tipo de Pago</th>
+    <th>Teléfono</th>
+    <th>Fecha del pedido</th>
     <th></th>
     <th></th>
   </tr>
@@ -16,12 +14,10 @@
   <tr>
     <td><%= order.nombre %></td>
     <td><%= order.empresa %></td>
-    <td><%= order.direccion %></td>
-    <td><%= order.email %></td>
     <td><%= order.telefono %></td>
     <td><%= order.tipoPago %></td>
+    <td><%= order.created_at %></td>
     <td><%= link_to 'Mostrar', order %></td>
-    <td><%= link_to 'Editar', edit_order_path(order) %></td>
     <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
   </tr>
 <% end %>
