@@ -14,7 +14,7 @@ class Producto < ActiveRecord::Base
 
 	def self.search(search)  
 	    if search  
-	      where('nombre LIKE ? and marca LIKE ? and modelo LIKE ?',"%#{search.split(',')[0]}%","%#{search.split(',')[1]}%","%#{search.split(',')[2]}%")  
+	      find_by_sql("select * from productos where codigo like '%#{search}%' " )
 	    else
 	      find_by_sql("select * from productos where imageurl not like 'logo%' ORDER BY RANDOM() LIMIT 10 ")
 	    end  
