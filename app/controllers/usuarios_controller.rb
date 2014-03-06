@@ -1,5 +1,5 @@
 class UsuariosController < ApplicationController
- skip_before_filter :authorize,  only: [:show]
+ skip_before_filter :authorize
   # GET /usuarios
   # GET /usuarios.json
   def index
