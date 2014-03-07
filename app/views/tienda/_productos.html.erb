@@ -5,7 +5,7 @@
 			<h4><%= producto.marca %></h4>
 			<div class="price_line">
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
-				<% if productos.cantidad > 2 %>
+				<% if producto.cantidad >= 2 %>
 				<div class="price">Disponible</div>	
 				<% else %>
 				<div class="price" style="color:#F46767;font-weight:bold">Agotado</div>	
