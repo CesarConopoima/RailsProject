@@ -29,12 +29,11 @@ var ready =function () {
 });   
 };
 
+
 $(document).ready(ready);
 $(document).on('page:load', ready);
 
-
-
-$(document).ready(function(){
+var ready = function(){
   var w1 = $( ".catalogo" ).width();
   var h1 = $( ".catalogo" ).height();
   $(".catalogo").click(function(){
@@ -48,4 +47,7 @@ $(document).ready(function(){
     $(this).animate({width:'150px',height:'125px'},"slow");
     }
   });
-});
+};
+ 
+$(document).ready(ready);
+$(document).on('page:load', ready);
