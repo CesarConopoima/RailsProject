@@ -34,10 +34,10 @@ $(document).ready(ready);
 $(document).on('page:load', ready);
 
 var ready = function(){
-  var w1 = $( ".catalogo" ).width();
-  var h1 = $( ".catalogo" ).height();
-  $(".catalogo").click(function(){
-    if (w1 != $( ".catalogo" ).width() )
+  var w1 = $( "img.catalogo" ).width();
+  var h1 = $( "img.catalogo" ).height();
+  $("img.catalogo").click(function(){
+    if (w1 != $( "img.catalogo" ).width() )
   {
  	$(this).width( w1 );
     $(this).height( h1 );
