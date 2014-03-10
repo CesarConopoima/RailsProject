@@ -31,3 +31,21 @@ var ready =function () {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+
+
+$(document).ready(function(){
+  var w1 = $( ".catalogo" ).width();
+  var h1 = $( ".catalogo" ).height();
+  $(".catalogo").click(function(){
+    if (w1 != $( ".catalogo" ).width() )
+  {
+ 	$(this).width( w1 );
+    $(this).height( h1 );
+  }
+  	else
+  	{
+    $(this).animate({width:'150px',height:'125px'},"slow");
+    }
+  });
+});
