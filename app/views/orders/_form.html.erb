@@ -41,12 +41,12 @@
     <%= f.text_field :telefonoaux, size:40 %>
   </div>
   <div class="field">
-    <%= f.label :tipoenvio %><br />
+    <%= f.label :tipo_de_envio %><br />
     <%= f.select :tipoenvio, Order::SEND_TYPES, 
     prompt: 'Selecciona tu tipo de envio' %>
   </div>
   <div class="field">
-    <%= f.label :localidadvenezuela %><br />
+    <%= f.label :localidad_de_venezuela %><br />
     <%= f.select :localidadvenezuela, Order::VENEZUELA_ESTADOS, 
     prompt: 'Selecciona tu Región de Venezuela' %>
   </div>
