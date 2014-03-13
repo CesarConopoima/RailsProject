@@ -6,7 +6,5 @@
   <td class="total_cell"><%= number_to_currency(cart.total_price, :unit => "Bsf ") %></td>
 </tr>
 </table>  
-<% if @order == false %>
 <%= button_to 'Continuar con la compra', new_order_path, method: :get, :class => 'button' %>
 <%= button_to 'Vaciar carro', cart, method: :delete, remote: true , :class => 'button'%>
-<% end %>
