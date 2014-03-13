@@ -1,9 +1,9 @@
 <h1>Lista de productos</h1>
 
 <%= form_tag productos_path, :method => 'get', :id => "productos_search" do %>
-    <h3>Busqueda rápida</h3>
-    <p style="font-style:italic;font-size:12px;font-color:gray;">Ejemplo: Biela,Copeland para todas las Bielas Copeland <br>
-        O Biela,Copeland,BX-30 para especificar el modelo
+    <h3>Busqueda de productos por Codigo</h3>
+    <p style="font-style:italic;font-size:12px;font-color:gray;">
+    	En este cambo escribiras el código de tu producto
     </p>    
     <p>  
     <%= text_field_tag :search, params[:search] %>  
