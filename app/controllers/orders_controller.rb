@@ -75,10 +75,10 @@ class OrdersController < ApplicationController
         end
 
       else
-      redirect_to tienda_url, notice: "No se puede procesar un carro de compras vacio"
+      redirect_to tienda_url, notice: "Tu pedido no se proceso, tu carro de compras esta vacio"
       return
     end
-    
+
   end
 
   # PUT /orders/1
