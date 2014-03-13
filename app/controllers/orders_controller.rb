@@ -57,10 +57,12 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(current_cart)
     @orderCreate=Order.new(params[:order])
     @cart = current_cart
-    if @cart.empty?
+    
+    if @cart.line_items.empty?
       redirect_to tienda_url, notice: "No se puede procesar un carro de compras vacio"
       return
     end
+
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
