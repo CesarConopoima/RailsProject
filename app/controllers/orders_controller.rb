@@ -58,25 +58,27 @@ class OrdersController < ApplicationController
     @orderCreate=Order.new(params[:order])
     @cart = current_cart
     
-    if @cart.line_items.empty?
+    if !@cart.line_items.empty?
+        respond_to do |format|
+          if @order.save
+            Cart.destroy(session[:cart_id])
+            session[:cart_id] = nil
+            OrderNotifier.received(@order).deliver
+            OrderNotifier.recibido(@order).deliver
+            format.html { redirect_to tienda_url, notice: 'Gracias por tu orden' }
+            format.json { render json: @order, status: :created, location: @order }
+          else
+            @cart = current_cart
+            format.html { render action: "new" }
+            format.json { render json: @order.errors, status: :unprocessable_entity }
+          end
+        end
+
+      else
       redirect_to tienda_url, notice: "No se puede procesar un carro de compras vacio"
       return
     end
-
-    respond_to do |format|
-      if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        OrderNotifier.received(@order).deliver
-        OrderNotifier.recibido(@order).deliver
-        format.html { redirect_to tienda_url, notice: 'Gracias por tu orden' }
-        format.json { render json: @order, status: :created, location: @order }
-      else
-        @cart = current_cart
-        format.html { render action: "new" }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
+    
   end
 
   # PUT /orders/1
