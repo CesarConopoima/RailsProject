@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
     @producto_id=@cart.line_items
 
     if @cart.line_items.empty?
-      redirect_to tienda_url, notice: "Tu carro esta vacio"
+      redirect_to tienda_url, notice: "Tu carro de compras esta vacio"
       return
     end
     
@@ -56,9 +56,9 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
     @orderCreate=Order.new(params[:order])
-    
-    if @cart.line_items.empty?
-      redirect_to tienda_url, notice: "El carro de compras esta vacio!!"
+    @cart = current_cart
+    if @cart.empty?
+      redirect_to tienda_url, notice: "No se puede procesar un carro de compras vacio"
       return
     end
     respond_to do |format|
