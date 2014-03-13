@@ -26,7 +26,7 @@
   </div>
    <div class="field">
     <%= f.label :direccion_de_envio %><br />
-    <%= f.text_area :direccion2, rows: 3, cols:40 %>
+    <%= f.text_area :direccionaux, rows: 3, cols:40 %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
@@ -38,7 +38,7 @@
   </div>
   <div class="field">
     <%= f.label :telefono_auxiliar %><br />
-    <%= f.text_field :telefono, size:40 %>
+    <%= f.text_field :telefonoaux, size:40 %>
   </div>
   <div class="field">
     <%= f.label :tipo_de_envio %><br />
@@ -46,13 +46,13 @@
     prompt: 'Selecciona tu tipo de envio' %>
   </div>
   <div class="field">
-    <%= f.label :tipo_de_pago %><br />
+    <%= f.label  %>:localidad_de_Venezuela<br />
     <%= f.select :localidadvenezuela, Order::VENEZUELA_ESTADOS, 
-    prompt: 'Selecciona tu tipo de pago' %>
+    prompt: 'Selecciona tu Región de Venezuela' %>
   </div>
   <div class="field">
-    <%= f.label :localidad_de_Venezuela %><br />
-    <%= f.select :tipoPago, Order::PAYMENT_TYPES, 
+    <%= f.label :tipo_de_pago %><br />
+    <%= f.select :tipoPago, Order::PAYMENT_TYPES,
     prompt: 'Selecciona tu tipo de pago' %>
   </div>
   <div class="actions">
