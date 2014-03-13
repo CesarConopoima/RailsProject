@@ -84,7 +84,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to tienda_url, notice: "Tu carro esta actualmente vacio" }
-      format.js   { redirect_to tienda_url, notice: "Tu carro esta actualmente vacio" }
+      format.js   
       format.json { head :no_content }
     end
   end
