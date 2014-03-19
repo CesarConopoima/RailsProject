@@ -26,6 +26,7 @@ class TiendaController < ApplicationController
 
   def vista
     @cart = current_cart
+    @productos = Producto.search(params[:search])
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 6 order by nombres")
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6 order by nombres")
     @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' group by nombres order by nombres")
