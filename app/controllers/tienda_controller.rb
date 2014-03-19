@@ -16,7 +16,7 @@ class TiendaController < ApplicationController
     @cart = current_cart
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 6 order by nombres")
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6 order by nombres")
-   @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' group by nombres order by nombres")
+    @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' group by nombres order by nombres")
     @productoYork=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'York' group by nombres order by nombres")
     @marca = params[:marca].downcase.capitalize
     @productos1 = Producto.find_by_sql("select marca from productos group by marca order by marca")
