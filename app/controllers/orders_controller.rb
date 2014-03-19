@@ -65,7 +65,7 @@ class OrdersController < ApplicationController
             session[:cart_id] = nil
             OrderNotifier.received(@order).deliver
             OrderNotifier.recibido(@order).deliver
-            format.html { redirect_to tienda_url, notice: 'Gracias por tu orden' }
+            format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
             format.json { render json: @order, status: :created, location: @order }
           else
             @cart = current_cart
