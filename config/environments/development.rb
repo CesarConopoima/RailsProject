@@ -28,6 +28,7 @@ Aplicacion::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  Paperclip.options[:command_path] = "C:/Program Files/ImageMagick-6.8.8-Q16"
   # Do not compress assets
   config.assets.compress = false
 

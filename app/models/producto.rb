@@ -4,6 +4,12 @@ class Producto < ActiveRecord::Base
 	before_destroy :ensure_not_referenced_by_any_line_item
 	attr_accessible :nombre, :codigo, :marca, :cantidad, :precio, :imageurl, :modelo
 	
+	attr_accessible :imagenagregada
+    has_attached_file :imagenagregada, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "logo/no_dispo.jpg"
+    validates_attachment :imagenagregada, :presence => true,
+  	:content_type => { :content_type => /jpg|gif|png|jpeg/},
+  	:size => { :in => 0..100.kilobytes }
+  	
 	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageurl, presence: true
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01}
 	validates :codigo, uniqueness: true
