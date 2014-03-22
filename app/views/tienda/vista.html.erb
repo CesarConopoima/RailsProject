@@ -16,7 +16,13 @@
 	<% @productos2.each do |producto| %>
 	<div class="entry" style="margin-top:12px;">
 		<h3><%= producto.nombre %></h3>
-		<%= image_tag(producto.imageurl, :class => 'catalogo') %>
+
+		<% if !producto.imagenagregada.to_s.include?('no_dispo.jpg') %>
+        <%= image_tag producto.imagenagregada.url , class: 'catalogo' %>
+        <% else %>
+        <%= image_tag(producto.imageurl, class: 'catalogo') %>
+        <% end %>
+        
 		<h4><%= producto.marca %></h4>
 			<div class="price_line">
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
