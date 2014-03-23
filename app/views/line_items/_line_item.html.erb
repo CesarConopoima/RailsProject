@@ -6,12 +6,12 @@
 
  <% if @mailer %>
     <% @impuesto=((line_item.total_price.to_f)*12/100.to_f).round(2) %>
-    <% @TotalItem=number_to_currency((line_item.total_price + @impuesto).round(2),:unit => "Bsf ") %>
+    <% @TotalItem=(line_item.total_price).round(2) %>
     <td><%= line_item.producto.codigo %></td>
     <td><%= line_item.producto.modelo %></td>
     <td><%= line_item.producto.nombre %></td>
     <td><%= line_item.quantity %></td>
-    <td><%= number_to_currency(line_item.producto.precio,:unit => "Bsf ") %></td>
+    <td><%= line_item.producto.precio %></td>
     <td></td>
     <td></td>
     <td>12.0</td>

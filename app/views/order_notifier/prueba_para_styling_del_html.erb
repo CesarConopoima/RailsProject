@@ -20,24 +20,24 @@
 	.separacion_tabla_final {border-style:solid;}
 </style>
 </head>
-
+<div class="contenido">
 <div class="contenido_derecha"><p>La Copelancita De Venezuela, C.A<br ></p>
 	 <p>R.I.F.: j307532556<br ></p>
 	 <p>N.I.T.:<br ></p>
 </div>
-<div class="contenido_izquierda"><p>Fecha de Emision:  <%= Time.now %> <br ></p>
+<div class="contenido_izquierda"><p>Fecha de Emision:  <br ></p>
 </div>
 <div class="contenido_derecha_1">
-	<p>Cliente :  <%= @order.nombre %>	<br ></p>
-	<p>Dirección: <%= @order.direccion %><br ></p>
-	<p>Dirección de envio: <%= @order.direccionaux %><br ></p>
-	<p>Telefono: <%= @order.telefono %>	<br ></p>
-	<p>Transporte: <%= @order.tipoenvio %><br ></p>
+	<p>Cliente : 	NOMBRE DEL CLIENTE	<br ></p>
+	<p>Direccion: direccion bastante larga del cliente, con comas y acentos porque estamos en un país que lleva acentos	<br ></p>
+	<p>Dirección de envio: direccion bastante larga del cliente, con comas y acentos porque estamos en un país que lleva acentos... esta es otra dirección a done debería ser enviado el paquete del cliente	<br ></p>
+	<p>Telefono:  0416 120 12 12	<br ></p>
+	<p>Transporte: Lo busca en la tienda	<br ></p>
 </div>
 <div class="contenido_izquierda_1">
-	<p>Condic. Pago: <%= @order.tipoPago %><br ></p>
-	<p>Vendedor: Compra electrónica	<br ></p>
-</div>	
+	<p>Condic. Pago: 	TIPO de pago del cliente	<br ></p>
+	<p>Vendedor: 		Compra electrónica	<br ></p>
+</div>		
 <table>
 <tr><th>Codigo</th>
 	<th>Modelo</th>
@@ -50,9 +50,20 @@
 	<th>I.V.A</th>
 	<th>Neto</th>
 	</tr>
-<%= render @order.line_items %>
-</table>
+<tr>
+  <td>CODIGO</td>
+   <td>MODELO</td>
+    <td>NOMBRE</td>
+    <td>100</td>
+    <td>19000</td>
+    <td></td>
+    <td></td>
+    <td>12.0</td>
+    <td>IMPUESTO</td>
+    <td>18920</td>
+</tr>
 
+</table>
 <table class="tabla_impuesto">
 	<tr>
 	<th>Tasa</th>
@@ -61,18 +72,18 @@
 	</tr>
 	<tr>
   	<td>12 %</td>
-   	<td><%= @precio_total.round(2) %></td>
-   	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+   	<td>AQUI TOTAL NETO</td>
+   	<td>AQUI EL IVA DEL TOTAL</td>
 	</tr>
 	<tr>
   	<td></td>
    	<td class="separacion_tabla">Sub-Total : </td>
-   	<td class="separacion_tabla"><%= @precio_total.round(2) %></td>
+   	<td class="separacion_tabla">AQUI EL TOTAL NETO</td>
 	</tr>
 	<tr>
   	<td></td>
    	<td>I.V.A.: </td>
-   	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+   	<td>AQUI EL IVA DEL TOTAL</td>
 	</tr>
 	<tr>
   	<td></td>
@@ -92,7 +103,7 @@
 	<tr>
   	<td></td>
    	<td class="separacion_tabla_final">Neto:</td>
-   	<td class="separacion_tabla_final"><%= @precio_total.round(2)+((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+   	<td class="separacion_tabla_final">SUMA DEL TOTAL MAS IMPUESTOS</td>
 	</tr>
 </table>
 </div>

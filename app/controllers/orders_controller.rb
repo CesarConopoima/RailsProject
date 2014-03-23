@@ -54,19 +54,19 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(params[:order])
+    @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
     @order.add_line_items_from_cart(current_cart)
     @orderCreate=Order.new(params[:order])
-    @cart = current_cart
     
     if !@cart.line_items.empty?
         respond_to do |format|
           if @order.save
-            Cart.destroy(session[:cart_id])
-            session[:cart_id] = nil
             OrderNotifier.received(@order).deliver
-            OrderNotifier.recibido(@order).deliver
+            OrderNotifier.recibido(@order,@total_price).deliver
             format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
             format.json { render json: @order, status: :created, location: @order }
+            Cart.destroy(session[:cart_id])
+            session[:cart_id] = nil
           else
             @cart = current_cart
             format.html { render action: "new" }

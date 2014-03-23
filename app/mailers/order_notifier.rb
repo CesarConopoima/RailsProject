@@ -12,8 +12,9 @@ class OrderNotifier < ActionMailer::Base
     mail to: order.email, subject: 'Confirmacion de pedido'
   end
 
-  def recibido(order)
+  def recibido(order,precio_total)
     @order = order
+    @precio_total = precio_total
     @mailer = order
     mail :to => "cesar.conopoima@gmail.com", subject: 'Hemos recibido un pedido'
   end
@@ -22,9 +23,4 @@ class OrderNotifier < ActionMailer::Base
   #
   #   en.order_notifier.shipped.subject
   #
-  def shipped
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
-  end
 end
