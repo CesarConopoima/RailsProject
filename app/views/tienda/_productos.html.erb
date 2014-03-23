@@ -14,7 +14,6 @@
 				<%= button_to 'Agregar al Carro', line_items_path(producto_id: producto), remote: true,:class => "button" %>
 				<% else %>
 				<div class="price" style="color:#F46767;font-weight:bold">Agotado</div>
-				<%= button_to 'Agregar al Carro' %>	
 				<% end %>
 				<%= image_tag("logo/carro_1.png",  :class => 'carro') %>
 			</div>
