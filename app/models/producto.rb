@@ -6,7 +6,7 @@ class Producto < ActiveRecord::Base
 	
 	attr_accessible :imagenagregada
     has_attached_file :imagenagregada, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "logo/no_dispo.jpg"
-    validates_attachment :imagenagregada, :presence => true,
+    validates_attachment :imagenagregada,
   	:content_type => { :content_type => /jpg|gif|png|jpeg/},
   	:size => { :in => 0..100.kilobytes }
   	
