@@ -53,6 +53,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    @cart = current_cart
     if !@cart.line_items.empty?
     @order = Order.new(params[:order])
     @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
