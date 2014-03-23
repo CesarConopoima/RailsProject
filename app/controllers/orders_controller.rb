@@ -53,12 +53,12 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    if !@cart.line_items.empty?
     @order = Order.new(params[:order])
     @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
     @order.add_line_items_from_cart(current_cart)
     @orderCreate=Order.new(params[:order])
-    
-    if !@cart.line_items.empty?
+        
         respond_to do |format|
           if @order.save
             OrderNotifier.received(@order).deliver
@@ -73,10 +73,9 @@ class OrdersController < ApplicationController
             format.json { render json: @order.errors, status: :unprocessable_entity }
           end
         end
-
-      else
+    else
       redirect_to tienda_url, notice: "Tu pedido no se proceso, tu carro de compras esta vacio"
-      return
+    return
     end
 
   end
