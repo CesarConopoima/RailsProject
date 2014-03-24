@@ -7,7 +7,7 @@ Queremos hacerte saber que hemos recibido tu orden de compra
 <p>
 A continuación la resumimos:
 <br ></p>
-<table>
+<table style = "text-align: center;border-style:solid;border-width:2px;">
 <tr><th>Codigo</th>
 	<th>Modelo</th>
 	<th>Descripcion</th>
@@ -19,44 +19,28 @@ A continuación la resumimos:
 	</tr>
 <%= render @order.line_items %>
 </table>
-<table class="tabla_impuesto">
+<table style = "float:rigth;text-align: center;margin-top:15px;border-style:solid;border-width:2px;">
 	<tr>
-	<th>Tasa</th>
-	<th>Base Imponible</th>
-	<th>I.V.A</th>
-	</tr>
-	<tr>
-  	<td>12 %</td>
+   	<td>Sub-Total : </td>
    	<td><%= @precio_total.round(2) %></td>
-   	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
 	</tr>
 	<tr>
-  	<td></td>
-   	<td class="separacion_tabla">Sub-Total : </td>
-   	<td class="separacion_tabla"><%= @precio_total.round(2) %></td>
-	</tr>
-	<tr>
-  	<td></td>
    	<td>I.V.A.: </td>
    	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
 	</tr>
 	<tr>
-  	<td></td>
    	<td>% Desc.:  </td>
    	<td>0.00</td>
 	</tr>
 	<tr>
-  	<td></td>
    	<td>Recargo:</td>
    	<td>0.00</td>
 	</tr>
 	<tr>
-  	<td></td>
    	<td>Otros:</td>
    	<td>0.00</td>
 	</tr>
 	<tr>
-  	<td></td>
    	<td class="separacion_tabla_final">Neto:</td>
    	<td class="separacion_tabla_final"><%= @precio_total.round(2)+((@precio_total.to_f)*12/100.to_f).round(2) %></td>
 	</tr>
