@@ -62,7 +62,7 @@ class OrdersController < ApplicationController
         
         respond_to do |format|
           if @order.save
-            OrderNotifier.received(@order).deliver
+            OrderNotifier.received(@order,@total_price).deliver
             OrderNotifier.recibido(@order,@total_price).deliver
             format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
             format.json { render json: @order, status: :created, location: @order }

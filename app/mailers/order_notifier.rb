@@ -6,8 +6,9 @@ class OrderNotifier < ActionMailer::Base
   #
   #   en.order_notifier.received.subject
   #
-  def received(order)
+  def received(order,precio_total)
     @order = order
+    @precio_total = precio_total
     @mailer = order
     mail to: order.email, subject: 'Confirmacion de pedido'
   end

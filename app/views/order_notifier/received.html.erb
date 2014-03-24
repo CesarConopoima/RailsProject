@@ -1,10 +1,66 @@
-<h3>Hemos recibido tu orden de compra</h3>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<h3 style="text-align: center;">Estimado <%= @order.nombre %> de <%= @order.empresa %><br >
+	Hemos recibido tu orden de compra</h3>
 <p>
 Queremos hacerte saber que hemos recibido tu orden de compra
-</p>
+<br ></p>
+<p>
+A continuación la resumimos:
+<br ></p>
 <table>
-<tr><th colspan="2">Cantidad</th>
-	<th>Descripcion</th></tr>
+<tr><th>Codigo</th>
+	<th>Modelo</th>
+	<th>Descripcion</th>
+	<th>Cantidad</th>
+	<th>Precio Unitario</th>
+	<th>% I.V.A</th>
+	<th>I.V.A</th>
+	<th>Neto</th>
+	</tr>
 <%= render @order.line_items %>
+</table>
+<table class="tabla_impuesto">
+	<tr>
+	<th>Tasa</th>
+	<th>Base Imponible</th>
+	<th>I.V.A</th>
+	</tr>
+	<tr>
+  	<td>12 %</td>
+   	<td><%= @precio_total.round(2) %></td>
+   	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td class="separacion_tabla">Sub-Total : </td>
+   	<td class="separacion_tabla"><%= @precio_total.round(2) %></td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td>I.V.A.: </td>
+   	<td><%= ((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td>% Desc.:  </td>
+   	<td>0.00</td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td>Recargo:</td>
+   	<td>0.00</td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td>Otros:</td>
+   	<td>0.00</td>
+	</tr>
+	<tr>
+  	<td></td>
+   	<td class="separacion_tabla_final">Neto:</td>
+   	<td class="separacion_tabla_final"><%= @precio_total.round(2)+((@precio_total.to_f)*12/100.to_f).round(2) %></td>
+	</tr>
 </table>	
+<div style="width:100%;text-align:center;">Para más información contactanos en horario de oficina a los teléfonos<br >(0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65</div>
+
 	

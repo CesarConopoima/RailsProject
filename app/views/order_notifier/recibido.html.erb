@@ -23,19 +23,22 @@
 
 <div class="contenido_derecha"><p>La Copelancita De Venezuela, C.A<br ></p>
 	 <p>R.I.F.: j307532556<br ></p>
-	 <p>N.I.T.:<br ></p>
 </div>
 <div class="contenido_izquierda"><p>Fecha de Emision:  <%= Time.now %> <br ></p>
 </div>
 <div class="contenido_derecha_1">
 	<p>Cliente :  <%= @order.nombre %>	<br ></p>
-	<p>Dirección: <%= @order.direccion %><br ></p>
-	<p>Dirección de envio: <%= @order.direccionaux %><br ></p>
-	<p>Telefono: <%= @order.telefono %>	<br ></p>
-	<p>Transporte: <%= @order.tipoenvio %><br ></p>
+	<p>Empresa :  <%= @order.empresa %>	<br ></p>
+	<p>Dirección : <%= @order.direccion %><br ></p>
+	<p>Dirección de envio : <%= @order.direccionaux %><br ></p>
+	<p>Teléfono : <%= @order.telefono %>	<br ></p>
+	<p>Teléfono secundario : <%= @order.telefonoaux %>	<br ></p>
+	<p>Correo Electrónico : <%= @order.email %>	<br ></p>
+	<p>Localidad de Venezuela del cliente : <%= @order.localidadvenezuela %>	<br ></p>
+	<p>Transporte : <%= @order.tipoenvio %><br ></p>
 </div>
 <div class="contenido_izquierda_1">
-	<p>Condic. Pago: <%= @order.tipoPago %><br ></p>
+	<p>Condición de Pago: <%= @order.tipoPago %><br ></p>
 	<p>Vendedor: Compra electrónica	<br ></p>
 </div>	
 <table>
