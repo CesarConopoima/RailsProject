@@ -40,9 +40,17 @@ class OrdersController < ApplicationController
     
     @order = Order.new
     respond_to do |format|
+      @validacion = @order.validate_presence(current_cart)
+      if @validacion[0] != "OK"
+      flash[:notice] = "Solo tenemos disponibles #{@validacion[1]-1} del producto  #{@validacion[0]} "
+      format.html { redirect_to tienda_url}
+      format.json { render json: @order }
+      else
       format.html # new.html.erb
       format.json { render json: @order }
+      end
     end
+    
   end
 
   # GET /orders/1/edit

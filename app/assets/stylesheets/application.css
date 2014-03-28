@@ -38,11 +38,10 @@
  }
 
 #notice {
-  color: #000 !important;
-  border: 2px solid red;
+  border: 2px solid #0D4F8B;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: #f0f0f0;
+  background-color: #4F94CD;
   font: bold smaller sans-serif;
 }
 
