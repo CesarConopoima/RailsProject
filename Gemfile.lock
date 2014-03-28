@@ -50,6 +50,7 @@ GEM
     eventmachine (1.0.3-x86-mingw32)
     excon (0.31.0)
     execjs (2.0.2)
+    galetahub-simple_captcha (0.1.5)
     heroku (3.3.0)
       heroku-api (~> 0.3.17)
       launchy (>= 0.3.2)
@@ -155,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)
+  galetahub-simple_captcha
   heroku
   jbuilder
   jquery-rails

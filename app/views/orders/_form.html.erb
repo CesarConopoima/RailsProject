@@ -55,6 +55,9 @@
     <%= f.select :tipoPago, Order::PAYMENT_TYPES,
     prompt: 'Selecciona tu tipo de pago' %>
   </div>
+   <div class="field">
+  <%= show_simple_captcha(:label => "Escribe los caracteres de la imagen") %>
+  </div>
   <div class="actions">
     <%= f.submit 'Hacer Orden' %>
   </div>

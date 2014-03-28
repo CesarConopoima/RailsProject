@@ -52,33 +52,35 @@ class OrdersController < ApplicationController
 
   # POST /orders
   # POST /orders.json
-  def create
+def create
     @cart = current_cart
-    if !@cart.line_items.empty?
-    @order = Order.new(params[:order])
-    @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
-    @order.add_line_items_from_cart(current_cart)
-    @orderCreate=Order.new(params[:order])
-        
-        respond_to do |format|
-          if @order.save
-            OrderNotifier.received(@order,@total_price).deliver
-            OrderNotifier.recibido(@order,@total_price).deliver
-            format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
-            format.json { render json: @order, status: :created, location: @order }
-            Cart.destroy(session[:cart_id])
-            session[:cart_id] = nil
-          else
-            @cart = current_cart
-            format.html { render action: "new" }
-            format.json { render json: @order.errors, status: :unprocessable_entity }
-          end
+    if simple_captcha_valid?
+        if !@cart.line_items.empty?
+        @order = Order.new(params[:order])
+        @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
+        @order.add_line_items_from_cart(current_cart)
+        @orderCreate=Order.new(params[:order])
+            respond_to do |format|
+              if @order.save
+                OrderNotifier.received(@order,@total_price).deliver
+                OrderNotifier.recibido(@order,@total_price).deliver
+                format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
+                format.json { render json: @order, status: :created, location: @order }
+                Cart.destroy(session[:cart_id])
+                session[:cart_id] = nil
+              else
+                @cart = current_cart
+                format.html { render action: "new" }
+                format.json { render json: @order.errors, status: :unprocessable_entity }
+              end
+            end
+        else
+          redirect_to tienda_url, notice: "Tu pedido no se proceso, tu carro de compras esta vacio"
+        return
         end
     else
-      redirect_to tienda_url, notice: "Tu pedido no se proceso, tu carro de compras esta vacio"
-    return
+      redirect_to tienda_url, notice: "La serie que introdujiste no corresponde con la imagen"
     end
-
   end
 
   # PUT /orders/1

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include SimpleCaptcha::ControllerHelpers
   before_filter :authorize
   protect_from_forgery
   

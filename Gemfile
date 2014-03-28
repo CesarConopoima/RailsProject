@@ -4,6 +4,8 @@ ruby "1.9.3"
 gem 'rails', '3.2.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gema simple captcha para autentificacion humanoide
+gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 gem "heroku"
 group :development, :test do
