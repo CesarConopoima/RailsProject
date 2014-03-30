@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 	has_many :line_items, dependent: :destroy
 	PAYMENT_TYPES = [ "Deposito Bancario" , "Transferencia Bancaria","Pago en la tienda"]
 	SEND_TYPES = [ "MRW" , "ZOOM","DHL","Busqueda en la Tienda"]
-	VENEZUELA_ESTADOS = [ "Anzoategui","Amazonas","Apure","Aragua","Barinas","Bolivar","Carabobo","Cojedes","Delta Amacuro","Distrito Capital","Falcon","Guarico","Lara","Merida","Miranda","Monagas","Nueva Esparta","Portuguesa","Tachira","Trujillo","Yaracuy","Zulia"]
+	VENEZUELA_ESTADOS = [ "Anzoátegui","Amazonas","Apure","Aragua","Barinas","Bolivar","Carabobo","Cojedes","Delta Amacuro","Distrito Capital","Falcon","Guarico","Lara","Merida","Miranda","Monagas","Nueva Esparta","Portuguesa","Tachira","Trujillo","Vargas","Yaracuy","Zulia"]
 	validates :nombre,:presence => { :message => "Este campo debe ser llenado" }
 	validates :empresa,:presence => { :message => "Este campo debe ser llenado" }
 	validates :direccion,:presence => { :message => "Este campo debe ser llenado" }
