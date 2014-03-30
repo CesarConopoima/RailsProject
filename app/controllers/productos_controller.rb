@@ -61,7 +61,7 @@ class ProductosController < ApplicationController
 
     respond_to do |format|
       if @producto.update_attributes(params[:producto])
-        format.html { redirect_to @producto, notice: 'Producto was successfully updated.' }
+        format.html { redirect_to @producto, notice: 'Su producto ha sido actualizado' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

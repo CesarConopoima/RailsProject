@@ -17,8 +17,9 @@
     <td><%= @TotalItem %></td>
     </tr>
 <% else %>
-    <td><%= line_item.quantity %>&times;</td>
+       <td><%= line_item.quantity %>&times;</td>
     <td><%= line_item.producto.nombre %></td>
     <td class="item_price"><%= number_to_currency(line_item.total_price, :unit => "Bsf ")    %></td>
-    </tr>
+    <td><%= button_to "-", decrease_line_item_path(line_item), :method => :put, remote: true %></td>
+    <td><%= button_to "+10", increase_line_item_path(line_item), :method => :put, remote: true %></td>
 <% end %>

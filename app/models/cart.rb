@@ -27,7 +27,7 @@ class Cart < ActiveRecord::Base
 
   def increase(line_item_id)
     current_item = line_items.find(line_item_id)
-    current_item.quantity += 1
+    current_item.quantity += 10
     current_item
   end
 end
