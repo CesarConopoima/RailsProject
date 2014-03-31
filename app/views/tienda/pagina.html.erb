@@ -1,6 +1,10 @@
 <style type="text/css">
-div.lista { float:left; padding-right:30px;padding-top: 10px;text-align:center;width: 100px }
+div.lista { float:left; padding-left:40px;padding-top: 12px;text-align:center;width: 100px;font-size: 85%;}
 .clearBoth { clear:both; }
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {background-color:#FF704D;}
+a:active {background-color:#FF704D;}
 </style>
 <% if notice %>
 <p id="notice"><%= notice %></p>
@@ -9,7 +13,7 @@ div.lista { float:left; padding-right:30px;padding-top: 10px;text-align:center;w
 	<% @k = 0 %>
 	<% @productos2.each do |producto| %>
 		<div class="lista">
-	<%= link_to "#{producto.nombres}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombres.downcase}") %>
+	<%= link_to "#{producto.nombres.downcase.capitalize}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombres.downcase}") %>
 		</div>
 		<% @k+=1 %>
 		<% if @k == 3 %>
