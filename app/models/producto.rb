@@ -20,7 +20,7 @@ class Producto < ActiveRecord::Base
 
 	def self.search(search)  
 	     if search  
-	      where('nombre LIKE ? OR codigo LIKE ? OR marca LIKE ?',"%#{search}%","%#{search}%","%#{search}%").limit(12)  
+	      where('nombre LIKE ? OR codigo LIKE ? OR marca LIKE ?',"%#{search.upcase}%","%#{search.upcase}%","%#{search.downcase.capitalize}%").limit(12)  
 	    else
 	      where('imageurl NOT LIKE ?', "logo%").order("RANDOM()").limit(6)
 	    end  
