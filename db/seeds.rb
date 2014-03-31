@@ -8,7 +8,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Producto.delete_all
-Producto.create(nombre:'AISLANTE PARA LA BORNERA MOD 06D',codigo:'AIS-1620',marca:'Carrier',cantidad:100,precio:0.37,imageurl:'logo/no_dispo.jpg',modelo:'06D')
 Producto.create(nombre:'AISLANTE PARA LA BORNERA 06E',codigo:'AIS-1669',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'vacio')
 Producto.create(nombre:'ALMOHADILLA DE METAL MOD 06D/05D/5G',codigo:'ALM-1805',marca:'Carrier',cantidad:100,precio:0.58,imageurl:'logo/no_dispo.jpg',modelo:'06D/05D/5G')
 Producto.create(nombre:'ALMOHADILLAS MOD 06E',codigo:'ALM-1890',marca:'Carrier',cantidad:100,precio:2.74,imageurl:'logo/no_dispo.jpg',modelo:'06E')
