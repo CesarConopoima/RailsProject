@@ -3,10 +3,10 @@
 <% end %>
 <h1>Tu tienda virtual</h1>
 <%= form_tag tienda_path, :method => 'get', :id => "productos_search" do %>
-    <h3>Busqueda tu Producto por el codigo que lo identifica</h3>
+    <h3>Busca tu Producto por Nombre o Código</h3>
     <p style="font-style:italic;font-size:12px;font-color:gray;">
-    	En este cambo escribiras el código de tu producto
-    </p>    
+    	Busqueda de un solo campo a la vez
+    </p>  
     <p>  
     <%= text_field_tag :search, params[:search] %>  
     <%= submit_tag "Buscar", :nombre => nil %>  

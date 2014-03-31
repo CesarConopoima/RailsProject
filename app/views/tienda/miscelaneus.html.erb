@@ -1,11 +1,15 @@
 <style type="text/css">
-div.lista { float:left; padding-right:30px;padding-top: 10px;text-align:center;width: 100px }
+div.lista { float:left; padding-left:35px;padding-top: 10px;text-align:center;width: 100px }
 .clearBoth { clear:both; }
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {background-color:#FF704D;}
+a:active {background-color:#FF704D;}
 </style>
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Productos <%= @marca.capitalize %></h1> 
+<h1>Productos marca <%= @marca.capitalize %> Miscelaneus</h1> 
 	<% @k = 0 %>
 	<% @productoMis.each do |producto| %>
 		<div class="lista">
