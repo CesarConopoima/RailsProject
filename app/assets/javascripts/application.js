@@ -21,14 +21,11 @@ $(document).ready(function(){
   var h1 = $( "img.catalogo" ).height();
   $("img.catalogo").click(function(){
     if (w1 != $( "img.catalogo" ).width() )
-  {
+    {
  	$(this).width( w1 );
     $(this).height( h1 );
-  }
-  	else
-  	{
-    $(this).animate({width:'150px',height:'125px'},"slow");
     }
+  	else{$(this).animate({width:'150px',height:'125px'},"slow");}
   });
 });
 
