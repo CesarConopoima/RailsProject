@@ -72,10 +72,11 @@ def create
               if @order.save
                 OrderNotifier.received(@order,@total_price).deliver
                 OrderNotifier.recibido(@order,@total_price).deliver
-                format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
-                format.json { render json: @order, status: :created, location: @order }
                 Cart.destroy(session[:cart_id])
                 session[:cart_id] = nil
+                
+                format.html { redirect_to tienda_url, notice: 'Gracias por tu orden, te hemos enviado un correo con el resumen de tu pedido' }
+                format.json { render json: @order, status: :created, location: @order }
               else
                 @cart = current_cart
                 format.html { render action: "new" }
