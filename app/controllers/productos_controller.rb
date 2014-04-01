@@ -58,7 +58,6 @@ class ProductosController < ApplicationController
   # PUT /productos/1.json
   def update
     @producto = Producto.find(params[:id])
-    @producto = Producto.new(params[:imagenagregada])
 
     respond_to do |format|
       if @producto.update_attributes(params[:producto])
