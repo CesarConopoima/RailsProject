@@ -189,7 +189,7 @@ Producto.create(nombre:'SLEEVE PARA COMPRESOR MOD 5H',codigo:'SLE-1752',marca:'C
 Producto.create(nombre:'VALVULA RELIEF CARRIER. MOD 06E',codigo:'VAL-1920',marca:'Carrier',cantidad:100,precio:38.87,imageurl:'logo/no_dispo.jpg',modelo:'06E')
 Producto.create(nombre:'VALVULA DE SERVICIO 1 1/8" DE BAJA MOD. 06D',codigo:'VAL-2095',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'. 06D')
 Producto.create(nombre:'VALVULA DE SERVICIO LADO DESCARGA 1 1/2 CARRIER',codigo:'VAL-2096',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'vacio')
-Producto.create(nombre:'VALV.DE SERVICIO 1 5/8" MOD.',codigo:'VAL-2097',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'.')
+Producto.create(nombre:'VALVULA DE SERVICIO 1 5/8" MOD.',codigo:'VAL-2097',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'.')
 Producto.create(nombre:'VALVULA DE SERVICIO 2 1/8"  (4 TORNILLOS)',codigo:'VAL-2099',marca:'Carrier',cantidad:100,precio:1.0,imageurl:'logo/no_dispo.jpg',modelo:'vacio')
 Producto.create(nombre:'VALVULA DE SERVICIO 7/8" MOD. 06E',codigo:'VAL-3009',marca:'Carrier',cantidad:100,precio:148.89,imageurl:'logo/no_dispo.jpg',modelo:'. 06E')
 Producto.create(nombre:'VALVULA DE SERVICIO 1 1/8" MOD.06D',codigo:'VAL-3010',marca:'Carrier',cantidad:100,precio:148.89,imageurl:'logo/no_dispo.jpg',modelo:'.06D')
