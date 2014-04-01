@@ -246,7 +246,7 @@ background:#EBEFF7;
     text-decoration: none;
     color: #105cb6;
     border: 1px solid #9aafe5; }
-    .digg_pagination a:hover, .digg_pagination a:focus {
+  .digg_pagination a:hover, .digg_pagination a:focus {
       color: #6ca0bb;
       border-color: #6ca0bb; }
   .digg_pagination .page_info {
