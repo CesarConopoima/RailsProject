@@ -223,4 +223,19 @@ color:#3B5998;
 background:#EBEFF7;
 }  
 
+.entry {
+    width: 220px;
+    min-height: 90px;
+    height: 205px;
+    float:left;
+    display:block;
 
+    img.catalogo {
+      width: 67px;
+      margin-right: 10px;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      position: absolute;
+      z-index:1;
+    }
+  }
