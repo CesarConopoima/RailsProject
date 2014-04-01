@@ -70,8 +70,8 @@ Aplicacion::Application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'gmail.com',
-  user_name:            'cesar.conopoima@gmail.com',
-  password:             '516204045',
+  user_name:            'copelancitadevenezuela@gmail.com',
+  password:             'copelancita123456789',
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
