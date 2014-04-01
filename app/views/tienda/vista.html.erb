@@ -37,4 +37,4 @@
 			<div style="text-align:center;z-index:1;margin-top:12px;margin-bottom:5px;"><%= producto.codigo %></div>
 	</div>
 <% end %>
-<p><%= will_paginate @productos2 %></p>
+<%= will_paginate @productos2, :previous_label => 'Anterior', :next_label => 'Siguiente' ,:class => 'digg_pagination',:id => 'digg_pagination' %>
