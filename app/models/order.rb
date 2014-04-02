@@ -3,10 +3,11 @@ class Order < ActiveRecord::Base
 	PAYMENT_TYPES = [ "Deposito Bancario" , "Transferencia Bancaria","Pago en la tienda"]
 	SEND_TYPES = [ "MRW" , "ZOOM","DHL","Busqueda en la Tienda"]
 	VENEZUELA_ESTADOS = [ "Anzoategui","Amazonas","Apure","Aragua","Barinas","Bolivar","Carabobo","Cojedes","Delta Amacuro","Distrito Capital","Falcon","Guarico","Lara","Merida","Miranda","Monagas","Nueva Esparta","Portuguesa","Tachira","Trujillo","Vargas","Yaracuy","Zulia"]
-	validates :nombre,:presence => { :message => "Este campo debe ser llenado" }
-	validates :empresa,:presence => { :message => "Este campo debe ser llenado" }
+	validates :nombre,:presence => { :message => "Este campo debe ser llenado" }, length: { maximum: 15 }
+	validates :empresa,:presence => { :message => "Este campo debe ser llenado" }, length: { maximum: 30 }
 	validates :direccion,:presence => { :message => "Este campo debe ser llenado" }
-	validates :email,:presence => { :message => "Este campo debe ser llenado" }
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	validates :email,:presence => { :message => "Este campo debe ser llenado" },format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
 	validates :telefono,:presence => { :message => "Este campo debe ser llenado" }
 	validates :direccionaux,:presence => { :message => "Este campo debe ser llenado" }
 	validates :telefonoaux,:presence => { :message => "Este campo debe ser llenado" }
