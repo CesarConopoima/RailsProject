@@ -1,3 +1,23 @@
 // Place all the styles related to the Vista controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.empresa {
+	.Personal{
+	width:95%;
+	margin-top:10px;
+	margin-right:10px;
+	margin-left:10px;
+	}
+	p{
+	font-family: verdana, sans-serif;
+ 	font-size: 12px;
+	text-align: justify;
+	margin-right:10px;
+	margin-left:10px;
+	}
+	h3{
+	color:#333333;
+	margin-left:10px;
+	}
+}
