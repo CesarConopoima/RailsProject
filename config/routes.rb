@@ -25,6 +25,8 @@ Aplicacion::Application.routes.draw do
 
   get "tienda/vistaDetalle"
 
+  resources :vista
+
   resources :productos do
     get :who_bought, on: :member
   end
