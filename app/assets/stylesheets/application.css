@@ -24,13 +24,19 @@
   }
 }
 
+#body  {
+    background: linear-gradient(#0a2544 , white) no-repeat;
+    background-size: 21000% auto, 21000% auto;
+} 
+
 #contenido{
 	width:70%;
 	min-width:1000px;
 	position:absolute;
 	left: 0;
-    right: 0;
-    margin: auto;
+  right: 0;
+  margin: auto;
+  background: white;
 	}
 
 #columns {
