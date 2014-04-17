@@ -3,13 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .carts,#side #cart {
   h2, .cart_title {
-  color:#333333;
+  color:#2a2a2a;
   text-align:center;
-	}
-	
+  }
+  
   .item_price, .total_line {
     font-size:10px;
     text-align: right;
+  }
+
+  .item_quantity, .item_nombre {
+    font-size:10px;
+    text-align: center;
   }
 
   .total_line .total_cell {
@@ -18,8 +23,9 @@
     font-weight: bold;
     border-top: 1px solid #0D4F8B;
   }
-   input.button1 {
-      width:100%;
+
+  input.button1 {
+      width:98%;
       border:0;
       margin-top:20px;
       color:white;
@@ -32,7 +38,7 @@
     background:#e59400;
     }
   input.button2 {
-      width:100%;
+      width:98%;
       border:0;
       margin-top:5px;
       color:white;
@@ -54,7 +60,7 @@
       display:inline;
     }
     input.buttonMas:hover {
-      background:#329932;
+      background:#66b266;
     }
     input.buttonMenos {
       border:0;

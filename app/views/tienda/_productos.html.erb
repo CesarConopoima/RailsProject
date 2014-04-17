@@ -6,7 +6,7 @@
             <% else %>
             <%= image_tag(producto.imageurl, class: 'catalogo') %>
             <% end %>
-			<h4><%= producto.marca %></h4>
+			<h4 class="price_line"><%= producto.marca %></h4>
 			<div class="price_line">
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
 				<% if producto.cantidad >= 2 %>

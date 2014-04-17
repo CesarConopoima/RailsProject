@@ -13,6 +13,7 @@
 */
 
 
+
 #banner {
   background: #bfcada;
   padding: 5px;
@@ -47,13 +48,13 @@ background:#5b5b5b;
 
 
 #contenido{
-  width:70%;
+  width:87%;
   min-width:1000px;
   position:absolute;
   left: 0;
   right: 0;
   margin: auto;
-  background: #f5ede3;
+  background: white;
   }
 
 
@@ -201,11 +202,11 @@ margin:-1px;
 }
 
 #footer {
- clear: both;
- position: relative;
- z-index: 10;
- height: 150px;
- background: #e4e7e9;
+clear: both;
+position: relative;
+z-index: 10;
+height: 150px;
+background: #e4e7e9;
  z-index: 1;
 }
 

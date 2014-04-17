@@ -7,6 +7,15 @@
     border-collapse: collapse;
   }
 
+img.catalogo {
+      width: 20px;
+      margin-right: 10px;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      position: absolute;
+      z-index:-1;
+    }
+    
   table tr td {
     padding: 5px;
     vertical-align: top;
