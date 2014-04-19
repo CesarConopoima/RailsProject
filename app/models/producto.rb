@@ -20,7 +20,7 @@ class Producto < ActiveRecord::Base
 
 	def self.search(search)  
 	     if search  
-	      where('nombre LIKE ? OR codigo LIKE ? OR marca LIKE ?',"%#{search.upcase}%","%#{search.upcase}%","%#{search.downcase.capitalize}%").limit(12)  
+	      where('nombre LIKE ? OR codigo LIKE ? OR marca LIKE ?',"%#{search.upcase}%","%#{search.upcase}%","%#{search.downcase.capitalize}%").limit(10)  
 	    else
 	      where('imageurl NOT LIKE ?', "logo%").order("RANDOM()").limit(6)
 	    end  
@@ -28,9 +28,13 @@ class Producto < ActiveRecord::Base
 
 
   	def self.vista(marca,nombre)
-  		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre.split(" ").first.upcase}%")
+  		where('marca LIKE ? AND nombre LIKE ? AND modelo LIKE ?',"#{marca}","#{nombre.split(" ").first.upcase}%","#{modelo}")
   	end
-
+	
+	def self.pagina2(marca,nombre)
+  		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre}%").group("nombre").group("modelo")
+  	end
+  	
   	def self.marcas
   		 find_by_sql("select marca from productos group by marca")
   	end

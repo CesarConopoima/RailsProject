@@ -19,6 +19,8 @@ Aplicacion::Application.routes.draw do
 
   get "tienda/pagina"
 
+  get "tienda/pagina2"
+
   get "tienda/vista"
 
   get "tienda/miscelaneus"

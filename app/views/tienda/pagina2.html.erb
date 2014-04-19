@@ -1,5 +1,5 @@
 <style type="text/css">
-div.lista { float:left; padding-left:40px;padding-top: 12px;text-align:center;width: 100px;font-size: 90%;}
+div.lista { float:left; padding-left:15px;padding-top: 12px;text-align:center;width: 210px;font-size: 80%;}
 .clearBoth { clear:both; }
 a:link {text-decoration:none;}
 a:visited {text-decoration:none;}
@@ -9,16 +9,15 @@ a:active {background-color:#6ca0bb;}
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h1>Productos <%= @marca.capitalize %></h1> 
+<h1><%= @nombre.downcase.capitalize.pluralize %> <%= @marca.capitalize %></h1> 
 	<% @k = 0 %>
 	<% @productos2.each do |producto| %>
 		<div class="lista">
-	<%= link_to "#{producto.nombres.downcase.capitalize}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombres.downcase}") %>
+	<%= link_to "#{producto.nombre.upcase.gsub("/"," ")}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombre.downcase}", :modelo => "#{producto.modelo}") %>
 		</div>
 	<% @k+=1 %>
-	<% if @k == 3 %>
+	<% if @k == 2 %>
 		<br class="clearBoth" />
 	<% @k = 0 %>
 	<% end %>
 <% end %>
-	

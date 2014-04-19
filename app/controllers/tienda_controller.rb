@@ -24,6 +24,19 @@ class TiendaController < ApplicationController
     @productoMis = Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca like '#{@marca}' group by nombres having count(*) <= 2")  
   end
 
+    def pagina2
+        @cart = current_cart
+        @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 2 order by nombres")
+        @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 2 order by nombres")
+        @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' group by nombres order by nombres")
+        @productoYork=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'York' group by nombres order by nombres")
+        @productos1 = Producto.find_by_sql("select marca from productos group by marca order by marca")
+        @marca = params[:marca].downcase.capitalize
+        @nombre = params[:nombre].split(" ")[0].upcase
+        @productos2 = Producto.pagina2(@marca,@nombre)
+        @productoMis = Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca like '#{@marca}' group by nombres having count(*) <= 2")  
+    end
+
   def vista
     @cart = current_cart
     @productos = Producto.search(params[:search])
