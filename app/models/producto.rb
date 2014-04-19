@@ -32,7 +32,7 @@ class Producto < ActiveRecord::Base
   	end
 	
 	def self.pagina2(marca,nombre)
-  		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre}%").group("nombre").group("modelo")
+  		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre}%").group("nombre")
   	end
 
   	def self.marcas
