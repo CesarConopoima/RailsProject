@@ -34,7 +34,7 @@ class TiendaController < ApplicationController
         @marca = params[:marca].downcase.capitalize
         @nombre = params[:nombre].split(" ")[0].upcase
        ## @productos2 = Producto.pagina2(@marca,@nombre)
-        @productos2 = Producto.find_by_sql("select * from productos where nombre like '#{@nombre}%' and marca like '#{@marca}' group by nombre")
+        @productos2 = Producto.find_by_sql("select nombre,count(*) AS number from productos where nombre like '#{@nombre}%' and marca like '#{@marca}' group by nombre having count(*) <= 1")
         @productoMis = Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca like '#{@marca}' group by nombres having count(*) <= 2")  
     end
 
