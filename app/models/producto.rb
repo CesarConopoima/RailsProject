@@ -27,14 +27,14 @@ class Producto < ActiveRecord::Base
   	end 
 
 
-  	def self.vista(marca,nombre)
+  	def self.vista(marca,nombre,modelo)
   		where('marca LIKE ? AND nombre LIKE ? AND modelo LIKE ?',"#{marca}","#{nombre.split(" ").first.upcase}%","#{modelo}")
   	end
 	
 	def self.pagina2(marca,nombre)
   		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre}%").group("nombre").group("modelo")
   	end
-  	
+
   	def self.marcas
   		 find_by_sql("select marca from productos group by marca")
   	end

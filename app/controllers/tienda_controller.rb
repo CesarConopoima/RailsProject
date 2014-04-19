@@ -47,7 +47,8 @@ class TiendaController < ApplicationController
     @productos1 = Producto.find_by_sql("select marca from productos group by marca order by marca")
     @marca = params[:marca].downcase.capitalize
     @nombre = params[:nombre].split(" ").first.upcase 
-    @productos2 = Producto.vista(params[:marca],params[:nombre]).paginate(:page => params[:page], :per_page => 6)
+    @modelo = params[:modelo]
+    @productos2 = Producto.vista2(@marca,@nombre,@modelo).paginate(:page => params[:page], :per_page => 6)
     @productoMis = Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca like '#{@marca}' group by nombres having count(*) <= 2") 
   end 
 
