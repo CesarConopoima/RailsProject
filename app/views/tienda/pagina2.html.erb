@@ -13,7 +13,7 @@ a:active {background-color:#6ca0bb;}
 	<% @k = 0 %>
 	<% @productos2.each do |producto| %>
 		<div class="lista">
-	<%= link_to "#{producto.nombre.upcase.gsub("/"," ")}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombre.downcase}") %>
+	<%= link_to "#{producto.nombre.upcase.gsub("/"," ")}", tienda_vista_path(:marca => "#{@marca}", :nombre => "#{producto.nombre}") %>
 		</div>
 	<% @k+=1 %>
 	<% if @k == 2 %>
