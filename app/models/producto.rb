@@ -27,8 +27,8 @@ class Producto < ActiveRecord::Base
   	end 
 
 
-  	def self.vista(marca,nombre,modelo)
-  		where('marca LIKE ? AND nombre LIKE ? AND modelo LIKE ?',"#{marca}","#{nombre.split(" ").first.upcase}%","#{modelo}")
+  	def self.vista(marca,nombre)
+  		where('marca LIKE ? AND nombre LIKE ?',"#{marca}","#{nombre.split(" ").first.upcase}%")
   	end
 	
 	def self.pagina2(marca,nombre)
