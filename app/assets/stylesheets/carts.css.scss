@@ -12,8 +12,14 @@
     text-align: right;
   }
 
-  .item_quantity, .item_nombre {
+   .item_nombre {
     font-size:10px;
+    text-align: center;
+  }
+  .item_quantity {
+    font-size:13px;
+    font-family:cursive;
+    font-weight:bold;
     text-align: center;
   }
 
@@ -65,12 +71,12 @@
     input.buttonMenos {
       border:0;
       color:black;
-      background:#ff9999;
+      background:#beddef;
       height:25px;
       text-font:60%;
       display:inline;
     }
     input.buttonMenos:hover {
-      background:#ff7f7f;
+      background:#9dcde7;
     }
 }

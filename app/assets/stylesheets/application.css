@@ -76,6 +76,7 @@ background:#5b5b5b;
 
  #main {
  position:relative;
+ min-height: 600px;
  float: left;
  width: 47%;
  margin-right: 1em;
