@@ -56,12 +56,6 @@ background:#5b5b5b;
   margin: auto;
   background: white;
   }
-
-
-#columns {
- background: white;
- }
-
 #notice {
   border: 2px solid #ff6666;
   padding: 1em;
@@ -69,22 +63,10 @@ background:#5b5b5b;
   background-color: #ffe5e5;
   font: bold smaller sans-serif;
 }
-
 #columns {
+  min-width: 1050px;
   background: #141;
 }
-
- #main {
- position:relative;
- min-height: 600px;
- float: left;
- width: 47%;
- margin-right: 1em;
- padding: 0;
- background: white;
-  z-index: 0;
- }
-
 #side_1{
   position:relative;
     float: left;
@@ -94,14 +76,27 @@ background:#5b5b5b;
     z-index: 1;
     margin-right:8px;
 }
+ #main {
+ position:relative;
+ min-width: 515px;
+ max-width: 517px;
+ min-height: 650px;
+ float: left;
+ width: 47%;
+ margin-right: 1em;
+ padding: 0;
+ background: white;
+  z-index: 0;
+ }
+
   #side {
     position:relative;
     float: left;
+    min-width: 285px;
     padding: 0;
     width: 27%;
     background: white;
   }
-
 .ui-menu {
   list-style: none;
   padding: 2px;

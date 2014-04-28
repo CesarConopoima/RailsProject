@@ -21,7 +21,27 @@
 	margin-left:10px;
 	}
 }
-
+.inicio { 
+	.barraBusqueda{
+	width:100%;
+	height:125px;
+	background: linear-gradient(#8492a1 , white) no-repeat;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: #0a2544;
+  	font-style:italic;
+	}
+	h4{
+	padding-top:15px;
+	font-size: 20px;
+    font-family: ‘Arial Black’, Gadget, sans-serif;
+    font-style:italic;
+    padding-left:10px;
+	}
+	p{
+	font-size: 12px;
+	padding-left:10px;
+	}
+}
 .servicio {
 $dimension: 150px;
 $marginrigth:15px;
