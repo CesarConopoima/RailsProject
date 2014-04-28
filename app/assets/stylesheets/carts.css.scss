@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .carts,#side #cart {
   h2, .cart_title {
-  color:#2a2a2a;
+  font-size: 25px;
+  font-family: ‘Arial Black’, Gadget, sans-serif;
+  color: white;
   text-align:center;
+  background:#0a2544;
+  height:32px;
+  line-height:120%;
   }
   
   .item_price, .total_line {

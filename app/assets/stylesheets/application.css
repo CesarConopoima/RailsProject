@@ -274,3 +274,40 @@ color:#063859;
 background-color:#c9cfd3;
 margin:-1px;
 }
+
+#imgCompresores{
+width: 100%;
+text-align: center;
+}
+
+#imgCompresores img{
+margin-top: 30px;
+width:125px;
+height: 115px;
+z-index: 1;
+}
+
+.servicio2 img{
+  width: 100%;
+}
+
+.servicio2 h2{
+  font-size: 20px;
+  font-family: ‘Arial Black’, Gadget, sans-serif;
+  color: white;
+  text-align:center;
+  background:#0a2544;
+  height:30px;
+  line-height:130%;
+  text-align: center;
+}
+.servicio2 h4{
+  font-size: 15px;
+  font-family: ‘Arial Black’, Gadget, sans-serif;
+  color: white;
+  text-align:center;
+  background:#0a2544;
+  height:20px;
+  line-height:120%;
+  text-align: center;
+}
