@@ -51,10 +51,14 @@
 	font-size: 12px;
 	padding-left:10px;
 	}
-	img{
+	div.slideShow{
 	width:100%;
-	position:relative;
-	padding-top:20px;
+	margin-top:25px;
+	border-style:double;
+	border-width:5px;
+	border-color:#495a64;
+	border-radius:5px;
+	content:url(/assets/SlideShow/EnsambladosCopeland.jpg);
 	}
 }
 
