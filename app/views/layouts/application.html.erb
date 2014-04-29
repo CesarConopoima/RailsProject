@@ -31,7 +31,7 @@
 	</div>
 	<div id="side" class="inline">
 		<% if @cart %>
-		<div id="cart" style="position:fixed;width:27%;">
+		<div id="cart">
 			<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 			<%= render @cart %>
 			<% end %>

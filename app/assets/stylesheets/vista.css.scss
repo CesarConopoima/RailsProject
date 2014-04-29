@@ -20,7 +20,17 @@
 	color:#333333;
 	margin-left:10px;
 	}
+	div.slideShow{
+	width:100%;
+	margin-top:30px;
+	border-style:double;
+	border-width:5px;
+	border-color:#495a64;
+	border-radius:5px;
+	content:url(/assets/SlideShow/EnsambladosCopeland.jpg);
+	}
 }
+
 .inicio { 
 	.barraBusqueda{
 	width:100%;
@@ -41,15 +51,20 @@
 	font-size: 12px;
 	padding-left:10px;
 	}
+	img{
+	width:100%;
+	position:relative;
+	padding-top:20px;
+	}
 }
+
 .servicio {
-$dimension: 150px;
+$dimension: 152px;
 $marginrigth:15px;
 $marginleft:40px;
 $margintop:15px;
 $opcty1:140%;	
 $opcty:250%;	
-
 	h1{
 	margin-top: 20px;
     padding-bottom: 0.5em;
@@ -121,7 +136,7 @@ $opcty:250%;
 	height:(1+1/4)*$dimension;
 	float:left;
 	margin-left:$marginleft/6;
-    margin-top:10px;
+     margin-top:10px;
     margin-bottom:10px;
     z-index:2;
 	}
@@ -134,8 +149,8 @@ $opcty:250%;
 	float:right;
 	margin-right:$marginrigth*(3/4);
 	margin-bottom:10px;
-	width:$dimension*(1+1/4);
-	height:$dimension*(1+1/4);
+	width:$dimension*(5/4);
+	height:$dimension*(5/4);
 	z-index:2;
 	}
 	.imagenesProceso img.imgProc6{
@@ -170,7 +185,7 @@ $opcty:250%;
 	border-width:10px;
 	border-color:#495a64;
 	border-radius:5px;
-	margin-left:$marginleft*1/6;
+	margin-left:$marginleft*1/2;
 	margin-top:$margintop*(2);
 	width:$dimension*(2/3);
 	height:$dimension*(2/3);
@@ -251,8 +266,8 @@ $opcty:250%;
 	float:right;
 	margin-right:$marginrigth*(3/4);
 	margin-bottom:10px;
-	width:$dimension*(1+1/4);
-	height:$dimension*(1+1/4);
+	width:$dimension*(5/4);
+	height:$dimension*(5/4);
 	z-index:2;
 	-webkit-filter: brightness($opcty);
   	-moz-filter: brightness($opcty);
@@ -304,7 +319,7 @@ $opcty:250%;
 	border-width:10px;
 	border-color:#495a64;
 	border-radius:5px;
-	margin-left:$marginleft*1/6;
+	margin-left:$marginleft*1/2;
 	margin-top:$margintop*(2);
 	width:$dimension*(2/3);
 	height:$dimension*(2/3);
