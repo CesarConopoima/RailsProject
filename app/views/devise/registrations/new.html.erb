@@ -1,0 +1,86 @@
+<style>
+h2 {font-size: 20px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:30px;
+  	line-height:130%;
+	margin-top: 25px;}
+h3 {font-size: 15px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:20px;
+  	line-height:130%;
+	margin-top: 15px;}
+div.labels{
+	font-size: 12px;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
+}
+input[type=submit] {
+	border: 0;
+	color:white;
+    background:#333333;
+    height:25px;
+}
+ input[type=submit]:hover {
+    background:#e59400;
+    height:25px;
+    }
+a{
+	text-decoration: none;
+}
+a:hover{
+	background: #708090;
+}
+p{
+color:#F46767;
+font-weight:bold;
+}
+</style>
+
+
+<h2>Crear una cuenta</h2>
+<h3>Datos Personales:</h3>
+<p>*Todos los campos deben ser llenados*</p>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<div class = "labels"><%= f.label :Nombre %><br />
+ 	 <%= f.text_field :nombre %></div>
+
+<div class = "labels"><%= f.label :Apellido %><br />
+ 	 <%= f.text_field :apellido %></div>
+
+<div class = "labels"><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+<h3>Datos de la empresa:</h3>
+<div class = "labels"><%= f.label :Nombre_de_la_empresa %><br />
+ 	 <%= f.text_field :nombreEmpresa %></div>
+<div class = "labels"><%= f.label :Telefono %><br />
+ 	 <%= f.text_field :telefono %></div>
+ <div class = "labels"><%= f.label :RIF_Empresa %><br />
+ 	 <%= f.text_field :rifEmpresa %></div>
+<h3>Dirección:</h3>
+<div class = "labels"><%= f.label :Dirección %><br />
+ 	 <%= f.text_field :direccion %></div>
+<div class = "labels"><%= f.label :Código_Postal %><br />
+ 	 <%= f.text_field :codigoPostal %></div>
+<div class = "labels"><%= f.label :Estado_de_Venezuela %><br />
+ 	 <%= f.select :localidadVenezuela, User::VENEZUELA_ESTADOS, 
+    prompt: 'Selecciona tu región' %></div>
+<h3>Contraseña:</h3>
+  <div class = "labels"><%= f.label :contraseña %><br />
+  <%= f.password_field :password %></div>
+
+  <div class = "labels"><%= f.label :confimar_contraseña %><br />
+  <%= f.password_field :password_confirmation %></div>
+  <div class="labels">
+  <%= show_simple_captcha(:label => "Demuestra que eres humano") %>
+  </div>
+
+  <div class = "labels"><%= f.submit "Crear cuenta" %></div>
+<% end %>
+
+<div class = "labels"><%= render "devise/shared/links" %></div>

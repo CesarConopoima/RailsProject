@@ -33,7 +33,7 @@
 				<div class="price" style="color:#F46767;font-weight:bold">Agotado</div>	
 				<% end %>
 			</div>
-			<div style="text-align:center;z-index:1;margin-top:12px;margin-bottom:5px;"><%= producto.codigo %></div>
+			<div class="codigo"><%= producto.codigo %></div>
 	</div>
 <% end %>
 <%= will_paginate @productos2, :previous_label => 'Anterior', :next_label => 'Siguiente' ,:class => 'digg_pagination',:id => 'digg_pagination' %>

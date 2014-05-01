@@ -1,0 +1,7 @@
+<p>Hola <%= @resource.email %>!</p>
+
+<p>Tu cuenta fue bloqueada debido a un execivo número de intentos de ingreso no exitosos.</p>
+
+<p>Click en link abajo para desbloquear tu cuenta</p>
+
+<p><%= link_to 'Desbloque mi cuenta', unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>

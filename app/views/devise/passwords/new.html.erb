@@ -1,0 +1,50 @@
+<style>
+h2 {font-size: 20px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:30px;
+  	line-height:130%;
+	margin-top: 25px;}
+h3 {font-size: 15px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:20px;
+  	line-height:130%;
+	margin-top: 15px;}
+div.labels{
+	text-align: center;
+	font-size: 12px;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
+}
+input[type=submit] {
+	border: 0;
+	color:white;
+    background:#333333;
+    height:25px;
+}
+ input[type=submit]:hover {
+    background:#e59400;
+    height:25px;
+    }
+a{
+	text-decoration: none;
+}
+a:hover{
+	background: #708090;
+}
+</style>
+
+<h2>Olvidaste tu contraseña?</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class = "labels"><%= f.label :email %><br />
+  <%= f.email_field :email, :autofocus => true %></div>
+
+  <div class = "labels"><%= f.submit "Enviar instrucciones para definir nueva contraseña" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SimpleCaptcha::ControllerHelpers
-  before_filter :authorize
+  skip_before_filter :authorize, only: [:devise]
   protect_from_forgery
   
   private
@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
 		session[:cart_id] = cart.id
 		cart
 	end
+  def has_role?(current_user, role)
+    return !!current_user.roles.find_by_name(role.to_s.camelize)
+  end
 
   protected
 

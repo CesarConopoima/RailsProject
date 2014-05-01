@@ -1,4 +1,6 @@
 Aplicacion::Application.routes.draw do
+  devise_for :users
+
   resources :orders
 
   resources :line_items
@@ -48,6 +50,9 @@ Aplicacion::Application.routes.draw do
   resources :usuarios
 
   root to: 'tienda#index', as: 'tienda'
+
+  devise_for :users, :path_names => {:sign_in => "login", :sign_out => "logout"}, :path => "d"
+  resources :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,5 +1,5 @@
 class ProductosController < ApplicationController
-  skip_before_filter :authorize, only: [:index]
+  before_filter :authorize
   # GET /productos
   # GET /productos.json
   def index
