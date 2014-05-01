@@ -14,13 +14,24 @@
 
 
   .entry {
+    position:relative;
     width: 235px;
     min-height: 220px;
     height: 205px;
     float:left;
     display:block;
     marging-left:25px;
-  
+    
+    a{
+    color:#44a;
+    text-decoration: none;
+    }
+    
+    a:hover{
+    color:white;
+    background: #708090 ;
+    }
+
    img.catalogo {
       width: 80px;
       margin-right: 10px;
@@ -37,8 +48,11 @@
       margin-left: 30px;
     }
     div.codigo{
-    text-align:center;
-    padding-top:200;
+    position:absolute;
+    bottom: 0;
+    color: #44a;
+    font-weight:bold;
+    left: 35%;
     }
     h3 {
       font-size: 100%;

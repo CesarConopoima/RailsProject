@@ -1,3 +1,25 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.orders{
+	h2 {font-size: 20px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:30px;
+  	line-height:130%;
+	margin-top: 25px;
+	text-align:center;}
+	h3 {font-size: 15px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:20px;
+  	line-height:130%;
+	margin-top: 15px;}
+	p{
+	color:#F46767;
+	font-weight:bold;
+	}
+}

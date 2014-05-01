@@ -10,12 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+<h2>Escriba los detalles del comprador aquí</h2>
+<p>*Todos los campos deben ser llenados*</p>
+<h3>Datos Personales:</h3>
   <div class="field">
-    <p style="color:#F46767;font-weight:bold">*Todos los campos deben ser llenados*</p>
     <%= f.label :nombre %><br />
     <%= f.text_field :nombre, size: 20 %>
   </div>
+<h3>Datos de la empresa:</h3>
   <div class="field">
     <%= f.label :empresa %><br />
     <%= f.text_field :empresa,  rows: 3, cols:40 %>
@@ -28,6 +30,7 @@
     <%= f.label :direccion_de_envio %><br />
     <%= f.text_area :direccionaux, rows: 3, cols:40 %>
   </div>
+<h3>Datos de contacto:</h3>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email, size:40 %>
@@ -41,6 +44,7 @@
     <%= f.text_field :telefonoaux, size:40 %>
   </div>
   <div class="field">
+<h3>Tipo de envio y localidad:</h3>
     <%= f.label :tipo_de_envio %><br />
     <%= f.select :tipoenvio, Order::SEND_TYPES, 
     prompt: 'Selecciona tu tipo de envio' %>
@@ -51,6 +55,7 @@
     prompt: 'Selecciona tu Región de Venezuela' %>
   </div>
   <div class="field">
+<h3>Tipo de pago:</h3>
     <%= f.label :tipo_de_pago %><br />
     <%= f.select :tipoPago, Order::PAYMENT_TYPES,
     prompt: 'Selecciona tu tipo de pago' %>
