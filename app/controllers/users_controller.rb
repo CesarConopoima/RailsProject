@@ -1,4 +1,4 @@
-class Admin::UsersController < Admin::AdminController
+class UsersController < Admin::AdminController
 skip_before_filter :authorize, only: [:create, :update]
   # GET /users.json
   def index
