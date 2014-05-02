@@ -8,12 +8,13 @@
             <% end %>
 			<h4 class="price_line"><%= producto.marca %></h4>
 			<div class="price_line">
+				<% if user_signed_in? %>
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
-				<% if producto.cantidad >= 2 %>
 				<div class="price">Disponible</div>	
 				<%= button_to 'Agregar al Carro', line_items_path(producto_id: producto), remote: true,:class => "button" %>
 				<% else %>
-				<div class="price" style="color:#F46767;font-weight:bold">Agotado</div>
+				<div class="price"><%= link_to "Precio", new_user_session_path %></div>
+				<div class="price">Disponible</div>	
 				<% end %>
 			</div>
 			<div class="codigo"><%= producto.codigo %></div>
