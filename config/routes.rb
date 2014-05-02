@@ -49,10 +49,10 @@ Aplicacion::Application.routes.draw do
   end
   resources :usuarios
 
-  root to: 'tienda#index', as: 'tienda'
-
   devise_for :users, :path_names => {:sign_in => "login", :sign_out => "logout"}, :path => "d"
   resources :users
+
+  root to: 'tienda#index', as: 'tienda'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
