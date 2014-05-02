@@ -1,4 +1,4 @@
-class UsersController < Admin::AdminController
+class UsersController < ApplicationController
 skip_before_filter :authorize, only: [:create, :update]
   # GET /users.json
   def index
@@ -82,7 +82,7 @@ skip_before_filter :authorize, only: [:create, :update]
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_users_url }
+      format.html { redirect_to tienda_path }
       format.json { head :ok }
     end
   end
