@@ -54,6 +54,9 @@ jQuery(document).ready(function ($) {
 
 });
 </script>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
 <div class="inicio">
   <div class="barraBusqueda">
   	<%= form_tag tienda_path, :method => 'get', :id => "productos_search" do %>
