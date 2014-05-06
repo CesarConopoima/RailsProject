@@ -356,6 +356,9 @@ SEPARADOR_COPELAN_PHOTO/SEP-2053.gif: SEPARADOR_COPELAN_PHOTO/SEP-2053-a68bfa01a
 SlideShow/BombasCarrier.jpg: SlideShow/BombasCarrier-8f1775f31eb120ecb3d97b7e9bd39224.jpg
 SlideShow/EnsambladosCopeland.jpg: SlideShow/EnsambladosCopeland-9981c6a9e376b61afc4006d43eca8a77.jpg
 SlideShow/KitDeEmpacaduras.jpg: SlideShow/KitDeEmpacaduras-5f3e84e2f58cae09edfca7626d54388f.jpg
+SlideShow/a17.png: SlideShow/a17-9facf414bdc484d03485432eccd8739d.png
+SlideShow/b16.png: SlideShow/b16-48c680ea8a2179a2aed8e7396e2c1e10.png
+SlideShow/loading.gif: SlideShow/loading-1e444a4fd0b6121f2dc26da170233769.gif
 TERMICO_COPELAND/TER-1642.gif: TERMICO_COPELAND/TER-1642-c70e8f0debe0f2fec318db1a124ae434.gif
 TUBOS_DE_SUCCION_COPE/TUB-188.gif: TUBOS_DE_SUCCION_COPE/TUB-188-e6915155b5d4b76f762be8e98eb12f54.gif
 TUBOS_DE_SUCCION_COPE/TUB-189.gif: TUBOS_DE_SUCCION_COPE/TUB-189-d6d2394d072aadd9ab4e7a9cc0b6a451.gif
@@ -474,6 +477,13 @@ ensamblado/Copeland_ensamblado/LAM.jpg: ensamblado/Copeland_ensamblado/LAM-967d0
 ensamblado/Copeland_ensamblado/MRB.jpg: ensamblado/Copeland_ensamblado/MRB-ee29789d4b509ce3815410bb8ae6c521.jpg
 ensamblado/Copeland_ensamblado/NRA.jpg: ensamblado/Copeland_ensamblado/NRA-967d05be7062bfa41ff699beccfa3452.jpg
 ensamblado/Copeland_ensamblado/NRD.jpg: ensamblado/Copeland_ensamblado/NRD-967d05be7062bfa41ff699beccfa3452.jpg
+fancyzoom/blank.gif: fancyzoom/blank-99eeeddc62cb4b433bc2c891909ca6f5.gif
+fancyzoom/fancybox_buttons.png: fancyzoom/fancybox_buttons-399c719133e280635150d72255321ca5.png
+fancyzoom/fancybox_loading.gif: fancyzoom/fancybox_loading-9249f96f8962b50b0a63696040957083.gif
+fancyzoom/fancybox_loading@2x.gif: fancyzoom/fancybox_loading@2x-d3ef9fc1985a633667ddb24415fac3da.gif
+fancyzoom/fancybox_overlay.png: fancyzoom/fancybox_overlay-a5f18b8301a4813ff4fe840e8a5747f0.png
+fancyzoom/fancybox_sprite.png: fancyzoom/fancybox_sprite-1c20a525f7f9b0c3c7216bc31cec6abc.png
+fancyzoom/fancybox_sprite@2x.png: fancyzoom/fancybox_sprite@2x-f9a359ca3d20a9b8437135d2e877f56d.png
 filtro/Carrier_filtro/300.jpg: filtro/Carrier_filtro/300-e2eff01a6cd11df18d3af1e0802ffd73.jpg
 filtro/Carrier_filtro/301.jpg: filtro/Carrier_filtro/301-1044949a1aa3b36915d8cd745caa064a.jpg
 filtro/Carrier_filtro/302.jpg: filtro/Carrier_filtro/302-db9b98980bfadd5f73af983ce8aa347d.jpg

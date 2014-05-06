@@ -1,3 +1,59 @@
+<%= javascript_include_tag "jssor.core" %>
+<%= javascript_include_tag "jssor.slider" %>
+<%= javascript_include_tag "jssor.utils" %>
+<script>
+jQuery(document).ready(function ($) {
+    //Reference http://www.jssor.com/development/slider-with-slideshow.html
+    //Reference http://www.jssor.com/development/tool-slideshow-transition-viewer.html
+
+    var _SlideshowTransitions = [
+    //Fade
+    { $Duration: 5000, $Opacity: 2 }
+    ];
+
+    var options = {
+        //$DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+        $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+        $AutoPlayInterval: 5000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+        $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+            $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+            $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+            $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+            $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+        },
+
+        $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
+            $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+            $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+        },
+
+        $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+            $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+            $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+            $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+            $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+            $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+            $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+            $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+        },
+
+        $ThumbnailNavigatorOptions: {
+            $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+            $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+            $DisableDrag: true,                             //[Optional] Disable drag or not, default value is false
+            $Orientation: 2                                 //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+        }
+    };
+
+    var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+});
+</script>
 <div class="inicio">
   <div class="barraBusqueda">
   	<%= form_tag tienda_path, :method => 'get', :id => "productos_search" do %>
@@ -11,5 +67,111 @@
     </p>  
     <% end %> 
   </div>
-  <div class="slideShow"></div>
+</div>
+<div id="slider1_container" style="position: relative; width: 540px;
+    height: 280px;margin-top:25px;">
+
+    <!-- Loading Screen -->
+    <div u="loading" style="position: relative; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+            background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+        </div>
+        <div style="position: absolute; display: block; background: url(<%= image_path('slideshow/loading.gif') %>) no-repeat center center;
+            top: 0px; left: 0px;width: 100%;height:100%;">
+        </div>
+    </div>
+
+    <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: relative; left: 0px; top: 0px; width: 540px; height: 280px;
+        overflow: hidden;">
+        <div>
+            <a u=image href="#"><%= image_tag("SlideShow/BombasCarrier.jpg", :alt => "piston 1") %></a>
+            <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;">Repuestos</div>
+            <div u="thumb"></div>
+        </div>
+        <div>
+            <a u=image href="#"><%= image_tag("SlideShow/EnsambladosCopeland.jpg", :alt => "piston 1") %></a>
+            <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;">Repuestos</div>
+            <div u="thumb"></div>
+        </div>
+        <div>
+            <a u=image href="#"><%= image_tag("SlideShow/KitDeEmpacaduras.jpg", :alt => "piston 1") %></a>
+            <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;">Repuestos</div>
+            <div u="thumb"></div>
+        </div>
+    </div>
+
+    <!-- Arrow Navigator Skin Begin -->
+    <style>
+        /* jssor slider arrow navigator skin 03 css */
+        /*
+        .jssora03l              (normal)
+        .jssora03r              (normal)
+        .jssora03l:hover        (normal mouseover)
+        .jssora03r:hover        (normal mouseover)
+        .jssora03ldn            (mousedown)
+        .jssora03rdn            (mousedown)
+        */
+        .jssora03l, .jssora03r, .jssora03ldn, .jssora03rdn
+        {
+            position: absolute;
+            cursor: pointer;
+            display: block;
+            background: url(<%= image_path('slideshow/a17.png') %>) no-repeat;
+            overflow:hidden;
+        }
+        .jssora03l { background-position: -3px -33px; }
+        .jssora03r { background-position: -63px -33px; }
+        .jssora03l:hover { background-position: -123px -33px; }
+        .jssora03r:hover { background-position: -183px -33px; }
+        .jssora03ldn { background-position: -243px -33px; }
+        .jssora03rdn { background-position: -303px -33px; }
+    </style>
+    <!-- Arrow Left -->
+    <span u="arrowleft" class="jssora03l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+    </span>
+    <!-- Arrow Right -->
+    <span u="arrowright" class="jssora03r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+    </span>
+
+    <!-- Bullet Navigator Skin Begin -->
+    <style>
+        /* jssor slider bullet navigator skin 03 css */
+        /*
+        .jssorb03 div           (normal)
+        .jssorb03 div:hover     (normal mouseover)
+        .jssorb03 .av           (active)
+        .jssorb03 .av:hover     (active mouseover)
+        .jssorb03 .dn           (mousedown)
+        */
+        .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av
+        {
+            background: url(<%= image_path('slideshow/b16.png') %>) no-repeat;
+            overflow:hidden;
+            cursor: pointer;
+        }
+        .jssorb03 div { background-position: -5px -4px; }
+        .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+        .jssorb03 .av { background-position: -65px -4px; }
+        .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+    </style>
+    <!-- bullet navigator container -->
+    <div u="navigator" class="jssorb03" style="position: absolute; bottom: 10px; right: 10px;">
+        <!-- bullet navigator item prototype -->
+        <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:12px;"><!--NumberTemplate></NumberTemplate--></div>
+    </div>
+
+    <!-- ThumbnailNavigator Skin Begin -->
+    <div u="thumbnavigator" class="slider1-T" style="position: absolute; bottom: 0px; left: 0px; height:60px; width:600px;">
+        <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
+            background-color: #ffffff; top: 0px; left: 0px; width: 100%; height: 100%;">
+        </div>
+        <!-- Thumbnail Item Skin Begin -->
+        <div u="slides">
+            <div u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 60px; TOP: 0; LEFT: 0;">
+                <thumbnailtemplate style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#000; line-height: 60px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
+            </div>
+        </div>
+        <!-- Thumbnail Item Skin End -->
+    </div>
 </div>
