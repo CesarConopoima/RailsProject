@@ -1,32 +1,10 @@
-<%= javascript_include_tag "jquery.fancybox.js?v=2.1.5" %>
-<%= stylesheet_link_tag "jquery.fancybox.css?v=2.1.5" %>
-
-<%= stylesheet_link_tag "jquery.fancybox-buttons.css?v=1.0.5" %>
-<%= javascript_include_tag "jquery.fancybox-buttons.js?v=1.0.5" %>
-<%= javascript_include_tag "jquery.fancybox-media.js?v=1.0.6" %>
-
-<%= stylesheet_link_tag "jquery.fancybox-thumbs.css?v=1.0.7" %>
-<%= javascript_include_tag "jquery.fancybox-thumbs.js?v=1.0.7" %>
-
-<script>
-	$(function(){
-		$('.fancybox').fancybox({
-			arrows : false,
-		});
-	});
-</script>
-<style type="text/css">
-	a:hover {
-		background-color:transparent;
-	}
-</style>
 	    <% @productos.each do |producto| %>
 		<div class="entry">
 			<h3><%= producto.nombre %></h3>
 			<% if !producto.imagenagregada.to_s.include?('no_dispo.jpg') %>
             <%= image_tag producto.imagenagregada.url , class: 'catalogo' %>
             <% else %>
-            <a class="fancybox" href="<%= image_path(producto.imageurl) %>" data-fancybox-group="gallery" style=""><img src="<%= image_path(producto.imageurl) %>" style="position: absolute;width:80px;margin-right:10px;margin-left:20px;margin-bottom:5px;z-index:1;" alt="" /></a>
+           <%= image_tag(producto.imageurl, class: 'catalogo') %>
             <% end %>
 			<h4 class="price_line"><%= producto.marca %></h4>
 			<div class="price_line">
