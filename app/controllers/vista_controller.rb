@@ -13,6 +13,7 @@ class VistaController < ApplicationController
   end
 
   def empresa
+    @identifiant="vistaEmpresa"
     @productos = Producto.search(params[:search])
     @productos1= Producto.find_by_sql("select marca from productos group by marca order by marca")
     @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 2 order by nombres")

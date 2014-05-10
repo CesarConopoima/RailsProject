@@ -44,13 +44,20 @@
 		</div>
 		<% elsif @identifiant == "vistaInicial" %>
 			<div class= "default">
-			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
-			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
-			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
-			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
 			</div>
 		<% elsif @identifiant == "servicio" %>
 			<%= render 'layouts/servicio' %>
+		<% elsif @identifiant == "vistaEmpresa" %>
+			<div class= "default">
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
+			</div>
 		<% end %>
 	</div>
 </div>
