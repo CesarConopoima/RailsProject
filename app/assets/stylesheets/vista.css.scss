@@ -85,6 +85,9 @@
 	border-bottom-width:3px;
 	border-bottom-color:#0a2544;
 	}
+	h3:hover{
+    cursor: pointer;
+	}
 	img{
   	display: block;
     margin-left: auto;
@@ -104,6 +107,9 @@
 	margin-left:350px;
 	color:white;
     background:#0D4F8B;
+	}
+	button:hover{
+	cursor: pointer;
 	}
 	h4{
 	padding-left:35px;

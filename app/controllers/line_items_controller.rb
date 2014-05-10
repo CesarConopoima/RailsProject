@@ -122,5 +122,23 @@ class LineItemsController < ApplicationController
       end
     end
   end
+
+    # PUT /line_items/1
+  # PUT /line_items/1.json
+  def increase1
+    @cart = current_cart
+    @line_item = @cart.increase1(params[:id])
+
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to tienda_path, notice: 'Line item was successfully updated.' }
+        format.js   { @current_item = @line_item }
+        format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   
 end

@@ -18,6 +18,7 @@
   }
 
    .item_nombre {
+    width:180px;
     font-size:10px;
     text-align: center;
   }
@@ -71,6 +72,17 @@
       display:inline;
     }
     input.buttonMas:hover {
+      background:#66b266;
+    }
+    input.buttonMas1 {
+      border:0;
+      color:black;
+      background:#99cc99;
+      height:25px;
+      text-font:60%;
+      display:inline;
+    }
+    input.buttonMas1:hover {
       background:#66b266;
     }
     input.buttonMenos {
