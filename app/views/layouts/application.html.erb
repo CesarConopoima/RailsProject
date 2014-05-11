@@ -70,9 +70,11 @@
 	<ul>
 	<li><%= link_to 'Ordenes', orders_path %></li>
 	<li><%= link_to 'Productos', productos_path %></li>
-	<li><%= link_to 'Usuarios', usuarios_path %></li>
+	<li><%= link_to 'Usuarios Del Servicio', users_path %></li>
+	<li><%= link_to 'Usuario Administrador!!', usuarios_path %></li>
+	<%= link_to "Editar Perfil del Administrado", current_usuario %>
+	<%= button_to 'Salir de Administrar', logout_path, method: :delete %>
 	</ul>
-	<%= button_to 'Logout', logout_path, method: :delete %>
 	<% end %>
 	
 	<div id="footer">

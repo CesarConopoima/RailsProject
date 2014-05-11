@@ -1,0 +1,26 @@
+<h1>Usuarios</h1>
+<table class="table table-striped">
+ <thead>
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Empresa</th>
+    <th>Fecha de creación</th>
+    <th>Accciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| -%>
+   <tr>
+    <td><%= user.id %></td>
+    <td><%= user.email %></td>
+    <td><%= user.nombreEmpresa %></td>
+    <td><%= user.created_at %></td>
+    <td>
+      <%= link_to "Mostrar", user_path(user) %>
+      <%= link_to "Eliminar", user_path(user), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Estas seguro de borrar este usuario??")}" %>
+    </td>
+    </tr>
+    <% end -%>
+   </tbody>
+</table>
