@@ -53,6 +53,14 @@ Aplicacion::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['copelancitafotos'],
+    :access_key_id => ENV['AKIAIFCH2I7H4C6K4U5A'],
+    :secret_access_key => ENV['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']
+  }
+}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)

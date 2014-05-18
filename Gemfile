@@ -18,8 +18,9 @@ group :production do
   gem 'thin'
   gem 'rails_12factor'
 end
-
+# using papper clip and ws3 from amazon to upload images
 gem "paperclip"
+gem 'aws-sdk'
 
 # Gems used only for assets and not required
 # in production environments by default.
