@@ -56,9 +56,9 @@ Aplicacion::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['copelancitafotos'],
-    :access_key_id => ENV['AKIAIFCH2I7H4C6K4U5A'],
-    :secret_access_key => ENV['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']
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 
