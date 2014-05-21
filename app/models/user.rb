@@ -7,8 +7,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   validates :nombre,:telefono,:localidadVenezuela,:apellido,
   :nombreEmpresa,:rifEmpresa,:direccion,:codigoPostal,
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email,:presence => { :message => "Este campo debe ser llenado" },format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  :email, :presence => { :message => "Este campo debe ser llenado" }
   validates :localidadVenezuela, inclusion: VENEZUELA_ESTADOS
   
   devise :database_authenticatable, :registerable,
