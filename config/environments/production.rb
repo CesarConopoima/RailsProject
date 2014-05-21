@@ -79,7 +79,7 @@ Aplicacion::Application.configure do
   port:                 587,
   domain:               'gmail.com',
   user_name:            'copelancitadevenezuela@gmail.com',
-  password:             'copelancita123456789',
+  password:             'PASSWORD_MAIL',
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
