@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
 	validates :empresa,:presence => { :message => "Este campo debe ser llenado" }, length: { maximum: 30 }
 	validates :direccion,:presence => { :message => "Este campo debe ser llenado" }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-	validates :email,:presence => { :message => "Este campo debe ser llenado" },format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+	validates :email,:presence => { :message => "Este campo debe ser llenado" },format: { with: VALID_EMAIL_REGEX }
 	validates :telefono,:presence => { :message => "Este campo debe ser llenado" }
 	validates :direccionaux,:presence => { :message => "Este campo debe ser llenado" }
 	validates :telefonoaux,:presence => { :message => "Este campo debe ser llenado" }
