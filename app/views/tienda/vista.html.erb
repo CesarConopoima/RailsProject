@@ -28,11 +28,10 @@
 		<h3><%= producto.nombre %></h3>
 
 		<% if !producto.imagenagregada.to_s.include?('no_dispo.jpg') %>
-		<img class="zoomsl" src="<%= image_path(producto.imagenagregada.url) %>" 
-            style="position:absolute;width:80px;margin-right:10px;margin-left:20px;margin-bottom:5px;z-index:1;" alt="" />
+		<img class="zoomsl" src="<%= image_path(producto.imagenagregada.url) %>"  alt="" />
         <% else %>
 		<img class="zoomsl" src="<%= image_path(producto.imageurl) %>" 
-            style="position:absolute;width:80px;margin-right:10px;margin-left:20px;margin-bottom:5px;z-index:1;" alt="" />
+           alt="" />
         <% end %>
         
 		<h4><%= producto.marca %></h4>
