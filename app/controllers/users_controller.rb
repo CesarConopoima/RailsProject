@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         flash[:notice] = flash[:notice].to_a.concat @user.errors.full_messages
-        format.html { redirect_to tienda_path, :notice => 'Tu cuenta se ha creado exitosamente' }
+        format.html { redirect_to tienda_index_path, :notice => 'Tu cuenta se ha creado exitosamente' }
         format.json { render :json => @user, :status => :created, :location => @user }
       else
         flash[:notice] = flash[:notice].to_a.concat @user.errors.full_messages
@@ -82,7 +82,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to tienda_path }
+      format.html { redirect_to users_path }
       format.json { head :ok }
     end
   end
