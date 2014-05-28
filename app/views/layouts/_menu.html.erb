@@ -9,6 +9,8 @@
 			  		<% @Busqueda = @productoCarr %>
 			  		<% elsif "#{producto.marca}" == 'Trane' %>
 			  		<% @Busqueda = @productoTran %>
+			  		<% elsif "#{producto.marca}" == 'Bitzer' %>
+			  		<% @Busqueda = @productoBitzer %>
 			  		<% else %>
 			  		<% @Busqueda = @productoYork %>
 			  		<% end %>
