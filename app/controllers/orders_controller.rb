@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
     @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 6")
     @productoTran=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'Trane' group by nombres")
     @productoYork=Producto.find_by_sql("select nombre AS nombres from productos where marca = 'York' group by nombres")
-    
+    @productoBitzer=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Bitzer' group by nombres order by nombres")
     @cart = current_cart
     @producto_id=@cart.line_items
 
