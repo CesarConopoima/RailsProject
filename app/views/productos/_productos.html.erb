@@ -2,7 +2,7 @@
     <% @productos.each do |producto| %>
       <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td>
-            <% if !producto.imagenagregada.to_s.include?('no_dispo.jpg') %>
+            <% if !producto.imagenagregada.to_s.include?('no_dispo') %>
             <%= image_tag producto.imagenagregada.url , class: 'list_image' %>
             <% else %>
             <%= image_tag(producto.imageurl, class: 'list_image') %>
