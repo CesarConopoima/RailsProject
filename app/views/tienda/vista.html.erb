@@ -27,7 +27,7 @@
 	<div class="entry" style="margin-top:12px;">
 		<h3><%= producto.nombre %></h3>
 
-		<% if !producto.imagenagregada.to_s.include?('no_dispo.jpg') %>
+		<% if !producto.imagenagregada.to_s.include?('no_dispo') %>
 		<img class="zoomsl" src="<%= image_path(producto.imagenagregada.url) %>"  alt="" />
         <% else %>
 		<img class="zoomsl" src="<%= image_path(producto.imageurl) %>" 
