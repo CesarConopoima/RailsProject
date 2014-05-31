@@ -41,7 +41,7 @@ Aplicacion::Application.configure do
   port:                 587,
   domain:               'gmail.com',
   user_name:            'cesar.conopoima@gmail.com',
-  password:             '516204045',
+  password:             'password',
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
