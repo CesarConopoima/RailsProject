@@ -35,7 +35,9 @@ a:hover{
 	background: #708090;
 }
 </style>
-
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
 <h2>Entrar como usuario registrado</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
