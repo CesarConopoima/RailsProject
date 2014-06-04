@@ -11,6 +11,9 @@
 	<div id="banner_2">
 		<%= image_tag("logo/banner.jpg")%>
 	</div>
+	<div id="logoImg">	
+	<%= image_tag("logo/logoEmpresa2.jpg",class: 'logo')%>
+	</div>
 	<div id="navegacion">
 		<ul>
 			<li><%= link_to "Inicio", tienda_url %></li>
@@ -26,16 +29,18 @@
 			<%end%>
 		</ul>
 	</div>	
-<div id="columns">
-	<div id="side_1" class="inline">
+<div id="side_1" class="inline">
+
 		<%= render 'layouts/menu' %>
-		<div id = "bannerDireccion">Dirección: <br>Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br>Email. copelancita@gmail.com</div>
+
+		<div id = "bannerDireccion">Dirección: <br>Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br>Email. copelancitadevenezuela@gmail.com</div>
 		<%= render 'layouts/googlemaps' %>
 		<div style="text-align:center;margin-top:5px;"><%= image_tag("logo/icra.gif")%></div>
-	</div>	
-	<div id="main" class="inline">
-		<%= yield %>
-	</div>
+</div>	
+<div id="main" class="inline">
+	<%= yield %>
+</div>
+
 	<div id="side" class="inline">
 		<% if @cart %>
 		<div id="cart">
@@ -48,24 +53,24 @@
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
-				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
 		<% elsif @identifiant == "servicio" %>
 			<div class= "default">
 			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
 			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
 			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
-			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
+			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
+			</div>
 		<% elsif @identifiant == "vistaEmpresa" %>
 			<div class= "default">
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
-				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/York.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "York")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
 		<% end %>
 	</div>
-</div>
 	
 	<% if session[:usuario_id] %>
 	<ul>

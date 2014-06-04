@@ -63,9 +63,6 @@ background:#5b5b5b;
   background-color: #ffe5e5;
   font: bold smaller sans-serif;
 }
-#columns {
-  min-width: 1050px;
-}
 #side_1{
   position:relative;
     float: left;
@@ -170,9 +167,27 @@ background:#5b5b5b;
   float: right;
 }
 
-#navegacion{
-  padding:0;
+#logoImg {
+  position:relative;
+  display:inline;
+  float: left;
+  width: 20%;
+  height: 70px;
+  margin-left: 100px;
+  margin-bottom:5px;
 }
+#logoImg img{
+  height: 70px; 
+}
+#navegacion {
+  position:relative;
+  display:inline;
+  float: right;
+  width:60%;
+  height: 70px;
+  margin-bottom:5px;
+}
+
 #navegacion ul li{
   display:inline;
 }

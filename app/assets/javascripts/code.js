@@ -65,10 +65,10 @@ var ready = function() {
 	$(this).attr('src', '/assets/COMPRESORES/Trane.jpg');
 	});
 	$('[class="imgComp4"]').mouseenter(function() {
-	$(this).attr('src','/assets/COMPRESORES/York_logo.jpg');
+	$(this).attr('src','/assets/COMPRESORES/Bitzer_logo.jpg');
 	});
 	$('[class="imgComp4"]').mouseleave(function() {
-	$(this).attr('src', '/assets/COMPRESORES/York.jpg');
+	$(this).attr('src', '/assets/COMPRESORES/Bitzer2.jpg');
 	});
 };
 
