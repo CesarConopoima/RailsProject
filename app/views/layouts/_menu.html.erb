@@ -1,7 +1,7 @@
 <ul id="menu">  
 		<% if @productos1 %>
 			<% @productos1.each do |producto| %>
-			  <li style="border: solid 1px #808080; text-align:center;">
+			  <li id = "linkMenu">
 			   <%= link_to "#{producto.marca}", tienda_pagina_path(:marca => "#{producto.marca.downcase}") %>
 			  	<ul><% if "#{producto.marca}" == 'Copeland' %>
 			  		<% @Busqueda = @productoCop %>
@@ -15,7 +15,7 @@
 			  		<% @Busqueda = @productoYork %>
 			  		<% end %>
 			  		<% @Busqueda.each do |producto1| %>
-			  		<li style="border: solid 1px #808080; width: 200px; height: 19px; text-align:center;font-size:75%; z-index: 1;">
+			  		<li id = "linkMenu2">
 			  		<%= link_to "#{producto1.nombres.split(" ").first.downcase.capitalize}", tienda_pagina2_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombres}") %>
 			  		</li>
 			  		<% end %>
