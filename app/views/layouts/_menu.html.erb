@@ -19,7 +19,7 @@
 			  		<%= link_to "#{producto1.nombres.split(" ").first.downcase.capitalize}", tienda_pagina2_path(:marca => "#{producto.marca.downcase}", :nombre => "#{producto1.nombres}") %>
 			  		</li>
 			  		<% end %>
-			  		<li style="border: solid 1px #808080; width: 200px; height: 19px; text-align:center;font-size:75%; z-index: 1;"><%= link_to "Miscelaneus", tienda_miscelaneus_path(:marca => "#{producto.marca.downcase}") %></li>
+			  		<li id = "linkMenu2"><%= link_to "Miscelaneus", tienda_miscelaneus_path(:marca => "#{producto.marca.downcase}") %></li>
 			  	</ul>
 			  </li>	
 			<% end %> 
