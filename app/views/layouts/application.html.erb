@@ -69,9 +69,7 @@
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
-		<% end %>
-	</div>
-	
+		<% end %>	
 	<% if session[:usuario_id] %>
 	<ul>
 	<li><%= link_to 'Ordenes', orders_path %></li>
@@ -81,6 +79,7 @@
 	</ul>
 	<%= button_to 'Salir de Administrar', logout_path, method: :delete %>
 	<% end %>
+</div>
 	
 	<div id="footer">
 	<div id="copyright">Copyright © 2014 Copelancita de Venezuela</br>
