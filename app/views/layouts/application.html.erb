@@ -92,11 +92,17 @@
 						Llamenos por los teléfonos (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65</div>
 	<div id="links">
 	<ul>
-		<li><%= link_to "Inicio", vista_inicio_path %></li>
-		<li><%= link_to "Empresa", vista_empresa_path %></li>
-		<li><%= link_to "Servicios", vista_servicio_path %></li>
-		<li><%= link_to "Productos", tienda_url %></li>
-		<li><%= link_to "Usuarios", login_path %></li>
+		<li><%= link_to "Inicio", tienda_url %></li>
+			<li><%= link_to "Empresa", vista_empresa_path %></li>
+			<li><%= link_to "Servicios", vista_servicio_path %></li>
+			<li><%= link_to "Productos", tienda_index_path %></li>
+			<% if user_signed_in? %>
+  			<% #link_to "My Profile", user_root_path%>
+  			<li><%= link_to('Salir', destroy_user_session_path, :method=>'delete') %></li>  
+  			<%else%>
+  			<li><%= link_to "Login", new_user_session_path %></li>
+  			<li><%= link_to "Nuevo usuario?", new_user_registration_path %></li>
+			<%end%>
 	</ul>
 	</div>
 	<div id="eventos">
