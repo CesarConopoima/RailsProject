@@ -18,6 +18,8 @@ class OrderNotifier < ActionMailer::Base
     @precio_total = precio_total
     @mailer = order
     mail :to => "copelancitadevenezuela@gmail.com", subject: 'Hemos recibido un pedido'
+    mail :to => "ventas@copelancitadevenezuela.com", subject: 'Hemos recibido un pedido'
+    mail :to => "copelancitadevenezuela@cantv.net", subject: 'Hemos recibido un pedido'
   end
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
