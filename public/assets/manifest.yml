@@ -357,8 +357,13 @@ SEPARADOR_COPELAN_PHOTO/SEP-1778P.gif: SEPARADOR_COPELAN_PHOTO/SEP-1778P-3cafc88
 SEPARADOR_COPELAN_PHOTO/SEP-2053.gif: SEPARADOR_COPELAN_PHOTO/SEP-2053-a68bfa01a254d02be286c6b63e73441d.gif
 SlideShow/BombasCarrier.jpg: SlideShow/BombasCarrier-8f1775f31eb120ecb3d97b7e9bd39224.jpg
 SlideShow/EnsambladosCopeland.jpg: SlideShow/EnsambladosCopeland-9981c6a9e376b61afc4006d43eca8a77.jpg
+SlideShow/EnsambladosCopeland2.jpg: SlideShow/EnsambladosCopeland2-fc7ce0f9aceb67dcc58f0847d8ffc379.jpg
 SlideShow/KitDeEmpacaduras.jpg: SlideShow/KitDeEmpacaduras-5f3e84e2f58cae09edfca7626d54388f.jpg
+SlideShow/Pistones.jpg: SlideShow/Pistones-3a6241cf3d7b990ae607bb80a2d48a05.jpg
 SlideShow/PlatosCopeland.jpg: SlideShow/PlatosCopeland-c65c35bd907be422a44e845241f30334.jpg
+SlideShow/PlatosCopeland2.jpg: SlideShow/PlatosCopeland2-03051424ae543c206bab07145660e946.jpg
+SlideShow/Varios1.jpg: SlideShow/Varios1-d884876965780399fc36e65948d2bef7.jpg
+SlideShow/Varios2.jpg: SlideShow/Varios2-524d4f5a0884d8721f16c9c6dc088f86.jpg
 SlideShow/a17.png: SlideShow/a17-9facf414bdc484d03485432eccd8739d.png
 SlideShow/b16.png: SlideShow/b16-48c680ea8a2179a2aed8e7396e2c1e10.png
 SlideShow/loading.gif: SlideShow/loading-1e444a4fd0b6121f2dc26da170233769.gif
@@ -553,6 +558,7 @@ kit_bocinas/2569_2567_2568.jpg: kit_bocinas/2569_2567_2568-6e86a428ebdec3fb536b9
 kit_bocinas/2573_2594_2595_2596.jpg: kit_bocinas/2573_2594_2595_2596-bd92c342d05876c08f519fb947b5389c.jpg
 logo/Personal-2.jpg: logo/Personal-2-a3345291e82d56eeb2bf6f5400eae32f.jpg
 logo/banner.jpg: logo/banner-60a35f388f93824f5321e543dee4bd65.jpg
+logo/banner_3.jpg: logo/banner_3-a409526256170a0b2c75a0c50409073a.jpg
 logo/carro_1.png: logo/carro_1-94aa3b503b7013c52bca56b402b5eafd.png
 logo/frio-tecnologia.png: logo/frio-tecnologia-6cdb798be052766addf0f6395436579d.png
 logo/icra.gif: logo/icra-82e911dca6d91b471026e52bb373a524.gif
@@ -605,7 +611,7 @@ piston/Copeland_piston/HAJ.jpg: piston/Copeland_piston/HAJ-c722ab100612b396b7951
 piston/Copeland_piston/KAH_KAG_KAE.jpg: piston/Copeland_piston/KAH_KAG_KAE-1bf20b67252a03b47319f77f7fe9ae9e.jpg
 piston/Copeland_piston/NRN_NRM.jpg: piston/Copeland_piston/NRN_NRM-941e8fac3c9c1393b6d148d94507191e.jpg
 application.js: application-5e85847a77b647c501ee494ff3c8fdca.js
-application.css: application-24c479b6959cb2ae016f99bf94993bf0.css
+application.css: application-d30960270e8200b9a3a927118ecaae19.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-691b2d4343303de8d214ad5395fd895d.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
 jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png
