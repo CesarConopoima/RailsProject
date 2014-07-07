@@ -33,18 +33,43 @@
 }
 
 #bannerDireccion{
-font-style:italic;
 font-size:10px;
-background:#333333;
 font-weight: bold;
 margin-top:5px;
 margin-left:2px;
-color:white;
+text-align: center;
+border: 2px solid #2F516D;
+border-radius:15px;
 } 
 
 #bannerDireccion:hover{
-background:#5b5b5b;
+border: 3px solid #2F516D;
 } 
+
+#banner_2 .logo {
+  margin-top: 5px;
+  margin-left: 100px;
+  width:400px;
+}
+#banner_2 .compresor1 {
+  margin-top: 5px;
+  margin-left: 35px;
+  width:100px;
+  border-radius: 70px;
+ -webkit-border-radius: 50px;
+ -moz-border-radius: 50px;
+
+}
+#banner_2 .compresor1:hover{
+  margin-top: 5px;
+  margin-left: 35px;
+  width:100px;
+  border-radius: 70px;
+ -webkit-border-radius: 50px;
+ -moz-border-radius: 50px;
+ -webkit-filter: brightness(180%);
+ 
+}
 
 
 #contenido{
@@ -190,21 +215,24 @@ background:#5b5b5b;
   position:relative;
   display:inline;
   float: left;
-  width: 20%;
-  height: 70px;
+  width: 5%;
+  height: 50px;
   margin-left: 100px;
+  margin-top:15px;
   margin-bottom:5px;
 }
 #logoImg img{
-  height: 70px; 
+  height: 50px; 
+  margin-top:15px;
 }
 #navegacion {
   position:relative;
   display:inline;
-  float: right;
-  width:60%;
-  height: 70px;
+  float: left;
+  width:85%;
+  height: 50px;
   margin-bottom:5px;
+  margin-top:15px;
 }
 
 #navegacion ul li{
@@ -212,7 +240,7 @@ background:#5b5b5b;
 }
 #navegacion ul li a{
 font-family:Arial;
-font-size:12px;
+font-size:17px;
 text-decoration: none;
 padding:10px;
 background-color: #333333;
@@ -234,9 +262,13 @@ margin:-1px;
 clear: both;
 position: relative;
 z-index: 10;
-height: 150px;
-background: #e4e7e9;
+height: 200px;
 z-index: 0;
+}
+#footer img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
 }
 
 #copyright {
@@ -287,7 +319,7 @@ text-decoration: none;
   width:40%;
   position:relative;
   float: left;
-  margin-left: 225px; 
+  margin-left: 550px; 
 }
 #links ul li{
   display:inline;
@@ -295,6 +327,7 @@ text-decoration: none;
 #links ul li a{
 font-size:90%;
 text-decoration: none;
+font-size: 17px;
 margin-top:10px;
 color:#063859;
 }

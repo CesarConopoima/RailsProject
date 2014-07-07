@@ -9,10 +9,13 @@
 <body class='<%= controller.controller_name %>' id="body">
 <div id="contenido">
 	<div id="banner_2">
-		<%= image_tag("logo/banner.jpg")%>
+		<%= image_tag("logo/logoEmpresa2.jpg",class: 'logo')%>
+		<%= image_tag("COMPRESORES/Carrier.jpg",class: 'compresor1')%>
+		<%= image_tag("COMPRESORES/Copeland.jpg",class: 'compresor1')%>
+		<%= image_tag("COMPRESORES/Trane.jpg",class: 'compresor1')%>
+		<%= image_tag("COMPRESORES/Bitzer2.jpg",class: 'compresor1')%>
 	</div>
 	<div id="logoImg">	
-	<%= image_tag("logo/logoEmpresa2.jpg",class: 'logo')%>
 	</div>
 	<div id="navegacion">
 		<ul>
@@ -32,14 +35,9 @@
 
 		<%= render 'layouts/menu' %>
 
-		<div id = "bannerDireccion">Dirección: <br>Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br>Email. 
-			<br>copelancitadevenezuela@cantv.net
-			<br>ventas@copelancitadevenezuela.com
-			<br>copelancitadevenezuela@gmail.com
+		<div id = "bannerDireccion">Dirección: <br> Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br><br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br><br>Email. copelancitadevenezuela@gmail.com<br></div>
 
-		</div>
 		<%= render 'layouts/googlemaps' %>
-		<div style="text-align:center;margin-top:5px;"><%= image_tag("logo/icra.gif")%></div>
 </div>	
 <div id="main" class="inline">
 	<%= yield %>
@@ -86,11 +84,8 @@
 </div>
 	
 	<div id="footer">
-	<div id="copyright">Copyright © 2014 Copelancita de Venezuela</br>
-						Contactenos por copelancitadevenezuela@gmail.com</br>
-						Llamenos por los teléfonos (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65</div>
-	<div id="links">
-	<ul>
+		<div id="links">
+		<ul>
 		<li><%= link_to "Inicio", tienda_url %></li>
 		<li><%= link_to "Empresa", vista_empresa_path %></li>
 		<li><%= link_to "Servicios", vista_servicio_path %></li>
@@ -100,14 +95,10 @@
   			<%else%>
   		<li><%= link_to "Login", new_user_session_path %></li>
   		<li><%= link_to "Nuevo usuario?", new_user_registration_path %></li>
-			<%end%>
+		<%end%>
 	</ul>
 	</div>
-	<div id="eventos">
-		<h2>Expositor en <a href="http://www.friotecnologia.com/"><br> Frío-tecnología 2014 </a></h2>	
-	</div>
-	<div id="imgeventos"><%= image_tag("logo/frio-tecnologia.png")%></div>
-	</div>
+	<%= image_tag("logo/banner_3.jpg")%>
 
 </div>	
 </body>
