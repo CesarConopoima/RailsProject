@@ -565,7 +565,9 @@ logo/icra.gif: logo/icra-82e911dca6d91b471026e52bb373a524.gif
 logo/logoEmpresa2.jpg: logo/logoEmpresa2-1fdf38307ee8707f0575efb1b12aefd4.jpg
 logo/logoEmpresa3.png: logo/logoEmpresa3-3caebc97d754a9f11c6ab32851aef5d8.png
 logo/logo_1.jpg: logo/logo_1-c5a9011543c3425d0c1b6746c8db8c15.jpg
+logo/logo_C.png: logo/logo_C-8ef188fdfe8e7858fe53cbc430e5f7b4.png
 logo/no_dispo.jpg: logo/no_dispo-3a82c171d3a9bfc5330dbc8cf93e4362.jpg
+logo/nombre.png: logo/nombre-448d83c84ba02b744c9da86df8beb86a.png
 pasador/Carrier_pasador/1519.jpg: pasador/Carrier_pasador/1519-1bf43f46956e460652159a40ef5d6392.jpg
 pasador/Carrier_pasador/1520.jpg: pasador/Carrier_pasador/1520-1bf43f46956e460652159a40ef5d6392.jpg
 pasador/Carrier_pasador/1523.jpg: pasador/Carrier_pasador/1523-cd433a6b4074b009e49680a30c4530fa.jpg
@@ -612,7 +614,7 @@ piston/Copeland_piston/HAJ.jpg: piston/Copeland_piston/HAJ-c722ab100612b396b7951
 piston/Copeland_piston/KAH_KAG_KAE.jpg: piston/Copeland_piston/KAH_KAG_KAE-1bf20b67252a03b47319f77f7fe9ae9e.jpg
 piston/Copeland_piston/NRN_NRM.jpg: piston/Copeland_piston/NRN_NRM-941e8fac3c9c1393b6d148d94507191e.jpg
 application.js: application-5e85847a77b647c501ee494ff3c8fdca.js
-application.css: application-662724acb7c86cb45b66b26225fae4d1.css
+application.css: application-7cf2e10efb6a85735f23b7198f3d4449.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-691b2d4343303de8d214ad5395fd895d.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
 jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png

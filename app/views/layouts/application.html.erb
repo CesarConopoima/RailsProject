@@ -9,7 +9,8 @@
 <body class='<%= controller.controller_name %>' id="body">
 <div id="contenido">
 	<div id="banner_2">
-		<%= image_tag("logo/logoEmpresa3.png",class: 'logo')%>
+		<%= image_tag("logo/logo_C.png",class: 'logo')%>
+		<%= image_tag("logo/nombre.png",class: 'nombre')%>
 	</div>
 	<div id = "bannerDireccion">Dirección: <br> Av. Capitán de Navío Felipe Estévez. <br>Nº 34, La Pica, Prado de María, Caracas - Venezuela.<br>Telefonos:<br> (0212) 633.23.18 - 632.08.80 - Fax: (0212) 632.31.65<br>Email.  copelancitadevenezuela@gmail.com</div>
 
@@ -19,6 +20,7 @@
 			<li><%= link_to "Empresa", vista_empresa_path %></li>
 			<li><%= link_to "Servicios", vista_servicio_path %></li>
 			<li><%= link_to "Productos", tienda_index_path %></li>
+			<li><%= link_to "Contacto", vista_contactar_path %></li>
 			<% if user_signed_in? %>
   			<li><%= link_to('Salir', destroy_user_session_path, :method=>'delete') %></li>  
   			<%else%>
@@ -28,10 +30,7 @@
 		</ul>
 	</div>	
 <div id="side_1" class="inline">
-
 		<%= render 'layouts/menu' %>
-
-		<%= render 'layouts/googlemaps' %>
 </div>	
 <div id="main" class="inline">
 	<%= yield %>
@@ -50,6 +49,13 @@
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
+			</div>
+		<% elsif @identifiant == "vistaContacto" %>
+			<div class= "default">
+			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
+			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
+			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
+			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
 		<% elsif @identifiant == "servicio" %>
 			<div class= "default">

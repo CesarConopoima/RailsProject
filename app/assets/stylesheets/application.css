@@ -44,8 +44,17 @@
 
 #banner_2 .logo {
   margin-top: 5px;
-  margin-left: 75px;
+  margin-left: 175px;
+  height: 140px;
+}
+#banner_2 .nombre {
+  margin-top: 5px;
+  margin-left: 80px;
   width:500px;
+  height: 100px;
+}
+.logo:hover{
+  -webkit-filter: brightness(140%);
 }
 #bannerDireccion{
 float: left;
@@ -235,6 +244,7 @@ text-align: center;
   height: 50px;
   margin-bottom:5px;
   margin-top:15px;
+  margin-left: 100px;
 }
 
 #navegacion ul li{

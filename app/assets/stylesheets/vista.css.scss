@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.vista{
 .empresa {
 	.Personal{
 	width:95%;
@@ -117,4 +118,24 @@
 	font-style:italic;
 	}
 
+}
+.contactar {
+		h3{
+		background: linear-gradient(to right,#0a2544 , white) no-repeat;
+	    background-size: 100% auto, 95% auto;
+	    color:white;
+	    padding-left:35px;
+	    font-style:Arial;
+	 	border-right-style:solid;
+		border-right-width:3px;
+		border-right-color:#0a2544;
+		border-bottom-style:solid;
+		border-bottom-width:3px;
+		border-bottom-color:#0a2544;
+		}
+		p{
+		font-family: Arial;
+	 	font-size: 12px;
+		}
+	}
 }
