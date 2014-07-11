@@ -29,6 +29,11 @@
 	</div>	
 <div id="side_1" class="inline">
 		<%= render 'layouts/menu' %>
+		<%= link_to image_tag("COMPRESORES/Copeland_logo_2.jpg",class: 'logoSide'), tienda_pagina_path(:marca => "Copeland") %>
+		<%= link_to image_tag("COMPRESORES/Carrier_logo_2.jpg",class: 'logoSide'), tienda_pagina_path(:marca => "Carrier") %>
+		<%= link_to image_tag("COMPRESORES/Bitzer_logo_2.jpg",class: 'logoSide'), tienda_pagina_path(:marca => "Bitzer") %>
+		<%= link_to image_tag("COMPRESORES/York_logo.jpg",class: 'logoSide'), tienda_pagina_path(:marca => "York") %>
+		<%= link_to image_tag("logo/logoSide2.gif",class: 'newProduct'), tienda_index_path %>	
 </div>	
 <div id="main" class="inline">
 	<%= yield %>

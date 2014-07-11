@@ -91,10 +91,13 @@ CIGUENAL_COPELAND/CIG-2140.gif: CIGUENAL_COPELAND/CIG-2140-c2c2ec5938ef0fcd0bb66
 COMPRESORES/Bitzer.jpg: COMPRESORES/Bitzer-0d0daa2f78f4945a2bff02366f70abac.jpg
 COMPRESORES/Bitzer2.jpg: COMPRESORES/Bitzer2-e761a6b16f2869d3f73ccf3be42d1a0b.jpg
 COMPRESORES/Bitzer_logo.jpg: COMPRESORES/Bitzer_logo-495e92b6cffd8e27b0f0bcaaeb8d0173.jpg
+COMPRESORES/Bitzer_logo_2.jpg: COMPRESORES/Bitzer_logo_2-5b79b8d600a9e03e52763a283144434f.jpg
 COMPRESORES/Carrier.jpg: COMPRESORES/Carrier-315c2cadf3e0948ff43d0be0c202e91d.jpg
 COMPRESORES/Carrier_logo.jpg: COMPRESORES/Carrier_logo-2148a9c6afe72e9fe19917b44c87145b.jpg
+COMPRESORES/Carrier_logo_2.jpg: COMPRESORES/Carrier_logo_2-b299a68a40b0927125c4450790011ec0.jpg
 COMPRESORES/Copeland.jpg: COMPRESORES/Copeland-984fcfdd48ca63c1bd58877a65187f48.jpg
 COMPRESORES/Copeland_logo.jpg: COMPRESORES/Copeland_logo-913c7a414ae25d3ecef952677adda920.jpg
+COMPRESORES/Copeland_logo_2.jpg: COMPRESORES/Copeland_logo_2-0d5aed604fa21ac511d99fe5c21f5a52.jpg
 COMPRESORES/Trane.jpg: COMPRESORES/Trane-3c3a69c4c19a38af8bdd95e18fcd5879.jpg
 COMPRESORES/Trane_logo.jpg: COMPRESORES/Trane_logo-b20523126f31ed98618be743a25c71e7.jpg
 COMPRESORES/York.jpg: COMPRESORES/York-5d3bffd4f7e0be9e14ecdf0aee95904b.jpg
@@ -575,6 +578,7 @@ kit_bocinas/2563_2564_2565_2566.jpg: kit_bocinas/2563_2564_2565_2566-fbf128b843f
 kit_bocinas/2569_2567_2568.jpg: kit_bocinas/2569_2567_2568-6e86a428ebdec3fb536b9f4e6c91d26f.jpg
 kit_bocinas/2573_2594_2595_2596.jpg: kit_bocinas/2573_2594_2595_2596-bd92c342d05876c08f519fb947b5389c.jpg
 logo/Personal-2.jpg: logo/Personal-2-a3345291e82d56eeb2bf6f5400eae32f.jpg
+logo/PersonalSide.gif: logo/PersonalSide-eafd4973a4e4decdeea65eacbbded96b.gif
 logo/banner.jpg: logo/banner-60a35f388f93824f5321e543dee4bd65.jpg
 logo/banner_3.jpg: logo/banner_3-a409526256170a0b2c75a0c50409073a.jpg
 logo/carro_1.png: logo/carro_1-94aa3b503b7013c52bca56b402b5eafd.png
@@ -582,6 +586,7 @@ logo/frio-tecnologia.png: logo/frio-tecnologia-6cdb798be052766addf0f6395436579d.
 logo/icra.gif: logo/icra-82e911dca6d91b471026e52bb373a524.gif
 logo/logoEmpresa2.jpg: logo/logoEmpresa2-1fdf38307ee8707f0575efb1b12aefd4.jpg
 logo/logoEmpresa3.png: logo/logoEmpresa3-3caebc97d754a9f11c6ab32851aef5d8.png
+logo/logoSide2.gif: logo/logoSide2-cf2abeaa76562506fb96c4688203a6e0.gif
 logo/logo_1.jpg: logo/logo_1-c5a9011543c3425d0c1b6746c8db8c15.jpg
 logo/logo_C.png: logo/logo_C-8ef188fdfe8e7858fe53cbc430e5f7b4.png
 logo/no_dispo.jpg: logo/no_dispo-3a82c171d3a9bfc5330dbc8cf93e4362.jpg
@@ -631,8 +636,8 @@ piston/Copeland_piston/EAB_EAD_KAL_EAV_EAL.jpg: piston/Copeland_piston/EAB_EAD_K
 piston/Copeland_piston/HAJ.jpg: piston/Copeland_piston/HAJ-c722ab100612b396b79516ab9465b894.jpg
 piston/Copeland_piston/KAH_KAG_KAE.jpg: piston/Copeland_piston/KAH_KAG_KAE-1bf20b67252a03b47319f77f7fe9ae9e.jpg
 piston/Copeland_piston/NRN_NRM.jpg: piston/Copeland_piston/NRN_NRM-941e8fac3c9c1393b6d148d94507191e.jpg
-application.js: application-5e85847a77b647c501ee494ff3c8fdca.js
-application.css: application-0c3dffeb511f1cbf90fef09bfdb50a65.css
+application.js: application-c1255d9aecfc5131059ef216189fd4bc.js
+application.css: application-0f6054a7b2e885ce5bc78fb9428c6cda.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-691b2d4343303de8d214ad5395fd895d.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
 jquery-ui/ui-bg_flat_75_ffffff_40x100.png: jquery-ui/ui-bg_flat_75_ffffff_40x100-841636c8f8d33987bb8d2f31e8ef92ca.png

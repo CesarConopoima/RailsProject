@@ -49,7 +49,7 @@
 }
 #banner_2 .nombre {
   margin-top: 5px;
-  margin-left: 80px;
+  margin-left: 0px;
   width:500px;
   height: 100px;
 }
@@ -110,6 +110,22 @@ text-align: center;
     z-index: 1;
     margin-right:5px;
 }
+#side_1 .logoSide{
+  width: 95%;
+  margin-top: 15px;
+}
+#side_1 .newProduct{
+  width: 95%;
+  height: 92px;
+  margin-top: 15px;
+}
+#side_1 .logoSide:hover{
+  -webkit-filter: brightness(140%);
+  }
+#side_1 .newProduct:hover{
+  -webkit-filter: brightness(140%);
+  }
+
  #main {
  position:relative;
  max-width: 620px;

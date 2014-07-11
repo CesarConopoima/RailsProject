@@ -43,34 +43,3 @@ var ready = function() {
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
-
-
-var ready = function() {
-	$('[class="imgComp1"]').mouseenter(function() {
-	$(this).attr('src','/assets/COMPRESORES/Carrier_logo.jpg');
-	});
-	$('[class="imgComp1"]').mouseleave(function() {
-	$(this).attr('src', '/assets/COMPRESORES/Carrier.jpg');
-	});
-	$('[class="imgComp2"]').mouseenter(function() {
-	$(this).attr('src','/assets/COMPRESORES/Copeland_logo.jpg');
-	});
-	$('[class="imgComp2"]').mouseleave(function() {
-	$(this).attr('src', '/assets/COMPRESORES/Copeland.jpg');
-	});
-	$('[class="imgComp3"]').mouseenter(function() {
-	$(this).attr('src','/assets/COMPRESORES/Trane_logo.jpg');
-	});
-	$('[class="imgComp3"]').mouseleave(function() {
-	$(this).attr('src', '/assets/COMPRESORES/Trane.jpg');
-	});
-	$('[class="imgComp4"]').mouseenter(function() {
-	$(this).attr('src','/assets/COMPRESORES/Bitzer_logo.jpg');
-	});
-	$('[class="imgComp4"]').mouseleave(function() {
-	$(this).attr('src', '/assets/COMPRESORES/Bitzer2.jpg');
-	});
-};
-
-$(document).ready(ready);
-$(document).on('page:load', ready);
