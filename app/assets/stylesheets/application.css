@@ -108,14 +108,14 @@ text-align: center;
     width: 15%;
     background: white;
     z-index: 1;
-    margin-right:1px;
+    margin-right:5px;
 }
  #main {
  position:relative;
  max-width: 620px;
  min-height: 650px;
  float: left;
- width: 55%;
+ width: 57%;
  margin-right: 0px;
  margin-left: 3px;
  background: white;
@@ -132,15 +132,15 @@ text-align: center;
 #linkMenu{
   border: solid 1px #00355b; 
   text-align:center;
-  background: linear-gradient(to right,#00355b , white) no-repeat;
+  background: linear-gradient(to right,#2F516D , white) no-repeat;
   color: white;
 }
 #linkMenu2{
-  border: solid 1px #00355b; 
+  border: solid 1px #2F516D; 
   width: 145px; 
   height: 19px; 
   text-align:left;
-  background: linear-gradient(to right,#00355b , white) no-repeat;
+  background: linear-gradient(to right,#2F516D , white) no-repeat;
   padding-left: 45px;
   font-size:75%;
 }
@@ -183,7 +183,7 @@ text-align: center;
   font-family: sans-serif;
 }
 .ui-menu .ui-menu-item a:hover{
-  background: linear-gradient(to right,#00355b , white) no-repeat;
+  background: linear-gradient(to right,#2F516D , white) no-repeat;
   }
 .ui-menu .ui-menu-item a.ui-state-focus,
 .ui-menu .ui-menu-item a.ui-state-active {
@@ -369,7 +369,7 @@ z-index: 1;
   font-family: ‘Arial Black’, Gadget, sans-serif;
   color: white;
   text-align:center;
-  background:#0a2544;
+  background:#2F516D;
   height:30px;
   line-height:130%;
   text-align: center;
@@ -379,7 +379,7 @@ z-index: 1;
   font-family: ‘Arial Black’, Gadget, sans-serif;
   color: white;
   text-align:center;
-  background:#0a2544;
+  background:#2F516D;
   height:20px;
   line-height:120%;
   text-align: center;
