@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   skip_before_filter :authorize, only: [:devise]
   protect_from_forgery
   
+  def after_sign_in_path_for(resource)
+    tienda_index_path
+  end
   private
 
   	def current_cart
