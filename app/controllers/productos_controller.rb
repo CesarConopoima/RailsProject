@@ -1,5 +1,6 @@
 class ProductosController < ApplicationController
   before_filter :authenticate_user!
+  load_and_authorize_resource
   #before_filter :authorize
   # GET /productos
   # GET /productos.json
