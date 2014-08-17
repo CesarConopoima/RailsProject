@@ -35,6 +35,7 @@ group :assets do
 end
 
 gem "devise"
+gem "cancan"
 
 gem 'jquery-rails'
 

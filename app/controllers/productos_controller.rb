@@ -1,5 +1,6 @@
 class ProductosController < ApplicationController
-  before_filter :authorize
+  before_filter :authenticate_user!
+  #before_filter :authorize
   # GET /productos
   # GET /productos.json
   def index

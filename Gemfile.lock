@@ -36,6 +36,7 @@ GEM
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
+    cancan (1.6.10)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -173,6 +174,7 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk
   bcrypt-ruby (~> 3.0.0)
+  cancan
   coffee-rails (~> 3.2.1)
   devise
   galetahub-simple_captcha
