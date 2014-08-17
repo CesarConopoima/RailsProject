@@ -75,14 +75,13 @@
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
 		<% end %>	
-	<% if session[:usuario_id] %>
+	<% if user_signed_in? and current_user.role_ids[0] == 3 %>
 	<ul>
+	<li>Bienvenido administrador!!</li>
 	<li><%= link_to 'Ordenes', orders_path %></li>
 	<li><%= link_to 'Productos', productos_path %></li>
-	<li><%= link_to 'Usuarios Del Servicio', users_path %></li>
-	<li><%= link_to 'Usuarios Administradores', usuarios_path %></li>
+	<li><%= link_to 'Usuarios', users_path %></li>
 	</ul>
-	<%= button_to 'Salir de Administrar', logout_path, method: :delete %>
 	<% end %>
 </div>
 	

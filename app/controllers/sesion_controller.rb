@@ -1,5 +1,5 @@
 class SesionController < ApplicationController
-  skip_before_filter :authorize
+  #skip_before_filter :authorize
 
   def nueva
   end
