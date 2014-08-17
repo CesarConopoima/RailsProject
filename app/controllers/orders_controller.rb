@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       @validacion = @order.validate_presence(current_cart)
       if @validacion[0] != "OK"
-      flash[:notice] = "Solo tenemos disponibles #{@validacion[1]-1} del producto  #{@validacion[0]} "
+      flash[:notice] = "Actualmente no poseemos la cantidad demandada del producto #{@validacion[0]} "
       format.html { redirect_to tienda_url}
       format.json { render json: @order }
       else
