@@ -16,7 +16,7 @@
     <td><%= order.empresa %></td>
     <td><%= order.telefono %></td>
     <% @usuario = User.find_by_id(order.userid) %>
-    <td><%= @usuario.username %></td>
+    <td><%= @usuario.email %></td>
     <td><%= order.status %></td>
     <td style="text-align:center;width:150px;"><%= order.updated_at %></td>
     <td><%= link_to 'Mostrar', order %></td>
