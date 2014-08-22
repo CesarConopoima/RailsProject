@@ -20,6 +20,7 @@
 			<li><%= link_to "Productos", tienda_index_path %></li>
 			<li><%= link_to "Contacto", vista_contactar_path %></li>
 			<% if user_signed_in? %>
+			<li><%= link_to('Mis Compras', vista_status_path) %></li> 
   			<li><%= link_to('Salir', destroy_user_session_path, :method=>'delete') %></li>  
   			<%else%>
   			<li><%= link_to "Login", new_user_session_path %></li>
@@ -68,6 +69,13 @@
 			<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
 			</div>
 		<% elsif @identifiant == "vistaEmpresa" %>
+			<div class= "default">
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Trane.jpg", class: 'imgComp3'), tienda_pagina_path(:marca => "Trane") %></div>
+				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Bitzer2.jpg", class: 'imgComp4'), tienda_pagina_path(:marca => "Bitzer")%></div>
+			</div>
+		<% elsif @identifiant == "vistaStatus" %>
 			<div class= "default">
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Carrier.jpg", class: 'imgComp1'), tienda_pagina_path(:marca => "Carrier") %></div>
 				<div id = "imgCompresores"><%= link_to image_tag("COMPRESORES/Copeland.jpg", class: 'imgComp2'), tienda_pagina_path(:marca => "Copeland")%></div>

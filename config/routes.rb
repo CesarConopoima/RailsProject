@@ -17,6 +17,8 @@ Aplicacion::Application.routes.draw do
 
   get "vista/contactar"
 
+  get "vista/status"
+
   get "tienda/index"
 
   get "tienda/pagina"

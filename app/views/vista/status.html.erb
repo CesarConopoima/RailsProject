@@ -1,0 +1,32 @@
+<div id="status" class="status" >
+<h2>Vea aquí el estatus de su compra</h2>
+<% if @orders != nil %>
+	<h3>Usted tiene <%= @orders.each.count %> ordenes pendientes con nosotros, vea su estatus aquí </h3>
+	<% @orders.each do |order| %>
+		<div class="top"></div>
+		<p>
+		  <b>Fecha de actualización</b>
+		  <%= order.updated_at %>
+		</p>
+		<p>
+		  <b>Estatus:</b>
+		  <%= order.status %>
+		</p>
+		<table class = "tableOrder">
+		<tr><th>Producto</th>
+		    <th>Cantidad</th>
+		</tr>
+		<tr>
+		<% @k=0 %>
+		<% VistaController.productos(current_user.id,order.id)[0].each do |producto| %>
+		<td><%= producto.nombre %></td>
+		<td class="quantity"><%= VistaController.productos(current_user.id,order.id)[1][@k] %></td>
+		<% @k+=1 %>
+		</tr>
+		<% end  %>
+		</table>	
+	<% end %>
+<% else %>
+	<p> Usted no posée compras en proceso con nosotros.</p>
+<% end %>
+</div>
