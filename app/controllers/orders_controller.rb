@@ -8,7 +8,19 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    
+    @productoID = []
+    @productos = []
+    @cantidad = []
 
+    @order.line_items.each do |item|
+      @productoID << item.producto_id
+      @cantidad << item.quantity
+    end 
+    @productoID.each do |id|
+      @productos << Producto.find_by_id(id)
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -71,6 +83,8 @@ def create
       if @orders_number < 120
             if !@cart.line_items.empty?
             @order = Order.new(params[:order])
+            @order.userid = current_user.id
+            @order.status = "Solicitud de compra enviada"
             @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
             @order.add_line_items_from_cart(current_cart)
             @orderCreate=Order.new(params[:order])

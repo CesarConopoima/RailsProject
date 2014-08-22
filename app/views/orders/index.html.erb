@@ -1,13 +1,13 @@
-<h1>Lista de Ordenes </h1>
+<h1>Lista de Ordenes</h1>
 
 <table>
   <tr>
     <th>Nombre</th>
     <th>Empresa</th>
     <th>Teléfono</th>
-    <th style="text-align:center;width:150px;">Fecha del pedido</th>
-    <th></th>
-    <th></th>
+    <th style="text-align:center;width:150px;">Fecha</th>
+    <th>Usuario</th>
+    <th>Estatus</th>
   </tr>
 
 <% @orders.each do |order| %>
@@ -15,8 +15,12 @@
     <td><%= order.nombre %></td>
     <td><%= order.empresa %></td>
     <td><%= order.telefono %></td>
-    <td style="text-align:center;width:150px;"><%= order.created_at %></td>
+    <% @usuario = User.find_by_id(order.userid) %>
+    <td><%= @usuario.username %></td>
+    <td><%= order.status %></td>
+    <td style="text-align:center;width:150px;"><%= order.updated_at %></td>
     <td><%= link_to 'Mostrar', order %></td>
+    <td><%= link_to 'Editar', edit_order_path(order) %></td>
     <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
   </tr>
 <% end %>

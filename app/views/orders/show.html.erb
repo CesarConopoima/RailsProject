@@ -47,7 +47,6 @@
   <b>Fecha de la orden:</b>
   <%= @order.created_at %>
 </p>
-
 <p>
   <b>Status:</b>
   <%= @order.status %>
@@ -56,5 +55,20 @@
   <b>UserId:</b>
   <%= @order.userid %>
 </p>
+<p>
+<b>Productos Demandados:</b>
+<table class = "tableOrder">
+<tr><th>Nombre</th>
+    <th>Cantidad</th>
+</tr>
+<tr>
+<% @k=0 %>
+<% @productos.each do |productos| %>
+<td><%= productos.nombre %></td>
+<td class="quantity"><%= @cantidad[@k] %></td>
+</tr>
+<% @k+=1 %> 
+<% end  %>
+</table>
 <%= link_to 'Editar', edit_order_path(@order) %> |
 <%= link_to 'Ir atras', orders_path %>
