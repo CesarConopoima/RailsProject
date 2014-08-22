@@ -18,8 +18,19 @@
   	height:20px;
   	line-height:130%;
 	margin-top: 15px;}
-	p{
-	color:#F46767;
-	font-weight:bold;
-	}
+ 
+ .tableOrder{
+    th {
+    width:100%;
+    color: white;
+    background:#2c4762;
+    text-align:center;
+    }
+    td.quantity{
+    font-weight:bold;
+    }
+    td{
+    text-align:center;
+    }
+  }
 }

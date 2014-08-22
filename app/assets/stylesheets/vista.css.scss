@@ -139,4 +139,37 @@
 	 	font-size: 12px;
 		}
 	}
+.status{
+.tableOrder{
+	th {
+	width:100%;
+	color: white;
+	background:#bfc7cf;
+	}
+	td.quantity{
+	font-weight:bold;
+	}
+	}
+  .top{
+  margin-top: 50px;
+  border-top-style: solid;
+  border-color: #2c4762;
+  }
+  h2{
+	font-size: 20px;
+	font-family: Arial;
+	color: white;
+	text-align:center;
+	background:#2F516D;
+	height:30px;
+	line-height:130%;
+	text-align: center;
+	}
+	h3 {
+	text-align:center;
+	}
+	td{
+	text-align: center;
+	}	  
+}
 }
