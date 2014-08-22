@@ -1,7 +1,6 @@
 <div id="status" class="status" >
 <h2>Vea aquí el estatus de su compra</h2>
-<% if @orders != nil %>
-	<h3>Usted tiene <%= @orders.each.count %> ordenes pendientes con nosotros, vea su estatus aquí </h3>
+	<h3>Usted tiene <%= @orders.each.count %> ordenes pendientes con nosotros</h3>
 	<% @orders.each do |order| %>
 		<div class="top"></div>
 		<p>
@@ -26,7 +25,4 @@
 		<% end  %>
 		</table>	
 	<% end %>
-<% else %>
-	<p> Usted no posée compras en proceso con nosotros.</p>
-<% end %>
 </div>
