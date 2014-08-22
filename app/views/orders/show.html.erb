@@ -48,6 +48,13 @@
   <%= @order.created_at %>
 </p>
 
-
+<p>
+  <b>Status:</b>
+  <%= @order.status %>
+</p>
+<p>
+  <b>UserId:</b>
+  <%= @order.userid %>
+</p>
 <%= link_to 'Editar', edit_order_path(@order) %> |
 <%= link_to 'Ir atras', orders_path %>
