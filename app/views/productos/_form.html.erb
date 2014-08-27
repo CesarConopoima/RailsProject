@@ -45,6 +45,11 @@
     <%= f.label :modelo %><br />
     <%= f.text_field :modelo %>
   </div>
+  <div class="field">
+    <%= f.label :miscelaneus %><br />
+    <%= f.select :flag1, Producto::MISCELANEUS, 
+    prompt: 'Escoja miscelaneus si/no' %>
+  </div>
   <div class="actions">
     <%= f.submit 'Actualizar producto' %>
   </div>

@@ -9,6 +9,8 @@ class Producto < ActiveRecord::Base
     validates_attachment :imagenagregada,
   	:content_type => { :content_type => /jpg|gif|png|jpeg/},
   	:size => { :in => 0..800.kilobytes }
+
+  	MISCELANEUS = [ "no", "si" ]
   	
 	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageurl, presence: true
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01}
