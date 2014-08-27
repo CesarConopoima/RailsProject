@@ -2,7 +2,7 @@ class Producto < ActiveRecord::Base
 	has_many :line_items
 	has_many :orders, through: :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
-	attr_accessible :nombre, :codigo, :marca, :cantidad, :precio, :imageurl, :modelo
+	attr_accessible :nombre, :codigo, :marca, :cantidad, :precio, :imageurl, :modelo,:flag1
 	
 	attr_accessible :imagenagregada
     has_attached_file :imagenagregada, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "logo/no_dispo.jpg"
@@ -11,7 +11,7 @@ class Producto < ActiveRecord::Base
   	:size => { :in => 0..800.kilobytes }
 
   	MISCELANEUS = [ "no", "si" ]
-  	
+
 	validates :nombre, :codigo, :marca, :cantidad, :precio, :modelo, :imageurl, presence: true
 	validates :precio, numericality: {greater_than_or_equal_to: 0.01}
 	validates :codigo, uniqueness: true
