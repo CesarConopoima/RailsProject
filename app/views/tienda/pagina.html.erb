@@ -16,7 +16,7 @@ a:active {background-color:#6ca0bb;}
 	<%= link_to "#{producto.nombres.downcase.capitalize}", tienda_pagina2_path(:marca => "#{@marca}", :nombre => "#{producto.nombres}") %>
 		</div>
 	<% @k+=1 %>
-	<% if @k == 5 %>
+	<% if @k == 4 %>
 		<br class="clearBoth" />
 	<% @k = 0 %>
 	<% end %>
