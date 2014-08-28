@@ -4,10 +4,10 @@ class TiendaController < ApplicationController
   def index
   	@productos = Producto.search(params[:search])
   	@productos1= Producto.find_by_sql("select marca from productos group by marca order by marca")
-    @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' group by nombres having count(*) > 2 order by nombres")
-    @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' group by nombres having count(*) > 2 order by nombres")
-    @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' group by nombres order by nombres")
-    @productoYork=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'York' group by nombres order by nombres")
+    @productoCop=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Copeland' and flag1='no' group by nombres having count(*) > 0 order by nombres")
+    @productoCarr=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Carrier' and flag1='no' group by nombres having count(*) > 0 order by nombres")
+    @productoTran=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Trane' and flag1='no' group by nombres order by nombres")
+    @productoYork=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'York' and flag1='no' group by nombres order by nombres")
     @productoBitzer=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Bitzer' and flag1='no' group by nombres order by nombres")
     @cart = current_cart
     @productoMis = Producto.find_by_sql("select nombre from productos where marca like '#{@marca}' and flag1='si' ") 
