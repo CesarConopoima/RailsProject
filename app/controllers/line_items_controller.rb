@@ -2,7 +2,7 @@ class LineItemsController < ApplicationController
   #skip_before_filter :authorize, only: [:create, :increase, :destroy, :decrease]
   before_filter :authenticate_user!
   load_and_authorize_resource
-  skip_authorize_resource :only => [:create, :increase, :destroy, :decrease]
+  skip_authorize_resource :only => [:create, :increase, :increase1, :destroy, :decrease]
   # GET /carts
   # GET /line_items
   # GET /line_items.json
