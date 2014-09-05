@@ -48,6 +48,7 @@ class OrdersController < ApplicationController
     @productoBitzer=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Bitzer' group by nombres order by nombres")
     @cart = current_cart
     @producto_id=@cart.line_items
+    
     @usuario = current_user
     
     if @cart.line_items.empty?
