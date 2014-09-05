@@ -9,9 +9,7 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all
     
-  
-
-    respond_to do |format|
+  respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
     end
@@ -50,14 +48,22 @@ class OrdersController < ApplicationController
     @productoBitzer=Producto.find_by_sql("select split_part(nombre,' ', 1) AS nombres,count(*) AS number from productos where marca = 'Bitzer' group by nombres order by nombres")
     @cart = current_cart
     @producto_id=@cart.line_items
-
+    @usuario = current_user
+    
     if @cart.line_items.empty?
       redirect_to tienda_url, notice: "Tu carro de compras esta vacio"
       return
     end
     
     @order = Order.new
-    @order.nombre = "Willi"
+    @order.nombre = @usuario.nombre
+    @order.empresa = @usuario.nombreEmpresa
+    @order.direccion = @usuario.direccion
+    @order.telefono = @usuario.telefono
+    @order.localidadvenezuela = @usuario.localidadVenezuela
+    @order.email = @usuario.email
+
+
     respond_to do |format|
       @validacion = @order.validate_presence(current_cart)
       if @validacion[0] != "OK"
