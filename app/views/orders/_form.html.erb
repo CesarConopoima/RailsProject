@@ -26,10 +26,6 @@
     <%= f.label :dirección %><br />
     <%= f.text_area :direccion, rows: 3, cols:40 %>
   </div>
-   <div class="field">
-    <%= f.label :dirección_de_envio %><br />
-    <%= f.text_area :direccionaux, rows: 3, cols:40 %>
-  </div>
 <h3>Datos de contacto:</h3>
   <div class="field">
     <%= f.label :email %><br />
@@ -53,6 +49,10 @@
     <%= f.label :localidad_de_venezuela %><br />
     <%= f.select :localidadvenezuela, Order::VENEZUELA_ESTADOS, 
     prompt: 'Selecciona tu Región de Venezuela' %>
+  </div>
+  <div class="field">
+    <%= f.label :dirección_MRW_de_envio %><br />
+    <%= f.text_area :direccionaux, rows: 3, cols:40 %>
   </div>
   <div class="field">
 <h3>Tipo de pago:</h3>

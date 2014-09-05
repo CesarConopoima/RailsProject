@@ -122,9 +122,9 @@ def create
   # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
-    OrderNotifier.statuschanged(@order).deliver
     respond_to do |format|
       if @order.update_attributes(params[:order])
+        OrderNotifier.statuschanged(@order).deliver
         format.html { redirect_to @order, notice: 'La orden ha cambiado de estatus' }
         format.json { head :no_content }
       else
