@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 	PAYMENT_TYPES = [ "Deposito Bancario" , "Transferencia Bancaria","Pago en la tienda"]
 	SEND_TYPES = [ "MRW (Pago en destino)" , "ZOOM (Pago en destino)","DHL (Pago en destino)","Busqueda en la Tienda"]
 	VENEZUELA_ESTADOS = [ "Anzoategui","Amazonas","Apure","Aragua","Barinas","Bolivar","Carabobo","Cojedes","Delta Amacuro","Distrito Capital","Falcon","Guarico","Lara","Merida","Miranda","Monagas","Nueva Esparta","Portuguesa","Tachira","Trujillo","Vargas","Yaracuy","Zulia"]
-	STATUS = [ "Solicitud de compra enviada" , "Compra recibida y leida", "Pago comprobado","Productos embalados","Productos enviados","Acuse de recibido" ]
+	STATUS = [ "Orden de compra recibida" , "En espera por pago para ser procesada", "Pago comprobado, artículos embalados","Artículos enviados","En espera por acuse de recibo por parte del cliente"]
 	validates :nombre,:presence => { :message => "Este campo debe ser llenado" }, length: { maximum: 15 }
 	validates :empresa,:presence => { :message => "Este campo debe ser llenado" }, length: { maximum: 30 }
 	validates :direccion,:presence => { :message => "Este campo debe ser llenado" }
