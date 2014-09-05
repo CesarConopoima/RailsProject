@@ -57,6 +57,7 @@ class OrdersController < ApplicationController
     end
     
     @order = Order.new
+    @order.nombre = "Willi"
     respond_to do |format|
       @validacion = @order.validate_presence(current_cart)
       if @validacion[0] != "OK"
@@ -86,7 +87,7 @@ def create
             if !@cart.line_items.empty?
             @order = Order.new(params[:order])
             @order.userid = current_user.id
-            @order.status = "Solicitud de compra enviada"
+            @order.status = "Orden de compra recibida"
             @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
             @order.add_line_items_from_cart(current_cart)
             @orderCreate=Order.new(params[:order])
