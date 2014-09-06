@@ -3,11 +3,11 @@
   <%= render(cart.line_items) %>
 <tr class="total_line">
   <td colspan="2">I.V.A</td>
-  <td><%= number_to_currency(cart.total_price*12/100, :unit => "Bsf ") %></td>
+  <td class="IVA_cell"><%= number_to_currency(cart.total_price*12/100, :unit => "Bsf ") %></td>
 </tr>
 <tr class="total_line">
   <td colspan="2">Total</td>
-  <td class="total_cell"><%= number_to_currency(cart.total_price, :unit => "Bsf ") %></td>
+  <td class="total_cell"><%= number_to_currency(cart.total_price + cart.total_price*12/100, :unit => "Bsf ") %></td>
 </tr>
 </table>  
 <%= button_to 'Continuar con la compra', new_order_path, method: :get, :class => 'button1' %>
