@@ -14,15 +14,30 @@
 		<table class = "tableOrder">
 		<tr><th>Producto</th>
 		    <th>Cantidad</th>
+		    <th>Precio</th>
 		</tr>
 		<tr>
 		<% @k=0 %>
+		<% @TotalPrice=0 %>
 		<% VistaController.productos(current_user.id,order.id)[0].each do |producto| %>
+		<% @cantidad=VistaController.productos(current_user.id,order.id)[1][@k] %>
 		<td><%= producto.nombre %></td>
-		<td class="quantity"><%= VistaController.productos(current_user.id,order.id)[1][@k] %></td>
+		<td><%= @cantidad  %></td>
+		<td><%= number_to_currency(producto.precio * @cantidad, :unit=>"Bsf ")  %></td>
+		<% @TotalPrice += producto.precio * @cantidad %>
 		<% @k+=1 %>
 		</tr>
 		<% end  %>
+		<tr>
+		<td></td>
+		<td class="iva">I.V.A</td>
+		<td class="iva"><%= number_to_currency(@TotalPrice*12/100, :unit=>"Bsf ") %></td>
+		</tr>
+		<tr>
+		<td></td>
+		<td class="total">Total</td>
+		<td class="total"><%= number_to_currency(@TotalPrice + @TotalPrice*12/100, :unit=>"Bsf ") %></td>
+		</tr>
 		</table>	
 	<% end %>
 </div>

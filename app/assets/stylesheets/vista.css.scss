@@ -141,12 +141,19 @@
 	}
 .status{
 .tableOrder{
-	th {
 	width:100%;
+	th {
 	color: white;
 	background:#bfc7cf;
 	}
-	td.quantity{
+	td.iva{
+	background:#bfc7cf;
+	color:white;
+	font-weight:bold;
+	}
+	td.total{
+	background:#2c4762;
+	color:white;
 	font-weight:bold;
 	}
 	}
