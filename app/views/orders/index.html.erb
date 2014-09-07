@@ -1,6 +1,6 @@
 <h1>Lista de Ordenes</h1>
 </br></br></br>
-<table>
+<table class = "resumen">
   <tr>
     <th>Nombre</th>
     <th>Empresa</th>
@@ -20,7 +20,7 @@
     <% @usuario = User.find_by_id(order.userid) %>
     <td><%= @usuario.email %></td>
     <td><%= order.status %></td>
-    <td style="text-align:center;width:150px;"><%= order.updated_at - (4*60*60 + 30*60) %></td>
+    <td class = "CellsToExpand"><%= order.updated_at - (4*60*60 + 30*60) %></td>
     <td><%= link_to 'Mostrar', order %></td>
     <td><%= link_to 'Editar', edit_order_path(order) %></td>
     <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
