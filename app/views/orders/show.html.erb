@@ -45,7 +45,7 @@
 
 <p>
   <b>Fecha de la orden:</b>
-  <%= @order.created_at %>
+  <%= @order.created_at - (4*60*60 + 30*60)%>
 </p>
 <p>
   <b>Status:</b>
@@ -53,7 +53,7 @@
 </p>
 <p>
   <b>Fecha de cambio de estatus</b>
-  <%= @order.updated_at %>
+  <%= @order.updated_at - (4*60*60 + 30*60) %>
 </p>
 <p>
 <b>Productos Demandados:</b>

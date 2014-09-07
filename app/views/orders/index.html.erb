@@ -5,9 +5,10 @@
     <th>Nombre</th>
     <th>Empresa</th>
     <th>Teléfono</th>
-    <th>Fecha</th>
+    <th>Fecha de Creación</th>
     <th>Usuario</th>
     <th>Estatus</th>
+    <th>Fecha de Actualización</th>
   </tr>
 
 <% @orders.each do |order| %>
@@ -15,11 +16,11 @@
     <td><%= order.nombre %></td>
     <td><%= order.empresa %></td>
     <td><%= order.telefono %></td>
-    <td><%= order.updated_at - (4*60*60 + 30*60) %></td>    
+    <td><%= order.created_at - (4*60*60 + 30*60) %></td>    
     <% @usuario = User.find_by_id(order.userid) %>
     <td><%= @usuario.email %></td>
     <td><%= order.status %></td>
-    <td style="text-align:center;width:150px;"><%= order.updated_at %></td>
+    <td style="text-align:center;width:150px;"><%= order.updated_at - (4*60*60 + 30*60) %></td>
     <td><%= link_to 'Mostrar', order %></td>
     <td><%= link_to 'Editar', edit_order_path(order) %></td>
     <td><%= link_to 'Eliminar', order, confirm: 'Esta seguro?', method: :delete %></td>
