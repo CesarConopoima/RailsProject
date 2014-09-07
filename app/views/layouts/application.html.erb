@@ -19,6 +19,7 @@
 			<li><%= link_to "Servicios", vista_servicio_path %></li>
 			<li><%= link_to "Productos", tienda_index_path %></li>
 			<li><%= link_to "Contacto", vista_contactar_path %></li>
+			<li><%= Time.now %></li>
 			<% if user_signed_in? %>
 			<li><%= link_to('Mis compras', vista_status_path) %></li> 
 			<li><%= link_to('Como comprar', vista_video_path) %></li> 
