@@ -53,6 +53,7 @@ Aplicacion::Application.routes.draw do
     put 'decrease', on: :member
     put 'increase', on: :member
     put 'increase1', on: :member
+    put 'erase', on: :member
   end
   resources :usuarios
 

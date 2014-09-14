@@ -8,7 +8,7 @@
     <th>Fecha de Creación</th>
     <th>Usuario</th>
     <th>Estatus</th>
-    <th>Datos del pago</th>
+    <th>Pagado?</th>
     <th>Fecha de Actualización</th>
   </tr>
 
@@ -22,9 +22,9 @@
     <td><%= @usuario.email %></td>
     <td><%= order.status %></td>
     <% if order.numerodepago != nil and order.monto != nil %>
-    <td style = "background:#99cc99;color:white">Ref: <%= order.banco %>;<%= order.numerodepago %>; Monto: <%= order.monto %> </td>
+    <td class = "CellsToExpand" style = "background:#99cc99;color:white">Ref: <%= order.banco %>;<%= order.numerodepago %>; Monto: <%= order.monto %> </td>
     <% else %>
-    <td style = "background:#c27070;color:white">En espera</td>
+    <td class = "CellsToExpand" style = "background:#c27070;color:white">En espera</td>
     <% end %>
     <td class = "CellsToExpand"><%= order.updated_at - (4*60*60 + 30*60) %></td>
     <td><%= link_to 'Mostrar', order %></td>

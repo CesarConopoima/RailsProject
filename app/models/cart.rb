@@ -36,5 +36,11 @@ class Cart < ActiveRecord::Base
     current_item.quantity += 1
     current_item
   end
+
+  def erase(line_item_id)
+	current_item = line_items.find(line_item_id)
+	current_item.destroy
+	current_item
+  end
   
 end
