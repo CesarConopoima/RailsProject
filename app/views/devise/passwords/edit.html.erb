@@ -1,16 +1,54 @@
-<h2>Cambia tu contraseña</h2>
+<style>
+h2 {font-size: 20px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:30px;
+  	line-height:130%;
+	margin-top: 25px;}
+h3 {font-size: 15px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:20px;
+  	line-height:130%;
+	margin-top: 15px;}
+div.labels{
+	text-align: center;
+	font-size: 12px;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
+}
+input[type=submit] {
+	border: 0;
+	color:white;
+    background:#333333;
+    height:25px;
+}
+ input[type=submit]:hover {
+    background:#e59400;
+    height:25px;
+    }
+a{
+	text-decoration: none;
+}
+a:hover{
+	background: #708090;
+}
+</style>
+
+<h2>Cambie su contraseña</h2>
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div><%= f.label :password, "Nueva contraseña" %><br />
+  <div class = "labels"><%= f.label :password, "Nueva contraseña" %><br />
   <%= f.password_field :password, :autofocus => true %></div>
 
-  <div><%= f.label :password_confirmation, "Confirma tu contraseña" %><br />
+  <div class = "labels"><%= f.label :password_confirmation, "Confirma tu contraseña" %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Cambiar contraseña" %></div>
+  <div class = "labels"><%= f.submit "Cambiar contraseña" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
