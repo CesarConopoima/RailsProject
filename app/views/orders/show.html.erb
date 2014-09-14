@@ -48,12 +48,28 @@
   <%= @order.created_at - (4*60*60 + 30*60)%>
 </p>
 <p>
-  <b>Status:</b>
+  <b>Estatus actual:</b>
   <%= @order.status %>
 </p>
 <p>
   <b>Fecha de cambio de estatus</b>
   <%= @order.updated_at - (4*60*60 + 30*60) %>
+</p>
+<p>
+  <b>------------------------------------------------------------------------</b>
+  <p>Datos del pago</p>
+</p>
+<p>
+  <b>Banco:</b>
+  <p><%= @order.banco %></p>
+</p>
+<p>
+  <b>Numéro de orden de pago:</b>
+  <p><%= @order.numerodepago %></p>
+</p>
+<p>
+  <b>Monto pagado:</b>
+  <p><%= @order.monto %></p>
 </p>
 <p>
 <b>Productos Demandados:</b>
