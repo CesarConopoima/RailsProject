@@ -21,6 +21,8 @@ Aplicacion::Application.routes.draw do
 
   get "vista/status"
 
+  get "vista/pagarorden"
+
   get "tienda/index"
 
   get "tienda/pagina"

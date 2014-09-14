@@ -1,0 +1,34 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> Esta Orden no puede ser procesada:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<h2>Haga efectiva su compra </h2>
+  <div class="field">
+    <%= f.label :Banco %><br />
+     <%= f.select :tipoPago, Order::BANCOS, 
+    prompt: 'Selecciona tu Banco' %>
+
+  </div>
+  <div class="field">
+    <%= f.label :Número_de_deposito_o_pago %><br />
+    <%= f.text_field :numerodepago, size: 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :Monto_pagado %><br />
+    <%= f.text_field :monto, size: 15 %>
+  </div>
+  <div class="field">
+  <%= show_simple_captcha(:label => "Demuestra que eres humano") %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Enviar información de pago' %>
+  </div>
+<% end %>
