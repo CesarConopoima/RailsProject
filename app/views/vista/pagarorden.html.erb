@@ -1,3 +1,47 @@
+<style>
+h2 {font-size: 20px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:30px;
+  	line-height:130%;
+	margin-top: 25px;}
+h3 {font-size: 15px;
+ 	font-family: ‘Arial Black’, Gadget, sans-serif;
+  	color: white;
+  	background:#0a2544;
+  	height:20px;
+  	line-height:130%;
+	margin-top: 15px;}
+div.field{
+	font-size: 12px;
+	font-family: ‘Arial Black’, Gadget, sans-serif;
+}
+input[type=submit] {
+	border: 0;
+	color:white;
+    background:#333333;
+    height:25px;
+}
+ input[type=submit]:hover {
+    background:#e59400;
+    height:25px;
+    }
+a{
+	text-decoration: none;
+}
+a:hover{
+	background: #708090;
+}
+p{
+color:#F46767;
+font-weight:bold;
+}
+</style>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Información de la orden de pago</h1>
 
 <%= render 'formPagar' %>

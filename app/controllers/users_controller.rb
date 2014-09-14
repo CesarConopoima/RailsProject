@@ -44,6 +44,8 @@ class UsersController < ApplicationController
     @user.attributes = params[:user]
     @user.role_ids = params[:user][:role_ids] if params[:user]
     @user = User.new(params[:user])
+
+    if simple_captcha_valid?
     respond_to do |format|
       if @user.save
         flash[:notice] = flash[:notice].to_a.concat @user.errors.full_messages
@@ -55,6 +57,9 @@ class UsersController < ApplicationController
         format.json { render :json => @user.errors, :status => :unprocessable_entity }
       end
     end
+  else
+    redirect_to (:back), notice: "La serie que introdujo no corresponde con la imagen"      
+  end
   end
 
   # PUT /users/1

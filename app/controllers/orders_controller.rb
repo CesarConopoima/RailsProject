@@ -130,16 +130,31 @@ def create
   # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
+    
+    if simple_captcha_valid?
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        OrderNotifier.statuschanged(@order).deliver
-        format.html { redirect_to @order, notice: 'La orden ha cambiado de estatus' }
+        #validación para saber que tipo de actualización se está haciendo
+        #si es del cliente significa que indicó los datos de la compra
+        if @order.numerodepago != nil and @order.monto != nil
+        format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
+        else
+        format.html { redirect_to (:back), notice: 'La orden ha cambiado de estatus!' }
+        format.json { head :no_content }
+        end
+      
+
       else
         format.html { render action: "edit" }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
+    
+    else
+    
+    redirect_to (:back), notice: "La serie que introdujo no corresponde con la imagen"      
+    end 
   end
 
   # DELETE /orders/1
