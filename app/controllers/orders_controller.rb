@@ -133,6 +133,7 @@ def create
     
     if simple_captcha_valid?
     respond_to do |format|
+      
       if @order.update_attributes(params[:order])
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra

@@ -13,9 +13,8 @@
 <h2>Haga efectiva su compra </h2>
   <div class="field">
     <%= f.label :Banco %><br />
-     <%= f.select :tipoPago, Order::BANCOS, 
+     <%= f.select :banco, Order::BANCOS, 
     prompt: 'Selecciona tu Banco' %>
-
   </div>
   <div class="field">
     <%= f.label :Número_de_deposito_o_pago %><br />
