@@ -94,7 +94,7 @@ def create
             if !@cart.line_items.empty?
             @order = Order.new(params[:order])
             @order.userid = current_user.id
-            @order.status = "Orden de compra recibida"
+            @order.status = "Orden de compra recibida y en espera por pago para continuar el proceso de despacho"
             @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
             @order.add_line_items_from_cart(current_cart)
             @orderCreate=Order.new(params[:order])
