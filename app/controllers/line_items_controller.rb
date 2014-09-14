@@ -143,5 +143,21 @@ class LineItemsController < ApplicationController
       end
     end
   end
+
+  def erase
+    @cart = current_cart
+    @line_item = @cart.erase(params[:id])
+
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to tienda_path, notice: 'Line item was successfully updated.' }
+        format.js   { @current_item = @line_item }
+        format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
   
 end
