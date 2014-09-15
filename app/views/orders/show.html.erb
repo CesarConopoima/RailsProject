@@ -9,11 +9,6 @@
 </p>
 
 <p>
-  <b>Direccion MRW de envio:</b>
-  <%= @order.direccionaux %>
-</p>
-
-<p>
   <b>Email:</b>
   <%= @order.email %>
 </p>
@@ -27,25 +22,33 @@
   <b>Telefono alternativo:</b>
   <%= @order.telefonoaux %>
 </p>
-
-<p>
-  <b>Tipo de envio:</b>
-  <%= @order.tipoenvio %>
-</p>
-
 <p>
   <b>Localidad en Venezuela:</b>
   <%= @order.localidadvenezuela %>
 </p>
-
 <p>
   <b>Tipo de pago:</b>
   <%= @order.tipoPago %>
 </p>
-
+<p>
+  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
+  <b style = "text-align:center;">Detalles del envio</b>
+</p>
+<p>
+  <b>Tipo de envio:</b>
+  <%= @order.tipoenvio %>
+</p>
+<p>
+  <b>Direccion MRW de envio:</b>
+  <%= @order.direccionaux %>
+</p>
 <p>
   <b>Fecha de la orden:</b>
   <%= @order.created_at - (4*60*60 + 30*60)%>
+</p>
+<p>
+  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
+  <b style = "text-align:center;">Estatus de la orden y última fecha de actualización</b>
 </p>
 <p>
   <b>Estatus actual:</b>
@@ -56,8 +59,8 @@
   <%= @order.updated_at - (4*60*60 + 30*60) %>
 </p>
 <p>
-  <b>------------------------------------------------------------------------</b>
-  <p>Datos del pago</p>
+  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
+  <b style = "text-align:center;">Datos del pago</b>
 </p>
 <p>
   <b>Banco:</b>
@@ -72,7 +75,10 @@
   <p><%= @order.monto %></p>
 </p>
 <p>
-<b>Productos Demandados:</b>
+  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
+  <b style = "text-align:center;">Productos Demandados:</b>
+</p>
+
 <table class = "tableOrder">
 <tr><th>Nombre</th>
     <th>Cantidad</th>
