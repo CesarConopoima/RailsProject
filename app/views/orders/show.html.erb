@@ -30,9 +30,10 @@
   <b>Tipo de pago:</b>
   <%= @order.tipoPago %>
 </p>
-<p>
-  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
-  <b style = "text-align:center;">Detalles del envio</b>
+<p style = "text-align:center;">
+  <b>--------------------------------------------------------------------------------------</b>
+  </br>
+  <b>Detalles del envio</b>
 </p>
 <p>
   <b>Tipo de envio:</b>
@@ -46,9 +47,10 @@
   <b>Fecha de la orden:</b>
   <%= @order.created_at - (4*60*60 + 30*60)%>
 </p>
-<p>
-  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
-  <b style = "text-align:center;">Estatus de la orden y última fecha de actualización</b>
+<p style = "text-align:center;">
+  <b>--------------------------------------------------------------------------------------</b>
+  </br>
+  <b>Estatus de la orden y última fecha de actualización</b>
 </p>
 <p>
   <b>Estatus actual:</b>
@@ -58,9 +60,10 @@
   <b>Fecha de cambio de estatus</b>
   <%= @order.updated_at - (4*60*60 + 30*60) %>
 </p>
-<p>
-  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
-  <b style = "text-align:center;">Datos del pago</b>
+<p style = "text-align:center;">
+  <b>--------------------------------------------------------------------------------------</b>
+  </br>
+  <b>Datos del pago</b>
 </p>
 <p>
   <b>Banco:</b>
@@ -74,9 +77,10 @@
   <b>Monto pagado:</b>
   <p><%= @order.monto %></p>
 </p>
-<p>
-  <b style = "text-align:center;">--------------------------------------------------------------------------------------</b>
-  <b style = "text-align:center;">Productos Demandados:</b>
+<p style = "text-align:center;">
+  <b>--------------------------------------------------------------------------------------</b>
+  </br>
+  <b>Productos Demandados:</b>
 </p>
 
 <table class = "tableOrder">
