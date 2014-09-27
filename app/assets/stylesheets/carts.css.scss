@@ -104,9 +104,12 @@
     input.erase {
       border:0;
       color:white;
-      background:black;
+      background:#323232;
       height:25px;
       text-font:60%;
       display:inline;
+    }
+    input.erase:hover {
+      background:black;
     }
 }

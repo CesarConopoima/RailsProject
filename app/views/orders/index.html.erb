@@ -22,7 +22,7 @@
     <td><%= @usuario.email %></td>
     <td><%= order.status %></td>
     <% if order.numerodepago != nil and order.monto != nil %>
-    <td class = "CellsToExpand" style = "background:#99cc99;color:white">Ref: <%= order.banco %>;<%= order.numerodepago %>; Monto: <%= order.monto %> </td>
+    <td class = "CellsToExpand" style = "background:#99cc99;color:white">Referencia: <%= order.banco %>;<%= order.numerodepago %>; Monto: <%= order.monto %> </td>
     <% else %>
     <td class = "CellsToExpand" style = "background:#c27070;color:white">En espera</td>
     <% end %>
