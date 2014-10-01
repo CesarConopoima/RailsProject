@@ -1,5 +1,24 @@
 <label class="label"><%= t("activerecord.attributes.user.email", :default => t("activerecord.labels.email", :default => "Email")) %>:</label>
-<p><%= @user.email %></p>
+<p>
+  <b>Email del Usuario:</b>
+  <%= @user.email %>
+</p>
+<p>
+<b>Nombre y Apellido:</b>
+  <%= @user.apellido %> , <%= @user.nombre %> 
+</p>
+<p>
+<b>Empresa</b>
+  <%= @user.nombreEmpresa %>
+</p>
+<p>
+<b>Teléfono</b>
+  <%= @user.telefono %>
+</p>
+<p>
+<b>Dirección</b>
+  <%= @user.direccion %>
+</p>
 <div class="form-actions">
-<%= link_to "Atras", admin_users_path, :class => 'btn'  %>
+<%= link_to "Atras", users_path, :class => 'btn'  %>
 </div>
