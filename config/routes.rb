@@ -50,10 +50,10 @@ Aplicacion::Application.routes.draw do
   end
 
   resources :line_items do
-    put 'decrease', on: :member
-    put 'increase', on: :member
-    put 'increase1', on: :member
-    put 'erase', on: :member
+    post 'decrease', on: :member
+    post 'increase', on: :member
+    post 'increase1', on: :member
+    post 'erase', on: :member
   end
   resources :usuarios
 

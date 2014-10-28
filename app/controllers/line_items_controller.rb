@@ -90,8 +90,6 @@ class LineItemsController < ApplicationController
   end
   # PUT /line_items/1
   # PUT /line_items/1.json
-# PUT /line_items/1
-  # PUT /line_items/1.json
   def decrease
     @cart = current_cart
     @line_item = @cart.decrease(params[:id])
