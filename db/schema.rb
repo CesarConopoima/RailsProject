@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140501224530) do
+ActiveRecord::Schema.define(:version => 20141028012517) do
 
   create_table "carts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(:version => 20140501224530) do
     t.string   "telefono2"
     t.string   "tipoenvio"
     t.string   "localidadvenezuela"
+    t.integer  "userid"
+    t.string   "status"
+    t.string   "banco"
+    t.string   "numerodepago"
+    t.string   "monto"
+    t.date     "fechadepago"
   end
 
   create_table "productos", :force => true do |t|
@@ -50,12 +56,13 @@ ActiveRecord::Schema.define(:version => 20140501224530) do
     t.decimal  "precio"
     t.string   "imageurl"
     t.string   "modelo"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.string   "imagenagregada_file_name"
     t.string   "imagenagregada_content_type"
     t.integer  "imagenagregada_file_size"
     t.datetime "imagenagregada_updated_at"
+    t.string   "flag1",                       :default => "no"
   end
 
   create_table "roles", :force => true do |t|
