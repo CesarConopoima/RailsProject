@@ -5,3 +5,9 @@ task :delete_carts => :environment do
   Cart.destroy_all
   puts "done."
 end
+
+task :delete_not_payed_orders => :environment do
+  puts "Deleting not payed orders"
+  Order.erase_not_processed_order
+  puts "done."
+end

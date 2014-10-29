@@ -48,4 +48,15 @@ class Order < ActiveRecord::Base
 		end
 		return @producto_no_dispo
 	end
+
+	def erase_not_processed_order
+		Order.all.each do |order|
+			time1 = order.created_at
+			time2 = Time.now()
+			Diff = time2 - (time1 + 86400)
+			status = order.status
+			if Diff > 0 and status.include?("Orden de compra recibida")
+				order.destroy
+			end  
+	end
 end

@@ -64,11 +64,7 @@ font-weight:bold;
     <%= f.label :Monto_pagado %><br />
     <%= f.text_field :monto, size: 15 %>
   </div>
-  <div class="field">
-    <%= f.label :Fecha_de_pago %><br />
-    <%= f.date_select :fechadepago, :start_year=>2014 %>
-  </div>
-  <div class="field">
+   <div class="field">
   <%= show_simple_captcha(:label => "Demuestra que eres humano") %>
   </div>
   <div class="actions">
