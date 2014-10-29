@@ -57,6 +57,7 @@ class Order < ActiveRecord::Base
 			status = order.status
 			if Diff > 0 and status.include?("Orden de compra recibida")
 				order.destroy
-			end  
+			end 
+		end 
 	end
 end
