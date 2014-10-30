@@ -1,6 +1,5 @@
 class OrderNotifier < ActionMailer::Base
   default from: "copelancitadevenezuela@gmail.com"
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -30,8 +29,8 @@ class OrderNotifier < ActionMailer::Base
   def paymentInformation(order)
     @order = order
     @numero = @order.id
-    mail to: => "copelancitadevenezuela@gmail.com", subject: 'Han Pagado la orden de referncia #{@numero}'
-    mail to: => "cesar.conopoima@gmail.com", subject: 'Han Pagado la orden de referencia #{@numero}'
+    mail to: => "copelancitadevenezuela@gmail.com", subject: "Han Pagado la orden de referencia #{@numero}"
+    mail to: => "cesar.conopoima@gmail.com", subject: "Han Pagado la orden de referencia #{@numero}"
   end
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
