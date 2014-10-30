@@ -130,10 +130,8 @@ def create
   # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
-    
     if simple_captcha_valid?
     respond_to do |format|
-      
       if @order.update_attributes(params[:order])
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra
@@ -141,15 +139,14 @@ def create
         #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
         #Ojo!, es necesario aquí el timer para que no se eliminé la compra?
         #@order.status = "Pago comprobado, productos embalados"
+        #@order.save
         OrderNotifier.paymentInformation(@order).deliver
         format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
         else
-        format.html { redirect_to (:back), notice: 'La Orden fué actualizada' }
+        format.html { redirect_to (:back), notice: 'Orden actualizada' }
         format.json { head :no_content }
         end
-      
-
       else
         format.html { render action: "edit" }
         format.json { render json: @order.errors, status: :unprocessable_entity }
