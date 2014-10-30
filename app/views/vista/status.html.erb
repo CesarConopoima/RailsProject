@@ -3,9 +3,17 @@
 	<h3>Usted tiene <%= @orders.each.count %> ordenes pendientes con nosotros</h3>
 	<% @orders.each do |order| %>
 		<div class="top"></div>
-		<p><b>Fecha de actualización: </b><%= order.updated_at - (4*60*60 + 30*60) %>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Llenar Info de pago', vista_pagarorden_path(id: order.id) %>
-		</p>
-		<p><b>Estatus:</b> <%= order.status %></p>
+		<p><b>Fecha de actualización: </b><%= order.updated_at - (4*60*60 + 30*60) %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% if order.status.include?("Orden de compra recibida") %>
+			<%= link_to 'Llenar Info de pago', vista_pagarorden_path(id: order.id) %>
+			</p>
+			<p><b>Estatus:</b> <%= order.status %></p>
+		<% else %>
+			</p>
+			<p><b>Estatus:</b> <%= order.status %></p>
+			<p><b>Informanción del pago:</b> Monto: <%= order.monto %> -- Banco: <%= order.banco %> -- Referencia: <%= order.numerodepago %></p>
+		<% end %>
 		<table class = "tableOrder">
 		<tr><th>Producto</th>
 		    <th>Cantidad</th>
