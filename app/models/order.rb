@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 	PAYMENT_TYPES = [ "Deposito Bancario" , "Transferencia Bancaria"]
 	SEND_TYPES = [ "MRW (Pago en destino)"]
 	VENEZUELA_ESTADOS = [ "Anzoategui","Amazonas","Apure","Aragua","Barinas","Bolivar","Carabobo","Cojedes","Delta Amacuro","Distrito Capital","Falcon","Guarico","Lara","Merida","Miranda","Monagas","Nueva Esparta","Portuguesa","Tachira","Trujillo","Vargas","Yaracuy","Zulia"]
-	STATUS = [ "Orden de compra recibida y en espera por pago para continuar el proceso de despacho" , "Pago comprobado, productos embalados","Productos enviados, en espera por acuse de recibo"]
+	STATUS = [ "Orden de compra recibida y en espera por pago para continuar el proceso de despacho" , "Comprobando datos del pago","Pago comprobado, productos embalados","Productos enviados, en espera por acuse de recibo"]
 		BANCOS= ["Banco de Venezuela","Banesco",
 		"BBVA Banco Provincial","Banco Mercantil",
 		"Bicentenario Banco Universal",

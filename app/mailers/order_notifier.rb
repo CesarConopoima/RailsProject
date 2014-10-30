@@ -23,14 +23,14 @@ class OrderNotifier < ActionMailer::Base
 
   def statuschanged(order)
     @order = order
-    mail to: order.email, subject: 'Cambio de estatus de su compra'
+    mail to: order.email, subject: 'Cambio el estatus de su compra'
   end
 
   def paymentInformation(order)
     @order = order
     @numero = @order.id
-    mail :to => "copelancitadevenezuela@gmail.com", subject: 'Hemos recibido un pedido'
-    mail :to => "cesar.conopoima@gmail.com", subject: 'Hemos recibido un pedido'
+    mail :to => "copelancitadevenezuela@gmail.com", subject: 'Hemos recibido el pago de la orden #{@numero}'
+    mail :to => "cesar.conopoima@gmail.com", subject: 'Hemos recibido el pago de la orden #{@numero}'
   end
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

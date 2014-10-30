@@ -138,12 +138,15 @@ def create
         if @order.numerodepago != nil and @order.monto != nil
         #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
         #Ojo!, es necesario aquí el timer para que no se eliminé la compra?
-        #@order.status = "Pago comprobado, productos embalados"
-        #@order.save
+        @order.status = "Comprobando datos del pago"
+        @order.save
         OrderNotifier.paymentInformation(@order).deliver
+        #este mailer es para el cliente, donde se le informa acerca del cambio de estatus
         format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
         else
+        #Este mailer se envia cuando el administrador cambia el status de la orden
+        OrderNotifier.statuschanged(@order).deliver
         format.html { redirect_to (:back), notice: 'Orden actualizada' }
         format.json { head :no_content }
         end
