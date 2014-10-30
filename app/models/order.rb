@@ -51,10 +51,10 @@ class Order < ActiveRecord::Base
 
 	def erase_not_processed_order
 		Order.all.each do |order|
-			time1 = order.created_at
-			time2 = order.updated_at
+			time1 = order.updated_at
+			time2 = Time.now()
 			status = order.status
-			if (time2 - time1) > 300 and status.include?("Orden de compra recibida")
+			if (time2 - time1) > 86400 and status.include?("Orden de compra recibida")
 				order.destroy
 			end 
 		end 

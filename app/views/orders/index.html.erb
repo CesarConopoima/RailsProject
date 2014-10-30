@@ -2,6 +2,7 @@
 </br></br></br>
 <table class = "resumen">
   <tr>
+    <th>Número</th>
     <th>Nombre</th>
     <th>Empresa</th>
     <th>Teléfono</th>
@@ -14,6 +15,7 @@
 
 <% @orders.each do |order| %>
   <tr>
+    <td><%= order.id %></td>
     <td><%= order.nombre %></td>
     <td><%= order.empresa %></td>
     <td><%= order.telefono %></td>

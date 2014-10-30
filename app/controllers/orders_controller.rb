@@ -138,11 +138,14 @@ def create
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra
         if @order.numerodepago != nil and @order.monto != nil
-        #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago
+        #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
+        #Ojo!, es necesario aquí el timer para que no se eliminé la compra?
+        #@order.status = "Pago comprobado, productos embalados"
+        OrderNotifier.paymentInformation(@order).deliver
         format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
         else
-        format.html { redirect_to (:back), notice: 'Los datos que introdujo ' }
+        format.html { redirect_to (:back), notice: 'La Orden fué actualizada' }
         format.json { head :no_content }
         end
       
