@@ -97,6 +97,11 @@ def create
             @order = Order.new(params[:order])
             @order.userid = current_user.id
             @order.status = "Orden de compra recibida y en espera por pago para continuar el proceso de despacho"
+            #estos campos se llenan automaticamente cuando la orden se
+            #crea para luego validarla cuando los usuarios hagan el pago de la orden
+            @order.banco = "Seleccione su Banco"
+            @order.numerodepago = "0"
+            @order.monto = "0"
             @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
             @order.add_line_items_from_cart(current_cart)
             @orderCreate=Order.new(params[:order])
@@ -139,7 +144,7 @@ def create
       if @order.update_attributes(params[:order])
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra
-        if @role[0] == 2 and @order.numerodepago != nil and @order.monto != nil and @order.banco != "Seleccione su Banco" 
+        if @role[0] == 2 and @order.numerodepago != "0" and @order.monto != "0" and @order.banco != "Seleccione su Banco" 
         #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
         #Ojo!, es necesario aquí el timer para que no se eliminé la compra?Productos enviados, en espera por acuse de recibo
         @order.status = "Comprobando datos del pago"
@@ -156,7 +161,7 @@ def create
         format.html { redirect_to (:back), notice: 'Orden actualizada' }
         format.json { head :no_content }
         else
-        format.html { redirect_to (:back), notice: 'El pago cambio de estatus no fue procesado, asegurese de que indico todos los campos' }
+        format.html { redirect_to (:back), notice: 'El cambio de estatus no fue procesado, asegurese que todos los campos estan llenos' }
         format.json { head :no_content }
         end
       else
