@@ -139,7 +139,7 @@ def create
       if @order.update_attributes(params[:order])
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra
-        if @role == 2 and @order.numerodepago != nil and @order.monto != nil and @order.banco != "Seleccione su Banco" 
+        if @role[0] == 2 and @order.numerodepago != nil and @order.monto != nil and @order.banco != "Seleccione su Banco" 
         #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
         #Ojo!, es necesario aquí el timer para que no se eliminé la compra?Productos enviados, en espera por acuse de recibo
         @order.status = "Comprobando datos del pago"
@@ -149,7 +149,7 @@ def create
         format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
         #Aqui poner elsif para considerar el cambio de estatus de  la orden por parte del admin
-        elsif @role == 3 
+        elsif @role[0] == 3 
         #Este mailer se envia cuando el administrador cambia el status de la orden
         @order.save
         OrderNotifier.statuschanged(@order).deliver
