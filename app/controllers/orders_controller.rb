@@ -137,7 +137,7 @@ def create
       if @order.update_attributes(params[:order])
         #validación para saber que tipo de actualización se está haciendo
         #si es del cliente significa que indicó los datos de la compra
-        if @order.numerodepago != nil and @order.monto != nil and @order.banco != "Seleccione su Banco"
+        if @role == 2 and @order.numerodepago != nil and @order.monto != nil and @order.banco != "Seleccione su Banco" 
         #aquí va un mailer para avisarle a la gente de copelancita sobre la información del pago 
         #Ojo!, es necesario aquí el timer para que no se eliminé la compra?Productos enviados, en espera por acuse de recibo
         @order.status = "Comprobando datos del pago"
