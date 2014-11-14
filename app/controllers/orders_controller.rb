@@ -147,8 +147,9 @@ def create
         format.html { redirect_to tienda_url, notice: 'Gracias por su pago, en breve confirmaremos los datos del mismo' }
         format.json { head :no_content }
         #Aqui poner elsif para considerar el cambio de estatus de  la orden por parte del admin
-        elsif @role == 3 and (@order.status == "Pago comprobado, productos embalados" or @order.status == "Productos enviados, en espera por acuse de recibo")
+        elsif @role == 3 
         #Este mailer se envia cuando el administrador cambia el status de la orden
+        @order.save
         OrderNotifier.statuschanged(@order).deliver
         format.html { redirect_to (:back), notice: 'Orden actualizada' }
         format.json { head :no_content }
