@@ -153,7 +153,7 @@ def create
         format.html { redirect_to (:back), notice: 'Orden actualizada' }
         format.json { head :no_content }
         else
-        format.html { redirect_to (:back), notice: 'No fue procesado el cambio' }
+        format.html { redirect_to (:back), notice: 'El pago cambio de estatus no fue procesado, asegurese de que indico todos los campos' }
         format.json { head :no_content }
         end
       else

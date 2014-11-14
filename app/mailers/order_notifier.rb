@@ -23,7 +23,7 @@ class OrderNotifier < ActionMailer::Base
 
   def statuschanged(order)
     @order = order
-    mail to: order.email, subject: 'Cambio el estatus de su compra'
+    mail to: order.email, subject: 'Cambió el estatus de su compra'
   end
 
   def paymentInformation(order)
