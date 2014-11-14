@@ -102,6 +102,8 @@ def create
             @order.banco = "Seleccione su Banco"
             @order.numerodepago = "0"
             @order.monto = "0"
+            #El tipo de envio por defecto sera mrw
+            @order.tipoenvio = "MRW (Pago en destino)"
             @total_price=current_cart.total_price #calcula el total del precio que aparece en el carrito de compras
             @order.add_line_items_from_cart(current_cart)
             @orderCreate=Order.new(params[:order])

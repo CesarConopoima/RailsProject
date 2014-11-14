@@ -26,7 +26,6 @@ class Order < ActiveRecord::Base
 	validates :direccionaux,:presence => { :message => "Este campo debe ser llenado" }
 	validates :telefonoaux,:presence => { :message => "Este campo debe ser llenado" }
 	validates :tipoPago, inclusion: PAYMENT_TYPES
-	validates :tipoenvio, inclusion: SEND_TYPES
 	validates :localidadvenezuela, inclusion: VENEZUELA_ESTADOS
 	def add_line_items_from_cart(cart)
 		cart.line_items.each do |item|
