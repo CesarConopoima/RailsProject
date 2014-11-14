@@ -82,6 +82,8 @@ class OrdersController < ApplicationController
   # GET /orders/1/edit
   def edit
     @order = Order.find(params[:id])
+    @usuario = current_user
+    @role = @usuario.role_ids
   end
 
   # POST /orders
