@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   def after_sign_in_path_for(resource)
-    set_flash_message :notice, :nuevo_mensaje_bienvenida, :nombre => resource.username, :apellido => resource.apellido
+    set_flash_message :notice, :nuevo_mensaje_bienvenida, :nombre => resource.nombre, :apellido => resource.apellido
     tienda_index_path
   end
   private
