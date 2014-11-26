@@ -20,9 +20,6 @@
     <td class="item_quantity"><%= line_item.quantity %>&times;</td>
     <td class="item_nombre"><%= line_item.producto.nombre %></td>
     <td class="item_price"><%= number_to_currency(line_item.total_price, :unit => "Bsf ")    %></td>
-    <td><%= button_to "-", decrease_line_item_path(line_item), :method => :put, remote: true, :class => 'buttonMenos' %></td>
-    <td><%= button_to "+", increase1_line_item_path(line_item), :method => :put, remote: true, :class => 'buttonMas1' %></td>
-    <td><%= button_to "+10", increase_line_item_path(line_item), :method => :put, remote: true, :class => 'buttonMas' %></td>
     <td><%= button_to "E", erase_line_item_path(line_item), :method => :put, remote: true, :class => 'erase' %></td>
     </tr>
 <% end %>
