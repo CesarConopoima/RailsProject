@@ -81,17 +81,35 @@
 </p>
 
 <table class = "tableOrder">
-<tr><th>Nombre</th>
+<tr>
+    <th>Nombre</th>
     <th>Cantidad</th>
+    <th>Precio</th>
 </tr>
 <tr>
 <% @k=0 %>
 <% @productos.each do |productos| %>
 <td><%= productos.nombre %></td>
 <td class="quantity"><%= @cantidad[@k] %></td>
+<td class="price"><%= @precio[@k] %></td>
 </tr>
 <% @k+=1 %> 
 <% end  %>
+<tr>
+<td></td>
+<td class="quantity">Precio_Orden</td>
+<td class="price"><%= number_to_currency(@OrderPrice,:unit => "Bsf ") %></td>
+</tr> 
+<tr>
+<td></td>
+<td class="quantity">IVA</td>
+<td class="price"><%= number_to_currency(@IVA,:unit => "Bsf ") %></td>
+</tr>
+<tr>
+<td></td>
+<td class="quantity">Precio_Total</td>
+<td class="price"><%= number_to_currency(@TotalPrice,:unit => "Bsf ") %></td>
+</tr>
 </table>
 <%= link_to 'Editar', edit_order_path(@order) %> |
 <%= link_to 'Ir atras', orders_path %>

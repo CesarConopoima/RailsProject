@@ -23,14 +23,19 @@ class OrdersController < ApplicationController
     @productoID = []
     @productos = []
     @cantidad = []
+    @precio = []
 
     @order.line_items.each do |item|
       @productoID << item.producto_id
       @cantidad << item.quantity
+      @precio << item.total_price
     end 
     @productoID.each do |id|
       @productos << Producto.find_by_id(id)
     end
+    @OrderPrice = @precio.inject{|sum,x| sum+x}.round(2)
+    @IVA = ((@OrderPrice.to_f)*12/100).to_f.round(2)
+    @TotalPrice = (@OrderPrice + @IVA).round(2)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @order }

@@ -7,6 +7,15 @@
 			magnifiereffectanimate: "fadeIn"
     	});
 	});
+
+	function cambiarcantidad(objeto) {
+		var producto_id = $(objeto).attr('id').split("agregaralcarro")[1];
+		var cantidad = $("#cantidad" + producto_id).val();
+		var accion = $(objeto).parent().parent().attr('action');
+		var accion_nueva = accion.split("quantity=")[0] + "quantity=" + cantidad;
+		$(objeto).parent().parent().attr('action',accion_nueva);
+	}
+
 </script>
 <% if notice %>
 <p id="notice"><%= notice %></p>
@@ -39,7 +48,9 @@
 				<% if user_signed_in? %>
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
 				<div class="price">Disponible</div>	
-				<%= button_to 'Agregar al Carro', line_items_path(producto_id: producto), remote: true,:class => "button" %>
+				<%= button_to 'Agregar al Carro' %>
+				<!-- button to buy is deactivated cause we are not selling yet -->
+				<!--%= button_to 'Agregar al Carro', line_items_path(producto_id: producto, quantity: "1"), remote: true, :class => "button", :id => "agregaralcarro#{producto.id}", :onclick => "cambiarcantidad(this);" %-->
 				<% else %>
 				<div class="price"><%= link_to "Precio", new_user_session_path %></div>
 				<div class="price">Disponible</div>	
