@@ -36,7 +36,7 @@
   				</form>
   				<!-- button to buy is deactivated cause we are not selling yet -->
 				<!--%= button_to 'Agregar al Carro', line_items_path(producto_id: producto, quantity: "1"), remote: true, :class => "button", :id => "agregaralcarro#{producto.id}", :onclick => "cambiarcantidad(this);" %-->
-				<%= button_to 'Agregar al Carro'%>
+				<!--%= button_to 'Agregar al Carro', :class => "button"%-->
 				<% else %>
 				<div class="price"><%= link_to "Precio", new_user_session_path %></div>
 				<div class="price">Disponible</div>	

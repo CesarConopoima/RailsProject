@@ -48,7 +48,7 @@
 				<% if user_signed_in? %>
 				<div class="price"><%= number_to_currency(producto.precio, :unit=>"Bsf ") %></div>
 				<div class="price">Disponible</div>	
-				<%= button_to 'Agregar al Carro' %>
+				<!--%= button_to 'Agregar al Carro', :class => "button" %-->
 				<!-- button to buy is deactivated cause we are not selling yet -->
 				<!--%= button_to 'Agregar al Carro', line_items_path(producto_id: producto, quantity: "1"), remote: true, :class => "button", :id => "agregaralcarro#{producto.id}", :onclick => "cambiarcantidad(this);" %-->
 				<% else %>
