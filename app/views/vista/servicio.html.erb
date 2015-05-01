@@ -74,44 +74,49 @@ jQuery(document).ready(function ($) {
     <div u="slides" style="cursor: move; position: relative; left: 0px; top: 0px; width: 400px; height: 255px;
         overflow: hidden;">
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/recepcion.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/recepcion_de_equipos.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
             <div u="thumb">Recepción</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/desarmado.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/desarmado.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
             <div u="thumb">Desarmado</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/presupuesto.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/evaluacion_presupuesto.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
-            <div u="thumb">Presupuesto</div>
+            <div u="thumb">Evaluación y presupuesto</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/rebobinado.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/limpieza.jpg", :alt => "piston 1") %></a>
+            <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
+            <div u="thumb">Limpieza de piezas</div>
+        </div>
+        <div>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/rebobinado.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
             <div u="thumb">Rebobinado</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/rectificacion2.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/rectificacion.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
             <div u="thumb">Rectificación</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/stock.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/stock.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
-            <div u="thumb">Stock</div>
+            <div u="thumb">Stock de repuestos</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/ensamblado.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/ensamblaje.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
             <div u="thumb">Ensamblado</div>
         </div>
         <div>
-            <a u=image href="#"><%= image_tag("PROCESO/despacho2.jpg", :alt => "piston 1") %></a>
+            <a u=image href="#"><%= image_tag("PROCESOS_NUEVAS/almacen.jpg", :alt => "piston 1") %></a>
             <div u="caption" t="L" style="position: absolute; top: 20px; left: 20px; width: 200px; height: 30px; color: #ffffff; font-size: 20px; line-height: 30px;"></div>
-            <div u="thumb">Despacho</div>
+            <div u="thumb">Almacenaje y despacho</div>
         </div>
     </div>
 
@@ -193,67 +198,66 @@ jQuery(document).ready(function ($) {
 <div class="servicio" id="servicio">
 <h3 class = "TitProc1">Recepción de equipos</h3>
 		<div class = "Proc1">
-					<%= image_tag("PROCESO/recepcion.jpg", class: 'imgProc2')%>
-					<p>El compresor ingresa a nuestra empresa donde es identificado por su procedencia, marca, modelo, fecha de ingreso y estado del equipo, con esto se define su ficha técnica que servira para mantener el control del equipo.
+			<%= image_tag("PROCESOS_NUEVAS/recepcion_de_equipos.jpg", class: 'imgProc2')%>
+					<p>Al momento de recibir el compresor, se le elabora una ficha técnica, colocando la información de ingreso (marca, modelo, serial, fecha en que se recibe y su estado físico externo), así como los datos del  cliente que trajo el equipo (nombre empresa, nombre de la persona contacto, teléfono y correo electrónico), en esta misma ficha posteriormente se plasmará  información de su estado mecánico. 
 					</p>
 					<button type="button" class="button">Esconder</button>
 		</div>
-<h3 class = "TitProc2">Desarmado y evaluación</h3>
+<h3 class = "TitProc2">Desarmado</h3>
 		<div class = "Proc2">
-			<%= image_tag("PROCESO/desarmado.jpg", class: 'imgProc1')%>
-			<p>Una vez desarmado el equipo, el supervisor de taller toma las piezas de los compresores y los equipos de medicion necesarios para llevar a cabo una evaluacion mecánica de cada una de las piezas.<br>
-			El bloque es también examinado con el fin de descartar fallas graves del mismo
+			<%= image_tag("PROCESOS_NUEVAS/desarmado.jpg", class: 'imgProc1')%>
+			<p>Una vez recibido el equipo, pasa al taller donde es desarmado totalmente, colocando toda y cada una de sus piezas al lado del mismo para su evaluación.
 			</p>
 			<button type="button" class="button">Esconder</button>
 		</div>	
-<h3 class = "TitProc3">Evaluación de presupuesto</h3>
+<h3 class = "TitProc3">Evaluación y presupuesto</h3>
 		<div class = "Proc3">
-			<%= image_tag("PROCESO/presupuesto.jpg", class: 'imgProc8')%>
-			<p>Una vez evaluada la ficha del compresor, esta pasa a las oficinas administrativas donde se realiza un presupuesto ajustado al daño que posea el equipo, incluyendole recontrucciones, rectificaciones y reemplazo de partes y piezas mecanicas y/o eléctricas.<br> 
-			Una vez realizado esto se notifica al cliente el estado de su equipo y el costo de la reconstruccion del mismo , con su aprobación continuamos el proceso.
+		<%= image_tag("PROCESOS_NUEVAS/evaluacion_presupuesto.jpg", class: 'imgProc8')%>
+			<p>Luego que el equipo es desarmado, cada una de las piezas es evaluada, se observa su estado mecánico,  se  examina el desgaste presentado, el estado de los componentes eléctricos, se le realizan mediciones, el bloque es también examinado con el fin de descartar fallas graves que pueda presentar. <br>
+            Se coloca en la ficha técnica  del equipo las piezas que pueden ser rectificadas y aquellas que deben ser remplazadas, en caso de ser requerido se le anexa documentación fotográfica.<br> 
+			Una vez evaluado el compresor pasa a la oficina administrativa  donde se elabora  el presupuesto en base a lo indicado en la ficha técnica, especificando: rectificaciones,  reemplazo de partes y piezas mecánicas y/o eléctricas, posteriormente se notifica al cliente el estado de su equipo y el costo de la reparación, si el presupuesto no es aprobado por el cliente, el equipo es armado para su  retiro de nuestras instalaciones.
 			</p>
 			<button type="button" class="button">Esconder</button>
 		</div>	
 <h3 class = "TitProc4">Rebobinado</h3>
 		<div class = "Proc4">
-			<%= image_tag("PROCESO/rebobinado.jpg", class: 'imgProc3')%>
-			<p>Todo compresor que presente daños en el embobinado es enviado al área de rebobinado, donde el nucleo del motor es limpiado.</p>
+			<%= image_tag("PROCESOS_NUEVAS/rebobinado.jpg", class: 'imgProc3')%>
+			<p>Todo compresor que presente daños en el embobinado es enviado al área de rebobinado, donde se procede a: </p>
 			<h4>Limpieza del estator</h4>
-			<p>En esta zona se despeja el stator del embobinado dañado, el stator es limpiado con técnica de sandblasting o chorro de arena, garantizando el arranque de todas las impurezas presentes.</p>
+			<p>Se retira el embobinado dañado del stator , se  elimina el sucio adherido aplicándole un baño de arena  (sandblasting ).</p>
 			<h4>Rebobinado</h4>
-			<p>Con los datos originales de fabricación, el motor es rebobinado, en copelancita de venezuela se rebobinan equipos con capacidad de hasta 100 HP, incluyendo unidades trifásicas bifásicas o monofásicas desde 120 hasta 240 voltios.</p>
-			<h4>Varnizado</h4>
-			<p>Con el fin de proteger y garantizar un rendimiento de los motores rebobinados, estos son varnizados y llevados altas temperaturas en nuestros hornos, de este modo se garantiza un recubrimiento optimo.</p>
+			<p>Con los datos originales de fabricación, se rebobina el stator (con capacidad de hasta 100 HP, incluyendo unidades trifásicas bifásicas o monofásicas desde 120 hasta 240 voltios).</p>
+			<h4>Barnizado</h4>
+			<p>Para proteger el rebobinado y asegurar un mejor rendimiento, se le aplica un baño de barniz a  altas temperaturas,  garantizando así un recubrimiento optimo.</p>
 			<button type="button" class="button">Esconder</button>
 		</div>
-<h3 class = "TitProc5">Rectificacion</h3>
+<h3 class = "TitProc5">Rectificación de Piezas</h3>
 		<div class = "Proc5">
-			<%= image_tag("PROCESO/rectificacion2.jpg", class: 'imgProc4')%>
-			<p>Toda pieza que fuese encontrada fuera de medida, pasa al área de rectificación, las piezas que tipicamente son rectificadas, son el cigueñal, el bloque y los platos de válvulas.</p>
+			<%= image_tag("PROCESOS_NUEVAS/rectificacion.jpg", class: 'imgProc4')%>
+			<p>Toda pieza que presente desgaste o no cumpla con las medadas establecidas por el fabricante  (cigüeñal, bloque y los platos ) pasaran al área de rectificación, donde se le aplicaran las correcciones y calibraciones de acuerdo a las especificaciones técnicas del caso.</p>
 			<button type="button" class="button">Esconder</button>
 		</div>
 <h3 class = "TitProc6">Stock de respuesto</h3>
 		<div class = "Proc6">
-			<%= image_tag("PROCESO/stock.jpg", class: 'imgProc5')%>
-			<p>En Copelancita de Venezuela contamos con un amplio Stock de respuestos, es asi como garantizamos a nuestros clientes la entrega de sus equipos de manera oportuna. <br> 
-			Una vez que las partes y piezas están limpias y rectificadas, el almacen entrega las piezans necesarias para reemplazar aquellas que fueron diagnosticadas como dañadas.
+			<%= image_tag("PROCESOS_NUEVAS/stock.jpg", class: 'imgProc5')%>
+			<p>Una vez que las partes y piezas están limpias y rectificadas, el almacén entrega las piezas necesarias para reemplazar aquellas que fueron diagnosticadas como dañadas.
 			</p>
 			<button type="button" class="button">Esconder</button>
 		</div>
-<h3 class = "TitProc7">Ensamblado</h3>
+<h3 class = "TitProc7">Ensamblaje</h3>
 		<div class = "Proc7">
-			<%= image_tag("PROCESO/ensamblado.jpg", class: 'imgProc6')%>
-			<p>El proceso de ensamblado se lleva a cabo una vez que se dispone de todas las piezas nuevas y rectificadas. El ensamblaje de nuestro equipos se hace siguiendo las más estrictas normas internas</p>
-			<h4>Prueba en vacio</h4>	
-			<p>Para verificar la calidad del proceso de ensamblaje y de reconstrucción del embobinado, nuestros equipos son puestos en marcha antes de instalar los cabezales de los mismos </p>
+			<%= image_tag("PROCESOS_NUEVAS/ensamblaje.jpg", class: 'imgProc6')%>
+			<p>El proceso de ensamblado se lleva a cabo una vez que se dispone de todas las piezas nuevas y rectificadas. El ensamblaje del equipo se hace siguiendo las más estrictas normas internas.</p>
+			<h4>Prueba en vacío</h4>	
+			<p>Para verificar la calidad del proceso de ensamblaje y de reconstrucción del embobinado, nuestros equipos son puestos en marcha antes de instalar los cabezales de los mismos.</p>
 			<h4>Prezurizado</h4>	
-			<p>Luego de haber verificado la calidad del ensamblaje, el equipo es pintado y presurizado con nitrogeno.</p>
+			<p>Luego de haber verificado la calidad del ensamblaje, el equipo es pintado y presurizado con nitrógeno.</p>
 			<button type="button" class="button">Esconder</button>
 		</div>
-<h3 class = "TitProc8">Despacho y/o almacenaje</h3>
+<h3 class = "TitProc8">Almacenaje y despacho</h3>
 			<div class = "Proc8">
-				<%= image_tag("PROCESO/despacho2.jpg", class: 'imgProc7')%>
-				<p>Una vez terminado el proceso de reparacion y reconstrucción del equipo, el cliente es informado para realizar el despacho del mismo, miestras este es guardado en el rack de compresores en la espera.</p>
+				<%= image_tag("PROCESOS_NUEVAS/almacen.jpg", class: 'imgProc7')%>
+				<p>Una vez concluido la reparación y reconstrucción del equipo, este  es almacenado en el rack de compresores para su entrega al cliente, quien  es informado para que proceda a su retiro.</p>
 				<button type="button" class="button">Esconder</button>
 			</div>
 </div>
